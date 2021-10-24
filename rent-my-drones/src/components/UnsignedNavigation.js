@@ -1,28 +1,26 @@
-import { Menu } from 'antd'
+import { Row } from 'antd'
 import React from "react";
 import {Link} from 'react-router-dom'
 import {HomeOutlined,PlusCircleOutlined,LoginOutlined} from '@ant-design/icons'
-
+import '../styles/Navigation.css'
 
 
 
 const UnsignedNavigation=()=>{
 
     return(
-        <Menu mode='horizontal'>
-           <Menu.Item>
-               <Link to='/'><HomeOutlined/></Link>
-               <h2>Home</h2>
-           </Menu.Item>
-           <Menu.Item>
-               <Link to = '/SignUp'><PlusCircleOutlined/></Link>
-               <h2>SignUp</h2>
-           </Menu.Item>
-           <Menu.Item>
-               <Link to ='/Login'><LoginOutlined/></Link>
-               <h2>Login</h2>
-           </Menu.Item>
-        </Menu>
+        <div className='nav-container'>
+        <Row className='navbar'>          
+               <Link to='/'><HomeOutlined/></Link>          
+               <Link to = '/SignUp'><PlusCircleOutlined/></Link>           
+               <Link to ='/Login'><LoginOutlined/></Link>        
+        </Row>
+        <Row className='nav-names'>
+            <h6>Home</h6>
+            <h6>Sign Up</h6>
+            <h6>Login</h6>
+        </Row>
+        </div>
     )
 
 }
