@@ -1,25 +1,34 @@
 import { Row } from 'antd'
 import React from "react";
-import {Link} from 'react-router-dom'
-import {HomeOutlined,PlusCircleOutlined,LoginOutlined} from '@ant-design/icons'
+import { Button } from 'antd';
 import '../styles/Navigation.css'
+import { useHistory } from 'react-router';
 
 
 
 const UnsignedNavigation=()=>{
+    const {push}=useHistory()
+    const goHome=(e)=>{
+        e.preventDefault()
+        push('/')
+    }
 
+    const goLogin=(e)=>{
+        e.preventDefault()
+        push('/Login')
+    }
+
+    const goSignUp=(e)=>{
+        e.preventDefault()
+        push('/Signup')
+    }
     return(
         <div className='nav-container'>
         <Row className='navbar'>          
-               <Link to='/'><HomeOutlined/></Link>          
-               <Link to = '/SignUp'><PlusCircleOutlined/></Link>           
-               <Link to ='/Login'><LoginOutlined/></Link>        
-        </Row>
-        <Row className='nav-names'>
-            <h6>Home</h6>
-            <h6>Sign Up</h6>
-            <h6>Login</h6>
-        </Row>
+               <Button onClick={goHome}>Home</Button>
+               <Button onClick={goSignUp}>Sign Up</Button>
+               <Button onClick={goLogin}>Login</Button>
+        </Row>       
         </div>
     )
 

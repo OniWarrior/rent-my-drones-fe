@@ -1,0 +1,46 @@
+.container{
+    box-shadow: 2px 2px 2px 2px rgba(0, 49, 128, 0.8) ; 
+    width:40%;
+    height:70vh;
+    
+}
+
+.container h2{
+    padding-top:5%;
+    text-align: center;
+}
+
+.container Button{
+    width:50%;
+    margin-left:20%;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color:blue;
+    border:none;
+    color:white;
+}
+
+.login-container{
+    padding-top:6%;
+    display:flex;
+    justify-content: center;
+}
+
+.input-group{
+    padding-top:1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;   
+    height: 50vh;
+    margin-left:10%;
+   
+}
+
+.input-group a{
+    text-decoration: none;
+    text-transform: none;
+}
+
+.input-group input{
+    width:90%;
+}
