@@ -33,6 +33,12 @@
     justify-content: space-evenly;   
     height: 50vh;
     margin-left:10%;
+   
+}
+
+.input-group a{
+    text-decoration: none;
+    text-transform: none;
 }
 
 .input-group input{

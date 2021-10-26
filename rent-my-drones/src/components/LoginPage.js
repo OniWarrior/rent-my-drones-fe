@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/Login.css'
 import { Button } from 'antd'
+import { Link } from 'react-router-dom'
 
 
 
@@ -28,6 +29,10 @@ const LoginPage =()=>{
                   />
 
                   <Button type='primary'>Submit</Button>
+
+                  <p>If you don't have an account
+                  click <Link to='/Signup'>here</Link>
+                  </p>
                 </div>
             </form>
         </div>
