@@ -7,8 +7,9 @@ const Home =()=>{
         <div className='home-container'>
             <div className='drone-img'>
             </div>    
-            <main className='main-doc'>
-                <h1>Rent My Drone</h1>
+            <h1 className='left'>Rent My Drone</h1>
+            <main className='main-doc'> 
+               
 
                 <p>Here at Rent My Drone, we allow the drone enthusiast to directly rent from a local drone owner</p>
                 <p>We also allow an owner to rent out their drone to earn money</p>

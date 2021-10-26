@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Login.css'
+import { Button } from 'antd'
 
 
 
@@ -25,6 +26,8 @@ const LoginPage =()=>{
                     placeholder='password'
                     required
                   />
+
+                  <Button type='primary'>Submit</Button>
                 </div>
             </form>
         </div>
