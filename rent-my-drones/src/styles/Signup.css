@@ -1,5 +1,5 @@
 .container{
-    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.301) ; 
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.8) ; 
     width:40%;
     height:70vh;
     
@@ -20,7 +20,7 @@
     color:white;
 }
 
-.login-container{
+.signup-container{
     padding-top:6%;
     display:flex;
     justify-content: center;
@@ -36,10 +36,7 @@
    
 }
 
-.input-group a{
-    text-decoration: none;
-    text-transform: none;
-}
+
 
 .input-group input{
     width:90%;
