@@ -1,16 +1,13 @@
-import React from 'react'
-import '../styles/Login.css'
-import { Button } from 'antd'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Button } from "antd";
+import '../styles/Signup.css'
 
-
-
-const LoginPage =()=>{
+const Signup =()=>{
 
     return (
-        <div className="login-container">
+        <div className="signup-container">
             <form className = "container">
-                <h2>Login</h2>
+                <h2>Sign up</h2>
                 <div className='input-group'>
                   <label htmlFor='username'>username</label>
                   <input 
@@ -28,16 +25,15 @@ const LoginPage =()=>{
                     required
                   />
 
-                  <Button type='primary'>Login</Button>
-
-                  <p>If you don't have an account
-                  click <Link to='/Signup'>here</Link>
-                  </p>
+                  <Button type='primary'>Submit</Button>
+                  
                 </div>
             </form>
         </div>
     )
 
+
+
 }
 
-export default LoginPage
+export default Signup
