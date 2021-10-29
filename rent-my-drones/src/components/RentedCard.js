@@ -1,11 +1,12 @@
 import React from 'react'
 
 
-const RentedCard=()=>{
+const RentedCard=(props)=>{
 
     return(
         <div className="rented-item-card">
-            
+            <img src={props.image} alt='Rented item'/>
+
         </div>
     )
 
