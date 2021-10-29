@@ -6,6 +6,7 @@ const RenterDashboard=()=>{
     return(
         <div className='dashboard-container'>
             
+
         </div>
     )
 
