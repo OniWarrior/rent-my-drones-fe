@@ -6,13 +6,18 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
+import rootReducer from './state/reducers/RootReducer';
 import App from './App'
+
+const store = createStore(rootReducer,applyMiddleware(thunk,logger))
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App/>
-    </Router>
+    <Provider store={store}>
+     <Router>
+       <App/>
+     </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
