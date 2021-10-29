@@ -2,6 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router} from 'react-router-dom'
+import logger from 'redux-logger';
+import thunk from 'redux-thunk';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 import App from './App'
 
 ReactDOM.render(
