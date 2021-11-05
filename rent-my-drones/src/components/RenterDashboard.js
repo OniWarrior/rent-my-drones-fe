@@ -12,6 +12,11 @@ const RenterDashboard=()=>{
         push('/available')
     }
 
+    const handleRented=(e)=>{
+        e.preventDefault()
+        push('/rented')
+    }
+
 
     return(
         <div className='dashboard-container'>
@@ -19,7 +24,7 @@ const RenterDashboard=()=>{
                 <h1>Dashboard</h1>                
             </div>
             <div className='dashboard-card-container'>
-              <Button className='dashboard-card'></Button>
+              <Button className='dashboard-card' ></Button>
               <Button className='dashboard-card'></Button>
             </div>
         </div>
