@@ -1,9 +1,17 @@
 import { Button } from 'antd'
 import React from 'react'
 import '../styles/RenterDashboard.css'
+import { useHistory } from 'react-router'
 
 
 const RenterDashboard=()=>{
+    const {push} = useHistory()
+
+    const handleAvailable=(e)=>{
+        e.preventDefault()
+        push('/available')
+    }
+
 
     return(
         <div className='dashboard-container'>
@@ -14,10 +22,6 @@ const RenterDashboard=()=>{
               <Button className='dashboard-card'></Button>
               <Button className='dashboard-card'></Button>
             </div>
-           
-            
-            
-
         </div>
     )
 
