@@ -1,6 +1,6 @@
 
 .dashboard-header{
-    font-size:large;
+    font-size:xx-large;
     font-family:sans-serif;
     text-align: center;
 }
@@ -12,6 +12,17 @@
     flex-flow: wrap;
     justify-content: space-evenly;
     padding-top:10%;
+}
+
+.dashboard-card{
+    min-height: 15rem;
+    width: 15rem;        
+    box-sizing: border-box;
+    box-shadow: 0px 6px 10px rgba(128,128,128,0.8);
+    margin-bottom:5%;
+    padding-top:1%;
+    background-color:black;
+    opacity: 0.9;
 }
 
 
