@@ -14,9 +14,33 @@
     color:white;
 }
 
-.navbar Button:hover{
-    background-color: black;
+.navbar Button:hover{    
     opacity: 0.5;
+    animation:nav-button-animation linear 0.5s infinite;
+}
+
+@keyframes nav-button-animation {
+
+    0%{
+        transform: rotate(0deg);
+    }
+
+    25%{
+        transform: rotate(-15deg);
+    }
+
+    50%{
+        transform: rotate(0deg);
+    }
+
+    75%{
+        transform: rotate(15deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+    
 }
 
 
