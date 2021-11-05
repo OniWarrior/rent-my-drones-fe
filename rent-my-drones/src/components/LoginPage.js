@@ -2,12 +2,15 @@ import React from 'react'
 import '../styles/Login.css'
 import { Button } from 'antd'
 import { Link } from 'react-router-dom'
+import UnsignedNavigation from './UnsignedNavigation'
 
 
 
 const LoginPage =()=>{
 
     return (
+      <div>
+        <UnsignedNavigation/>
         <div className="login-container">
             <form className = "container">
                 <h2>Login</h2>
@@ -36,6 +39,7 @@ const LoginPage =()=>{
                 </div>
             </form>
         </div>
+      </div>
     )
 
 }

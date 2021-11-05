@@ -1,10 +1,13 @@
 import React from "react";
 import '../styles/Home.css'
+import UnsignedNavigation from './UnsignedNavigation'
 
 const Home =()=>{
 
     return(
-        <div className='home-container'>
+        <div>
+        <UnsignedNavigation/>
+         <div className='home-container'>
             <div className='drone-img'>
             </div>                
             <main className='main-doc'>    
@@ -16,6 +19,7 @@ const Home =()=>{
                     then signup/login at the top of the page.
                 </p>
             </main> 
+         </div>
         </div>
     )
 
