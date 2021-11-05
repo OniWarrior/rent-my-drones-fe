@@ -9,8 +9,11 @@ const RenterDashboard=()=>{
             <div className='dashboard-header'>
                 <h1>Dashboard</h1>                
             </div>
-            <Button className='dashboard-card'></Button>
-            <Button className='dashboard-card'></Button>
+            <div className='dashboard-card-container'>
+              <Button className='dashboard-card'></Button>
+              <Button className='dashboard-card'></Button>
+            </div>
+           
             
             
 
