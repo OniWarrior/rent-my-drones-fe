@@ -24,8 +24,8 @@ const RenterDashboard=()=>{
                 <h1>Dashboard</h1>                
             </div>
             <div className='dashboard-card-container'>
-              <Button className='dashboard-card' onClick={handleAvailable}>Available</Button>
-              <Button className='dashboard-card' onClick={handleRented}>Rented</Button>
+              <Button id='available-card'className='dashboard-card' onClick={handleAvailable}>Available</Button>
+              <Button id = 'rented-card' className='dashboard-card' onClick={handleRented}>Rented</Button>
             </div>
         </div>
     )
