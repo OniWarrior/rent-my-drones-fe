@@ -6,8 +6,8 @@ const RenterDashboard=()=>{
 
     return(
         <div className='dashboard-container'>
-            <Button></Button>
-            <Button></Button>
+            <Button className='dashboard-card'></Button>
+            <Button className='dashboard-card'></Button>
             
 
         </div>
