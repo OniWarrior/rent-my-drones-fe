@@ -6,8 +6,11 @@ const RenterDashboard=()=>{
 
     return(
         <div className='dashboard-container'>
+            <div className='dashboard-header'>
+            </div>
             <Button className='dashboard-card'></Button>
             <Button className='dashboard-card'></Button>
+            
             
 
         </div>
