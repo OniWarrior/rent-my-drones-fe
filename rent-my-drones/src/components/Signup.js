@@ -1,10 +1,13 @@
 import React from "react";
 import { Button } from "antd";
 import '../styles/Signup.css'
+import UnsignedNavigation from "./UnsignedNavigation";
 
 const Signup =()=>{
 
     return (
+      <div>
+        <UnsignedNavigation/>
         <div className="signup-container">
             <form className = "container">
                 <h2>Sign up</h2>
@@ -30,6 +33,7 @@ const Signup =()=>{
                 </div>
             </form>
         </div>
+      </div>
     )
 
 
