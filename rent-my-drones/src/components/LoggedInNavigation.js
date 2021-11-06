@@ -31,7 +31,7 @@ const LoggedInNavigation=()=>{
                 <Button onClick={goToDashboard}>Dashboard</Button>
                 <Button onClick={goToAvailable}>Available </Button>
                 <Button onClick={goToRented}>Rented</Button>
-                <Button>Log out</Button>
+                <Button onClick={logOut}>Log out</Button>
             </Row>
         </div>
     )
