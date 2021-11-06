@@ -1,11 +1,12 @@
 import React from "react";
 import {Row, Button } from 'antd';
 import { useHistory } from "react-router";
+import '../styles/Navigation.css'
 
 const LoggedInNavigation=()=>{
     const {push} = useHistory()
 
-    const goToDashboard=()=>{
+    const goToDashboard=(e)=>{
         e.preventDefault()
         push('/Dashboard')
     }
@@ -21,10 +22,11 @@ const LoggedInNavigation=()=>{
     }
     return(
         <div className='nav-container'>
-            <Row className='nav-bar'>
+            <Row className='navbar'>
                 <Button onClick={goToDashboard}>Dashboard</Button>
                 <Button onClick={goToAvailable}>Available </Button>
                 <Button onClick={goToRented}>Rented</Button>
+                <Button>Log out</Button>
             </Row>
         </div>
     )

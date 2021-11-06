@@ -2,7 +2,7 @@ import { Button } from 'antd'
 import React from 'react'
 import '../styles/RenterDashboard.css'
 import { useHistory } from 'react-router'
-
+import LoggedInNavigation from './LoggedInNavigation'
 
 const RenterDashboard=()=>{
     const {push} = useHistory()
@@ -20,6 +20,7 @@ const RenterDashboard=()=>{
 
     return(
         <div className='dashboard-container'>
+            <LoggedInNavigation/>
             <div className='dashboard-header'>
                 <h1>Dashboard</h1>                
             </div>
