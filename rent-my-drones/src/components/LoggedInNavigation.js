@@ -23,7 +23,7 @@ const LoggedInNavigation=()=>{
 
     const logOut=(e)=>{
         e.preventDefault()
-        localStorage.clear('token')
+        localStorage.removeItem('token')
     }
     return(
         <div className='nav-container'>
