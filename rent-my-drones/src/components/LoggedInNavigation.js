@@ -20,6 +20,11 @@ const LoggedInNavigation=()=>{
         e.preventDefault()
         push('/rented')
     }
+
+    const logOut=(e)=>{
+        e.preventDefault()
+        localStorage.clear('token')
+    }
     return(
         <div className='nav-container'>
             <Row className='navbar'>
