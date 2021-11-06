@@ -4,6 +4,11 @@ import { useHistory } from "react-router";
 
 const LoggedInNavigation=()=>{
     const {push} = useHistory()
+
+    const goToDashboard=()=>{
+        e.preventDefault()
+        push('/Dashboard')
+    }
     return(
         <div className='nav-container'>
             <Row className='nav-bar'>
