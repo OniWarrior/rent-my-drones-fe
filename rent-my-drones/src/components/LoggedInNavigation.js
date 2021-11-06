@@ -9,6 +9,11 @@ const LoggedInNavigation=()=>{
         e.preventDefault()
         push('/Dashboard')
     }
+
+    const gotToAvailable=(e)=>{
+        e.preventDefault()
+        push('/avaliable')
+    }
     return(
         <div className='nav-container'>
             <Row className='nav-bar'>
