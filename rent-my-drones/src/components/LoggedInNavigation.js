@@ -14,6 +14,11 @@ const LoggedInNavigation=()=>{
         e.preventDefault()
         push('/avaliable')
     }
+
+    const gotToRented=(e)=>{
+        e.preventDefault()
+        push('/rented')
+    }
     return(
         <div className='nav-container'>
             <Row className='nav-bar'>
