@@ -1,6 +1,6 @@
 import { Row } from 'antd'
 import React from "react";
-import { Button } from 'antd';
+import {Row, Button } from 'antd';
 import '../styles/Navigation.css'
 import { useHistory } from 'react-router';
 
