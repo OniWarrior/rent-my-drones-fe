@@ -4,6 +4,7 @@ import Home from './components/Home';
 import LoginPage from './components/LoginPage';
 import RenterDashboard from './components/RenterDashboard';
 import Signup from './components/Signup';
+import Available from './components/Available';
 import './styles/App.css'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path='/Login' component={LoginPage}/>
         <Route path='/Signup' component={Signup}/>
         <Route path='/Dashboard' component={RenterDashboard}/>
+        <Route path='/Dashboard/available' component={Available}/>
       </Switch>
 
 
