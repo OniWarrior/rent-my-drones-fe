@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "antd";
 import LoggedInNavigation from "./LoggedInNavigation";
-
+import '../styles/Available.css'
 
 const Available=()=>{
     return (
@@ -11,7 +11,7 @@ const Available=()=>{
                 <h1>Available Drones</h1>
             </div>
             <div className='available-card-container'>
-                
+
             </div>
             
             
