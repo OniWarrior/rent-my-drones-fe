@@ -30,6 +30,7 @@
 }
 
 .main-doc p{
-    color: grey;
+    color: black;
+    font-weight: bolder;
 }
 
