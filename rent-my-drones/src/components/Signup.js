@@ -5,13 +5,19 @@ import UnsignedNavigation from "./UnsignedNavigation";
 import FormSchema from '../formSchemas/FormSchema'
 import { useValidation } from "../hooks/useValidation";
 import { useHistory } from "react-router";
+import { PROPERTY_TYPES } from "@babel/types";
 
-const Signup =()=>{
+const Signup =(props)=>{
   const {push} = useHistory()
   const [signup,errors,setSignup] = useValidation(FormSchema)
 
   const change=(e)=>{
     setSignup(e,FormSchema)
+  }
+
+  const onFormSubmit=(e)=>{
+    e.preventDefault()
+    props.register(signup,push)
   }
 
     return (
