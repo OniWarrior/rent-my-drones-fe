@@ -7,6 +7,7 @@ import { useValidation } from "../hooks/useValidation";
 import { useHistory } from "react-router";
 
 const Signup =()=>{
+  const {push} = useHistory()
 
     return (
       <div>
