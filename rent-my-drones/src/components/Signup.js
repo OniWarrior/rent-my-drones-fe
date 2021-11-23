@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "antd";
 import '../styles/Signup.css'
 import UnsignedNavigation from "./UnsignedNavigation";
+import FormSchema from '../formSchemas/FormSchema'
 
 const Signup =()=>{
 
