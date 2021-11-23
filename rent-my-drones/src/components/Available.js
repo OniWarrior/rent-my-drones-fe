@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "antd";
 import LoggedInNavigation from "./LoggedInNavigation";
 import '../styles/Available.css'
+import Card from './Card'
 
 const Available=()=>{
     return (
