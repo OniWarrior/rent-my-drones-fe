@@ -11,3 +11,7 @@ const initialErrors={
     username:'',
     password:''
 }
+
+export const useValidation=(schema)=>{
+
+}
