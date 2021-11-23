@@ -26,23 +26,29 @@ const Signup =(props)=>{
             <Form className = "container" onFinish={onFormSubmit}>
                 <h2>Sign up</h2>
                 <div className='input-group'>
-                  <Form.Item name='username'>
-                    <input 
+                 
+                  <Form.Item name='username'  label='username'>
+                  
+                    <Input 
                      id='username'
                      type='text'
                      placeholder='username'
                      required
+                     onChange={change}
                    />
+                   
                   </Form.Item>
-                  <label htmlFor='password'>password</label>
-                  <input
+                  <Form.Item name='password' label='password'>
+                  <Input.Password
                     id='password'
                     type='password'
                     placeholder='password'
                     required
+                    onChange={change}
                   />
-
-                  <Button type='primary' >Submit</Button>
+                  </Form.Item>
+                
+                  <Button type='primary'htmlType='submit' >Submit</Button>
                   
                 </div>
             </Form>
