@@ -26,14 +26,14 @@ const Signup =(props)=>{
             <Form className = "container" onFinish={onFormSubmit}>
                 <h2>Sign up</h2>
                 <div className='input-group'>
-                  <label htmlFor='username'>username</label>
-                  <input 
+                  <Form.Item htmlFor='username'>username
+                    <input 
                      id='username'
                      type='text'
                      placeholder='username'
                      required
                    />
-
+                  </Form.Item>
                   <label htmlFor='password'>password</label>
                   <input
                     id='password'
