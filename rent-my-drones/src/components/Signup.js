@@ -24,7 +24,7 @@ const Signup =(props)=>{
       <div>
         <UnsignedNavigation/>
         <div className="signup-container">
-            <form className = "container">
+            <form className = "container" onSubmit={onFormSubmit}>
                 <h2>Sign up</h2>
                 <div className='input-group'>
                   <label htmlFor='username'>username</label>
