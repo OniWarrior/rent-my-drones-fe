@@ -10,6 +10,10 @@ const Signup =()=>{
   const {push} = useHistory()
   const [signup,errors,setSignup] = useValidation(FormSchema)
 
+  const change=(e)=>{
+    setSignup(e,FormSchema)
+  }
+
     return (
       <div>
         <UnsignedNavigation/>
