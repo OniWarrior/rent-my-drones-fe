@@ -8,6 +8,7 @@ import { useHistory } from "react-router";
 
 const Signup =()=>{
   const {push} = useHistory()
+  const [signup,errors,setSignup] = useValidation(FormSchema)
 
     return (
       <div>
