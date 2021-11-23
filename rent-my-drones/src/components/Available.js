@@ -11,11 +11,7 @@ const Available=()=>{
                 <h1>Available Drones</h1>
             </div>
             <div className='available-card-container'>
-
             </div>
-            
-            
-
         </div>
     )
 
