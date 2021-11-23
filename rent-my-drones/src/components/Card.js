@@ -10,6 +10,7 @@ const Card=(props)=>{
             <h2>{props.drone_name}</h2>
             <p>{props.drone_description}</p>
             <p>{props.drone_cost}</p>
+            <Button>Rent Drone</Button>
         </div>
     )
 
