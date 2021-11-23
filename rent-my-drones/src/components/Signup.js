@@ -1,11 +1,10 @@
 import React from "react";
-import { Button } from "antd";
+import { Input,Form,Button } from "antd";
 import '../styles/Signup.css'
 import UnsignedNavigation from "./UnsignedNavigation";
 import FormSchema from '../formSchemas/FormSchema'
 import { useValidation } from "../hooks/useValidation";
 import { useHistory } from "react-router";
-import { PROPERTY_TYPES } from "@babel/types";
 
 const Signup =(props)=>{
   const {push} = useHistory()
@@ -43,7 +42,7 @@ const Signup =(props)=>{
                     required
                   />
 
-                  <Button type='primary'>Submit</Button>
+                  <Button type='primary' >Submit</Button>
                   
                 </div>
             </form>
