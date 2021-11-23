@@ -30,6 +30,12 @@
 }
 
 .main-doc p{
-    color: grey;
+    color: black;
+    font-weight: bolder;
+}
+
+.main-doc h1{
+    font-size:x-large;
+    padding-bottom: 1rem;
 }
 
