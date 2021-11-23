@@ -17,6 +17,7 @@ export const useValidation=(schema)=>{
     const [errors,setErrors] = useState(initialErrors)
 
     const onInputChange=(event)=>{
+        const {name,value} = event.target
 
     }
 }
