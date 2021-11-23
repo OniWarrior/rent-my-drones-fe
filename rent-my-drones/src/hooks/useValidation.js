@@ -28,5 +28,9 @@ export const useValidation=(schema)=>{
             setErrors({...errors,[name]:err.errors[0]})
         })
 
+        setData({
+            ...data,[name]:value
+        })
+
     }
 }
