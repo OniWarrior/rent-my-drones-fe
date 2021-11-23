@@ -33,4 +33,6 @@ export const useValidation=(schema)=>{
         })
 
     }
+
+    return [data,errors,onInputChange]
 }
