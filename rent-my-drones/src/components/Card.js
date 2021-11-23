@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const RentedCard=(props)=>{
+const Card=(props)=>{
 
     return(
         <div className="rented-item-card">
@@ -14,4 +14,4 @@ const RentedCard=(props)=>{
 
 }
 
-export default RentedCard
+export default Card
