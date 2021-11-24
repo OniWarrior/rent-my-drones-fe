@@ -11,6 +11,7 @@ import { connect } from "react-redux";
 
 
 
+
 const LoginPage =(props)=>{
 
   const {push} = useHistory()
@@ -100,4 +101,4 @@ const mapStateToProps=(state)=>{
 
 const mapDispatchToProps={postLogin}
 
-export default LoginPage
+export default connect(mapStateToProps,mapDispatchToProps)(LoginPage)
