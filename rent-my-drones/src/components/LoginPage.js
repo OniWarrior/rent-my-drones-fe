@@ -77,7 +77,7 @@ const LoginPage =(props)=>{
                 </div>          
                 </Form.Item>
 
-                  <Button type='primary'>Login</Button>
+                  <Button type='primary' disabled={handleDisabled}>Login</Button>
 
                   <p>If you don't have an account
                   click <Link to='/Signup'>here</Link>
