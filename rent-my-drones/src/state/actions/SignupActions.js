@@ -13,7 +13,7 @@ export const register=(signup,push)=>(dispatch)=>{
         push('/Login')       
     })
     .catch(err=>{
-        
+        dispatch({type:SIGNUP_FAILURE,payload:err.message})
     })
 
 }
