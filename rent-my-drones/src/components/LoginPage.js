@@ -11,7 +11,35 @@ import { connect } from "react-redux";
 
 
 
-const LoginPage =()=>{
+const LoginPage =(props)=>{
+
+  const {push} = useHistory()
+  const [login,errors,setLogin] = useValidation(FormSchema)
+  const initialDisabled = true
+  const [disabled,setDisabled] = useState(initialDisabled)
+
+  const change=(event)=>{
+    setSignup(event,FormSchema)
+  }
+  
+  const handleDisabled=(e)=>{
+    e.preventDefault()
+    if(login.username.length >=12 && login.password.length >=12){
+      setDisabled(()=>({
+        disabled: !disabled
+      }))
+    }
+    else{
+      setDisabled(()=>({
+        disabled:disabled
+      }))
+    }
+  }
+
+  const onFormSubmit=(e)=>{
+    e.preventDefault()
+    props.postLogin(login,push)
+  }
 
     return (
       <div>
