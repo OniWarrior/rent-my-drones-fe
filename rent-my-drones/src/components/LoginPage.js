@@ -45,7 +45,7 @@ const LoginPage =(props)=>{
       <div>
         <UnsignedNavigation/>
         <div className="login-container">
-            <Form className = "container">
+            <Form className = "container" onFinish={onFormSubmit}>
                 <h2>Login</h2>
                 <div className='input-group'>
                 <Form.Item name='username'  label='username'>
