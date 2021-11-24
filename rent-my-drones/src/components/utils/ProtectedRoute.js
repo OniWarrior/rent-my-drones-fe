@@ -6,7 +6,7 @@ const ProtectedRoute = ({component,...rest})=>{
         return(<Route component={component} {...rest}/>)
     }
     else{
-        <Redirect to='/Login'/>
+        return(<Redirect to='/Login'/>)
     }
 
 }
