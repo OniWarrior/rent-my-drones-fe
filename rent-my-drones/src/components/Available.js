@@ -34,7 +34,7 @@ const Available=(props)=>{
                               <p>{char.drone_description}</p>                                  
                             </div>   
                             <div className='drone-button'>
-                              <Button>Rent Drone</Button>     
+                              <Button type='ghost'>Rent Drone</Button>     
                             </div>
                                                   
                         </Card>)

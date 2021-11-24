@@ -1,4 +1,4 @@
-import axiosWithAuth from '../../components/utils/axiosWithAuth'
+import axiosWithAuth from '../../components/utils/AxiosWithAuth'
 
 
 export const AVAILABLE_START = 'AVAILABLE_START'

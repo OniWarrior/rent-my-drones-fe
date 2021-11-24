@@ -34,5 +34,13 @@
 }
 
 .drone-button{    
-    text-align: center;
+    text-align: center;    
+}
+
+.drone-button Button{
+    border:1px solid black;
+}
+
+.drone-button Button:hover{
+    background-color: white;
 }
