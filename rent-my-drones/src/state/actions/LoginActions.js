@@ -13,6 +13,10 @@ export const postLogin=(e,login,push)=>(dispatch)=>{
         dispatch({type:LOGIN_SUCCESS,payload:success.data})
         push('/Dashboard')          
     })
+    .catch(err=>{
+        dispatch({type:LOGIN_FAILURE,payload:err.message})
+        
+    })
 
 }
 
