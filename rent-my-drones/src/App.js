@@ -7,6 +7,7 @@ import Signup from './components/Signup';
 import Available from './components/Available';
 import './styles/App.css'
 import ProtectedRoute from './components/utils/ProtectedRoute'
+import Rented from './components/Rented';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Route path='/Login' component={LoginPage}/>
         <Route path='/Signup' component={Signup}/>
         <ProtectedRoute exact path='/Dashboard' component={RenterDashboard}/>
-        <ProtectedRoute path='/Dashboard/available' component={Available}/>        
+        <ProtectedRoute path='/Dashboard/available' component={Available}/>
+        <Route path='/Dashboard/rented' component={Rented}  />      
       </Switch>
 
 
