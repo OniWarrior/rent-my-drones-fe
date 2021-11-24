@@ -19,7 +19,7 @@ const LoginPage =(props)=>{
   const [disabled,setDisabled] = useState(initialDisabled)
 
   const change=(event)=>{
-    setSignup(event,FormSchema)
+    setLogin(event,FormSchema)
   }
   
   const handleDisabled=(e)=>{
@@ -88,6 +88,14 @@ const LoginPage =(props)=>{
       </div>
     )
 
+}
+
+const mapStateToProps=(state)=>{
+  return{
+    login:state.loginReducer.login,
+    loading:state.loginReducer.loading,
+    error:state.loginReducer.error
+  }
 }
 
 export default LoginPage
