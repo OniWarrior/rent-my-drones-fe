@@ -8,8 +8,8 @@ import { getAvailableDrones } from "../state/actions/AvailableActions";
 const Available=(props)=>{
 
     useEffect(()=>{
-        
-    })
+        props.getAvailableDrones()
+    },[])
     return (
         <div className='available-container'>
             <LoggedInNavigation/>
