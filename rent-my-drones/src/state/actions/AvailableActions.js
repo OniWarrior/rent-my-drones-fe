@@ -9,5 +9,8 @@ export const AVAILABLE_FAILURE = 'AVAILABLE_FAILURE'
 export const getAvailableDrones=()=>(dispatch)=>{
     dispatch({type:AVAILABLE_START})
     axiosWithAuth('https://rent-my-drones-be.herokuapp.com/api/users/available')
+    .then(success=>{
+        
+    })
 
 }
