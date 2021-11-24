@@ -4,7 +4,7 @@ import LoggedInNavigation from "./LoggedInNavigation";
 import '../styles/Available.css'
 import { connect } from "react-redux";
 
-const Available=()=>{
+const Available=(props)=>{
     return (
         <div className='available-container'>
             <LoggedInNavigation/>
@@ -28,4 +28,4 @@ const mapStateToProps=(state)=>{
 
 const mapDispatchToProps={getAvailableDrones}
 
-export default Available
+export default connect(mapStateToProps,mapDispatchToProps)(Available)
