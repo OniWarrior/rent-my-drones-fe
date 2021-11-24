@@ -25,8 +25,8 @@ const Available=(props)=>{
                 {
                     props.drones.map((char,index)=>{
                         return( 
-                        <Card title={char.drone_name}key={index} data={char} style={{width:400}}>
-                            <img src={char.drone_image} alt='The drone your buying'/>      
+                        <Card className='available-card'title={char.drone_name}key={index} data={char} >
+                            <img className='drone-images'src={char.drone_image} alt='The drone your buying'/>      
                             <p>{char.drone_cost}</p>
                             <p>{char.drone_description}</p>
                             <Button>Rent Drone</Button>
