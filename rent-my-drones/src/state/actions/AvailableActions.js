@@ -6,5 +6,7 @@ export const AVAILABLE_FAILURE = 'AVAILABLE_FAILURE'
 
 
 export const getAvailableDrones=()=>(dispatch)=>{
+    dispatch({type:AVAILABLE_START})
     
+
 }
