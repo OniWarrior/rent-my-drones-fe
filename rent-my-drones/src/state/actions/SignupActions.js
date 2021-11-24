@@ -6,6 +6,7 @@ export const SIGNUP_FAILURE='SIGNUP_FAILURE'
 
 
 export const register=(signup,push)=>(dispatch)=>{
-    
+    dispatch({type:SIGNUP_START})
+
 }
 
