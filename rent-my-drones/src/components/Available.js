@@ -24,6 +24,7 @@ const Available=(props)=>{
                             <img src={char.drone_image} alt='The drone your buying'/>      
                             <p>{char.drone_cost}</p>
                             <p>{char.drone_description}</p>
+                            <Button>Rent Drone</Button>
                         </Card>)
                     })
                 }
