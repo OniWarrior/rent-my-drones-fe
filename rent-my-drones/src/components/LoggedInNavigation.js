@@ -18,7 +18,7 @@ const LoggedInNavigation=()=>{
 
     const goToRented=(e)=>{
         e.preventDefault()
-        push('/rented')
+        push('/Dashboard/rented')
     }
 
     const logOut=(e)=>{
