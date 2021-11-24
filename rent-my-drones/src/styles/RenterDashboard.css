@@ -72,3 +72,11 @@
 }
 
 
+@media screen and (max-width:480px) {
+    .dashboard-card{
+        opacity: 1;
+        border-radius: 20px;
+    }
+}
+
+
