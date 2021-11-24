@@ -87,7 +87,7 @@ const Signup =(props)=>{
 
 const mapStateToProps =(state)=>{
   return{
-    
+    signup:state.signupReducer.signup
   }
 }
 
