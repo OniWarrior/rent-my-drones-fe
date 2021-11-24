@@ -10,6 +10,11 @@ const Available=(props)=>{
     useEffect(()=>{
         props.getAvailableDrones()
     },[])
+    if(props.loading){
+        return(<h1>...Loading</h1>)
+    }
+    else{
+
     return (
         <div className='available-container'>
             <LoggedInNavigation/>
@@ -31,7 +36,7 @@ const Available=(props)=>{
             </div>
         </div>
     )
-
+    }
 }
 
 const mapStateToProps=(state)=>{

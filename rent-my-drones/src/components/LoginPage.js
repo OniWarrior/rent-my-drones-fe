@@ -38,8 +38,8 @@ const LoginPage =(props)=>{
     }
   }
 
-  const onFormSubmit=(e)=>{
-    e.preventDefault()
+  const onFormSubmit=()=>{
+    
     props.postLogin(login,push)
   }
 
@@ -47,7 +47,7 @@ const LoginPage =(props)=>{
       <div>
         <UnsignedNavigation/>
         <div className="login-container">
-            <Form className = "container" onFinish={onFormSubmit}>
+            <Form className = "container" onSubmitCapture={onFormSubmit}>
                 <h2>Login</h2>
                 <div className='input-group'>
                 <Form.Item name='username'  label='username'>
