@@ -2,9 +2,9 @@ import React from "react";
 import { Button } from "antd";
 import LoggedInNavigation from "./LoggedInNavigation";
 import '../styles/Available.css'
-import Card from './Card'
+import { connect } from "react-redux";
 
-const Available=()=>{
+const Available=(props)=>{
     return (
         <div className='available-container'>
             <LoggedInNavigation/>
@@ -18,4 +18,14 @@ const Available=()=>{
 
 }
 
-export default Available
+const mapStateToProps=(state)=>{
+    return{
+         drones:state.availableReducer.drones,
+         loading:state.availableReducer.loading,
+         error:state.availableReducer.error
+    }
+}
+
+const mapDispatchToProps={getAvailableDrones}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Available)
