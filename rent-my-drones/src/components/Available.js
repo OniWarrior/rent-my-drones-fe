@@ -23,6 +23,7 @@ const Available=(props)=>{
                         <Card title={char.drone_name}key={index} data={char} style={{width:400}}>
                             <img src={char.drone_image} alt='The drone your buying'/>      
                             <p>{char.drone_cost}</p>
+                            <p>{char.drone_description}</p>
                         </Card>)
                     })
                 }
