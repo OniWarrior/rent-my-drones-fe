@@ -6,6 +6,7 @@ import FormSchema from '../formSchemas/FormSchema'
 import { useValidation } from "../hooks/useValidation";
 import { useHistory } from "react-router";
 import { useState } from "react";
+import { register } from "../state/actions/SignupActions";
 
 const Signup =(props)=>{
   const {push} = useHistory()
@@ -92,5 +93,7 @@ const mapStateToProps =(state)=>{
     error:state.signupReducer.error
   }
 }
+
+const mapDispatchToProps = {register}
 
 export default Signup
