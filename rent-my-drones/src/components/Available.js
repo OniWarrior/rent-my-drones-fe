@@ -20,10 +20,12 @@ const Available=()=>{
 
 const mapStateToProps=(state)=>{
     return{
-         drones:state.avalableReducer.drones,
+         drones:state.availableReducer.drones,
          loading:state.availableReducer.loading,
          error:state.availableReducer.error
     }
 }
+
+const mapDispatchToProps={getAvailableDrones}
 
 export default Available
