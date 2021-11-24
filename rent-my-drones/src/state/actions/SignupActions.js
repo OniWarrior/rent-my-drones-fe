@@ -12,6 +12,9 @@ export const register=(signup,push)=>(dispatch)=>{
         dispatch({type:SIGNUP_SUCCESS,payload:success.data}) 
         push('/Login')       
     })
+    .catch(err=>{
+        
+    })
 
 }
 
