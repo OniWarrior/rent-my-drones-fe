@@ -20,5 +20,6 @@ export const getAvailableDrones=()=>(dispatch)=>{
 
 export const rentAvailableDrone=(id,isRented)=>(dispatch)=>{
     dispatch({type:AVAILABLE_START})
+    axiosWithAuth().put(`/api/users/available/${id}`,isRented)
 
 }
