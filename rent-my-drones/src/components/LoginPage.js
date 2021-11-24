@@ -17,7 +17,7 @@ const LoginPage =()=>{
       <div>
         <UnsignedNavigation/>
         <div className="login-container">
-            <form className = "container">
+            <Form className = "container">
                 <h2>Login</h2>
                 <div className='input-group'>
                   <label htmlFor='username'>username</label>
@@ -42,7 +42,7 @@ const LoginPage =()=>{
                   click <Link to='/Signup'>here</Link>
                   </p>
                 </div>
-            </form>
+            </Form>
         </div>
       </div>
     )
