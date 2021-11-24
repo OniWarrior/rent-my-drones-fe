@@ -31,9 +31,11 @@ const Available=(props)=>{
                             </div> 
                             <div className='drone-info'>
                               <p>$ {char.drone_cost}</p>
-                              <p>{char.drone_description}</p>  
-                              <Button>Rent Drone</Button>      
+                              <p>{char.drone_description}</p>                                  
                             </div>   
+                            <div className='drone-button'>
+                              <Button>Rent Drone</Button>     
+                            </div>
                                                   
                         </Card>)
                     })
