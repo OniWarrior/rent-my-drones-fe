@@ -5,13 +5,30 @@ import UnsignedNavigation from "./UnsignedNavigation";
 import FormSchema from '../formSchemas/FormSchema'
 import { useValidation } from "../hooks/useValidation";
 import { useHistory } from "react-router";
+import { useState } from "react";
 
 const Signup =(props)=>{
   const {push} = useHistory()
   const [signup,errors,setSignup] = useValidation(FormSchema)
+  const initialDisabled = true
+  const [disabled,setDisabled] = useState(initialDisabled)
 
   const change=(event)=>{
     setSignup(event,FormSchema)
+  }
+  
+  const handleDisabled=(e)=>{
+    e.preventDefault()
+    if(signup.username.length >=12 && signup.password.length >=12){
+      setDisabled(()=>({
+        disabled: !disabled
+      }))
+    }
+    else{
+      setDisabled(()=>({
+        disabled:disabled
+      }))
+    }
   }
 
   const onFormSubmit=(e)=>{
@@ -37,7 +54,10 @@ const Signup =(props)=>{
                      required
                      onChange={change}
                    />
-                   
+                    <div className='errors'>
+                     <p>{errors.username}</p>
+                                      
+                    </div>
                   </Form.Item>
                   <Form.Item name='password' label='password'>
                   <Input.Password
@@ -47,15 +67,14 @@ const Signup =(props)=>{
                     placeholder='password'
                     required
                     onChange={change}
-                  />
-                  
-                  </Form.Item>
-                
-                  <Button type='primary'htmlType='submit' >Submit</Button>
-                  <div className='errors'>
-                    <p>{errors.username}</p>
+                  />        
+                  <div className='errors'>                    
                     <p>{errors.password}</p>                   
-                  </div>
+                  </div>          
+                  </Form.Item>
+                  
+                  <Button type='primary' htmlType='submit' disabled={handleDisabled} >Submit</Button>
+                
                 </div>
             </Form>
         </div>
