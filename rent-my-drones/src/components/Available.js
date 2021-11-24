@@ -19,7 +19,9 @@ const Available=(props)=>{
             <div className='available-card-container'>
                 {
                     props.drones.map((char,index)=>{
-                        return <Card key={index} data={char}/>
+                        return( <Card title={char.drone_name}key={index} data={char} style={{width:400}}>
+
+                                </Card>)
                     })
                 }
             </div>
