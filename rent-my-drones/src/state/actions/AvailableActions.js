@@ -17,3 +17,7 @@ export const getAvailableDrones=()=>(dispatch)=>{
     })
 
 }
+
+export const rentAvailableDrone=(id,isRented)=>(dispatch)=>{
+
+}
