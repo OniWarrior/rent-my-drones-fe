@@ -15,8 +15,8 @@ function App() {
         <Route exact path='/' component={Home}/>
         <Route path='/Login' component={LoginPage}/>
         <Route path='/Signup' component={Signup}/>
-        <ProtectedRoute path='/Dashboard' component={RenterDashboard}/>
-        <ProtectedRoute path='/available' component={Available}/>
+        <ProtectedRoute exact path='/Dashboard' component={RenterDashboard}/>
+        <ProtectedRoute path='/Dashboard/available' component={Available}/>        
       </Switch>
 
 
