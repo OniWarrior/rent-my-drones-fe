@@ -8,6 +8,7 @@ import { useValidation } from "../hooks/useValidation";
 import { useHistory } from "react-router";
 import { useState } from "react";
 import { connect } from "react-redux";
+import { postLogin } from '../state/actions/LoginActions';
 
 
 
@@ -78,7 +79,7 @@ const LoginPage =(props)=>{
                 </div>          
                 </Form.Item>
 
-                  <Button type='primary' disabled={handleDisabled}>Login</Button>
+                  <Button type='primary' htmlType='submit' disabled={handleDisabled}>Login</Button>
 
                   <p>If you don't have an account
                   click <Link to='/Signup'>here</Link>
