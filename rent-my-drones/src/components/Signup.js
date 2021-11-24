@@ -7,6 +7,7 @@ import { useValidation } from "../hooks/useValidation";
 import { useHistory } from "react-router";
 import { useState } from "react";
 import { register } from "../state/actions/SignupActions";
+import { connectAdvanced } from "react-redux";
 
 const Signup =(props)=>{
   const {push} = useHistory()
