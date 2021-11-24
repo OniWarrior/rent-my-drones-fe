@@ -12,6 +12,9 @@ const initialState={
 
 
 const availableReducer=(state=initialState,action)=>{
+    switch(action.type){
+        
+    }
 
 }
 
