@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Button } from "antd";
+import { Button,Card } from "antd";
 import LoggedInNavigation from "./LoggedInNavigation";
 import '../styles/Available.css'
 import { connect } from "react-redux";
@@ -17,6 +17,11 @@ const Available=(props)=>{
                 <h1>Available Drones</h1>
             </div>
             <div className='available-card-container'>
+                {
+                    props.drones.map((char,index)=>{
+
+                    })
+                }
             </div>
         </div>
     )
