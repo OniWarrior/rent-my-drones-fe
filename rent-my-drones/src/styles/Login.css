@@ -74,3 +74,7 @@
 .input-group input{
     width:90%;
 }
+
+.errors{
+    color:red;
+  }
