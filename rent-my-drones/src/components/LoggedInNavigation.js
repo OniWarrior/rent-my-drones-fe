@@ -13,7 +13,7 @@ const LoggedInNavigation=()=>{
 
     const goToAvailable=(e)=>{
         e.preventDefault()
-        push('/available')
+        push('/Dashboard/available')
     }
 
     const goToRented=(e)=>{
