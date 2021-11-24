@@ -7,7 +7,7 @@ import { useValidation } from "../hooks/useValidation";
 import { useHistory } from "react-router";
 import { useState } from "react";
 import { register } from "../state/actions/SignupActions";
-import { connectAdvanced } from "react-redux";
+import { connect } from "react-redux";
 
 const Signup =(props)=>{
   const {push} = useHistory()
@@ -97,4 +97,4 @@ const mapStateToProps =(state)=>{
 
 const mapDispatchToProps = {register}
 
-export default Signup
+export default connect(mapStateToProps,mapDispatchToProps)(Signup)
