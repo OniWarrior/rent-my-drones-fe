@@ -6,14 +6,16 @@ import{
 
 const initialState={
     drones:{},
-    loading:'',
+    loading:false,
     error:''
 }
 
 
 const availableReducer=(state=initialState,action)=>{
     switch(action.type){
-        
+        case AVAILABLE_START:
+            return{...state,loading:true}
+
     }
 
 }
