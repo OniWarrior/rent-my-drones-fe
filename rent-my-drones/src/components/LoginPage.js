@@ -20,21 +20,34 @@ const LoginPage =()=>{
             <Form className = "container">
                 <h2>Login</h2>
                 <div className='input-group'>
-                  <label htmlFor='username'>username</label>
-                  <input 
-                     id='username'
-                     type='text'
-                     placeholder='username'
-                     required
-                   />
-
-                  <label htmlFor='password'>password</label>
-                  <input
-                    id='password'
-                    type='password'
-                    placeholder='password'
-                    required
-                  />
+                <Form.Item name='username'  label='username'>
+                  
+                  <Input 
+                   id='username'
+                   type='text'
+                   name='username'
+                   placeholder='username'
+                   required
+                   onChange={change}
+                 />
+                  <div className='errors'>
+                   <p>{errors.username}</p>
+                                    
+                  </div>
+                </Form.Item>
+                <Form.Item name='password' label='password'>
+                <Input.Password
+                  id='password'
+                  type='password'
+                  name='password'
+                  placeholder='password'
+                  required
+                  onChange={change}
+                />        
+                <div className='errors'>                    
+                  <p>{errors.password}</p>                   
+                </div>          
+                </Form.Item>
 
                   <Button type='primary'>Login</Button>
 
