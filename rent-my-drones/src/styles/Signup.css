@@ -37,7 +37,9 @@
    
 }
 
-
+.errors{
+    color:red;
+  }
 
 .input-group input{
     width:90%;

@@ -10,8 +10,8 @@ const Signup =(props)=>{
   const {push} = useHistory()
   const [signup,errors,setSignup] = useValidation(FormSchema)
 
-  const change=(e)=>{
-    setSignup(e,FormSchema)
+  const change=(event)=>{
+    setSignup(event,FormSchema)
   }
 
   const onFormSubmit=(e)=>{
@@ -32,6 +32,7 @@ const Signup =(props)=>{
                     <Input 
                      id='username'
                      type='text'
+                     name='username'
                      placeholder='username'
                      required
                      onChange={change}
@@ -42,14 +43,19 @@ const Signup =(props)=>{
                   <Input.Password
                     id='password'
                     type='password'
+                    name='password'
                     placeholder='password'
                     required
                     onChange={change}
                   />
+                  
                   </Form.Item>
                 
                   <Button type='primary'htmlType='submit' >Submit</Button>
-                  
+                  <div className='errors'>
+                    <p>{errors.username}</p>
+                    <p>{errors.password}</p>                   
+                  </div>
                 </div>
             </Form>
         </div>
