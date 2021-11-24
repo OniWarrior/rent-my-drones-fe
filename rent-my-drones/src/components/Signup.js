@@ -85,4 +85,10 @@ const Signup =(props)=>{
 
 }
 
+const mapStateToProps =(state)=>{
+  return{
+    
+  }
+}
+
 export default Signup
