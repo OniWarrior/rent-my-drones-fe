@@ -17,6 +17,8 @@ const availableReducer=(state=initialState,action)=>{
             return{...state,loading:true}
         case AVAILABLE_SUCCESS:
             return{...state,drones:action.payload,loading:false}
+        case AVAILABLE_FAILURE:
+            return{...state,error:action.payload,loading:false}
 
     }
 
