@@ -27,11 +27,14 @@ const Available=(props)=>{
                         return( 
                         <Card className='available-card'title={char.drone_name}key={index} data={char} >
                             <div className='drone-image-container' >
-                              <img className='drone-images'src={char.drone_image} alt='The drone your buying'/> 
-                              <p>{char.drone_cost}</p>
-                              <p>{char.drone_description}</p>
-                              <Button>Rent Drone</Button>
-                            </div>                              
+                              <img className='drone-images'src={char.drone_image} alt='The drone your buying'/>                                        
+                            </div> 
+                            <div className='drone-info'>
+                              <p>$ {char.drone_cost}</p>
+                              <p>{char.drone_description}</p>  
+                              <Button>Rent Drone</Button>      
+                            </div>   
+                                                  
                         </Card>)
                     })
                 }
