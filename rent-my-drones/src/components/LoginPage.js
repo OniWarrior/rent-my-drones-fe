@@ -98,4 +98,6 @@ const mapStateToProps=(state)=>{
   }
 }
 
+const mapDispatchToProps={postLogin}
+
 export default LoginPage
