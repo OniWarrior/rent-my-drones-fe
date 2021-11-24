@@ -10,9 +10,9 @@ export const postLogin=(login,push)=>(dispatch)=>{
     
     dispatch({type:LOGIN_START})
     axios.post(`https://rent-my-drones-be.herokuapp.com/api/auth/Login`,login)
-    .then((success)=>{
-        dispatch({type:LOGIN_SUCCESS,payload:success.data})
-        localStorage.setItem('token', success.data.token)
+    .then(response=>{
+        dispatch({type:LOGIN_SUCCESS,payload:response.data})
+        localStorage.setItem('token', response.data.token)
         push('/Dashboard')          
     })
     .catch(err=>{

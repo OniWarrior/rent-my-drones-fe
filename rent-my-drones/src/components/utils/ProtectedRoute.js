@@ -1,14 +1,12 @@
-import React from 'react'
-import {Route,Redirect} from 'react-router-dom'
+import React from "react";
+import { Route, Redirect } from "react-router";
 
-const ProtectedRoute = ({component,...rest})=>{
-    if(localStorage.getItem('token')){
-        return(<Route component={component} {...rest}/>)
+const ProtectedRoute = ({component, ...rest}) => {
+    if(localStorage.getItem("token")) {
+        return(<Route component={component} {...rest} />)
+    } else {
+        return <Redirect to="/Login" />
     }
-    else{
-        return(<Redirect to='/Login'/>)
-    }
-
 }
 
-export default ProtectedRoute
+export default ProtectedRoute;
