@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "antd";
 import LoggedInNavigation from "./LoggedInNavigation";
-
+import '../styles/Rented.css'
 
 const Rented =()=>{
     return (
