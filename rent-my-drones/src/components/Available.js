@@ -18,4 +18,12 @@ const Available=()=>{
 
 }
 
+const mapStateToProps=(state)=>{
+    return{
+         drones:state.avalableReducer.drones,
+         loading:state.availableReducer.loading,
+         error:state.availableReducer.error
+    }
+}
+
 export default Available
