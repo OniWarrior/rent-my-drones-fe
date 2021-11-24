@@ -4,6 +4,12 @@ import{
     AVAILABLE_FAILURE
 } from '../actions/AvailableActions'
 
+const initialState={
+    drones:{},
+    loading:'',
+    error:''
+}
+
 
 const availableReducer=(state=initialState,action)=>{
 
