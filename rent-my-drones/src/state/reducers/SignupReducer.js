@@ -18,7 +18,7 @@ const signupReducer=(state=initialState,action)=>{
         case SIGNUP_SUCCESS:
             return {...state,signup:action.payload,loading:false}
         case SIGNUP_FAILURE:
-            return {...state,signup:action.payload,loading:false}
+            return {...state,error:action.payload,loading:false}
         default:
             return state;
     }

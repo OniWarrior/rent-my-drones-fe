@@ -12,7 +12,7 @@ import { connect } from "react-redux";
 const Signup =(props)=>{
   const {push} = useHistory()
   const [signup,errors,setSignup] = useValidation(FormSchema)
-  const initialDisabled = true
+  const initialDisabled = 1
   const [disabled,setDisabled] = useState(initialDisabled)
 
   const change=(event)=>{
@@ -42,7 +42,7 @@ const Signup =(props)=>{
       <div>
         <UnsignedNavigation/>
         <div className="signup-container">
-            <Form className = "container" onFinish={onFormSubmit}>
+            <Form className = "container" onSubmitCapture={onFormSubmit}>
                 <h2>Sign up</h2>
                 <div className='input-group'>
                  

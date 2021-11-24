@@ -9,12 +9,12 @@ const RenterDashboard=()=>{
 
     const handleAvailable=(e)=>{
         e.preventDefault()
-        push('/available')
+        push('/Dashboard/available')
     }
 
     const handleRented=(e)=>{
         e.preventDefault()
-        push('/rented')
+        push('/Dashboard/rented')
     }
 
 

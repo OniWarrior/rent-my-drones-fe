@@ -6,7 +6,7 @@ import{
 
 const initialState={
     drones:{},
-    loading:false,
+    loading:true,
     error:''
 }
 
