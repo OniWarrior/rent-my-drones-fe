@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "antd";
 import LoggedInNavigation from "./LoggedInNavigation";
 import '../styles/Available.css'
-import Card from './Card'
+import { connect } from "react-redux";
 
 const Available=()=>{
     return (
