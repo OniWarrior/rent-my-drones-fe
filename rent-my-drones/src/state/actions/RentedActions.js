@@ -20,7 +20,7 @@ export const returnRentedDrone=(id)=>(dispatch)=>{
     dispatch({type:RENTED_START})
     axiosWithAuth().put(`/api/users/rented/${id}`)
     .then(success=>{
-        
+        dispatch({type:RENTED_SUCCESS,payload:success.data})
     })
 
 }
