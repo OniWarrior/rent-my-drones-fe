@@ -13,7 +13,9 @@ const initialState={
 
 const rentedReducer=(state=initialState,action)=>{
     switch(action.type){
-        
+        case RENTED_START:
+            return {...state,loading:true}
+
     }
 
 }
