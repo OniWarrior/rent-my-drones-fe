@@ -3,7 +3,8 @@ import { Button,Card} from "antd";
 import LoggedInNavigation from "./LoggedInNavigation";
 import '../styles/Available.css'
 import { connect } from "react-redux";
-import { getAvailableDrones } from "../state/actions/AvailableActions";
+import { getAvailableDrones,rentAvailableDrone } from "../state/actions/AvailableActions";
+
 
 const Available=(props)=>{
 
@@ -54,6 +55,6 @@ const mapStateToProps=(state)=>{
     }
 }
 
-const mapDispatchToProps={getAvailableDrones}
+const mapDispatchToProps={getAvailableDrones,rentAvailableDrone}
 
 export default connect(mapStateToProps,mapDispatchToProps)(Available)
