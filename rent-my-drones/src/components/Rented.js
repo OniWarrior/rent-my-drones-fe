@@ -25,7 +25,7 @@ const Rented =()=>{
         <div className='renter-container'>
             <LoggedInNavigation/>
             <div className='renter-header'>
-                <h1>Available Drones</h1>
+                <h1>Rented Drones</h1>
             </div>
             <div className='renter-card-container'>
                 {
