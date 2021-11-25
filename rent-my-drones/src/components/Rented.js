@@ -55,4 +55,7 @@ const Rented =(props)=>{
 
 }
 
+const mapStateToProps=(state)=>{
+    
+}
 export default Rented
