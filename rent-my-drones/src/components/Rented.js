@@ -22,18 +22,18 @@ const Rented =()=>{
     else{
 
     return (
-        <div className='available-container'>
+        <div className='renter-container'>
             <LoggedInNavigation/>
-            <div className='available-header'>
+            <div className='renter-header'>
                 <h1>Available Drones</h1>
             </div>
-            <div className='available-card-container'>
+            <div className='renter-card-container'>
                 {
                     props.drones.map((char,index)=>{
                         return( 
-                        <Card className='available-card'title={char.drone_name}key={index} data={char} >
+                        <Card className='renter-card'title={char.drone_name}key={index} data={char} >
                             <div className='drone-image-container' >
-                              <img className='drone-images'src={char.drone_image} alt='The drone your buying'/>                                        
+                              <img className='drone-images'src={char.drone_image} alt='The drone your returning'/>                                        
                             </div> 
                             <div className='drone-info'>
                               <p>$ {char.drone_cost}</p>
