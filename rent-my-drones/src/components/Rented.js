@@ -7,7 +7,7 @@ const Rented =()=>{
     const initialValue = false
     const [isReturned,setIsReturned] = useState(initialValue)
     useEffect(()=>{
-        props.getAvailableDrones()
+        props.getRentedDrones()
     },[isReturned])
     
     const handleReturnButton=(e,id)=>{
