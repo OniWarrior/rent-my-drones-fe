@@ -21,6 +21,7 @@ const Available=(props)=>{
                 isRented:!isRented
             })
         ))
+        setIsRented(()=>({isRented:!isRented}))
     }
 
     if(props.loading){
