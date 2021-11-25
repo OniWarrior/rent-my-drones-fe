@@ -31,7 +31,7 @@ const Rented =(props)=>{
             </div>
             <div className='renter-card-container'>
                 {
-                    props.drones.map((char,index)=>{
+                    props.rentedDrones.map((char,index)=>{
                         return( 
                         <Card className='renter-card'title={char.drone_name}key={index} data={char} >
                             <div className='drone-image-container' >
