@@ -7,7 +7,7 @@ import { getAvailableDrones,rentAvailableDrone } from "../state/actions/Availabl
 
 
 const Available=(props)=>{
-
+    const [isRented,setIsRented] = useState()
     useEffect(()=>{
         props.getAvailableDrones()
     },[])
