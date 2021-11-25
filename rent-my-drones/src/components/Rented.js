@@ -7,6 +7,7 @@ import '../styles/Rented.css'
 import { useHistory } from "react-router";
 
 const Rented =(props)=>{
+    const {push} = useHistory()
     const initialValue = false
     const [isReturned,setIsReturned] = useState(initialValue)
     useEffect(()=>{
