@@ -17,7 +17,8 @@ const Rented =(props)=>{
     const handleReturnButton=(e,id)=>{
         e.preventDefault()        
         props.returnRentedDrone(id)
-        setIsReturned(()=>({isReturned:!isReturned}))        
+        setIsReturned(()=>({isReturned:!isReturned}))   
+        push('/Dashboard/available')     
     }
 
     
