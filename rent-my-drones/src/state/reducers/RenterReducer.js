@@ -12,5 +12,8 @@ const initialState={
 }
 
 const rentedReducer=(state=initialState,action)=>{
+    switch(action.type){
+        
+    }
 
 }
