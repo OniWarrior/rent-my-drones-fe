@@ -3,7 +3,7 @@ import '../styles/Login.css'
 import { Input,Form,Button } from "antd";
 import { Link } from 'react-router-dom'
 import UnsignedNavigation from './UnsignedNavigation'
-import FormSchema from '../formSchemas/FormSchema'
+import LoginFormSchema from '../formSchemas/LoginFormSchema'
 import { useValidation } from "../hooks/useValidation";
 import { useHistory } from "react-router";
 import { useState } from "react";
@@ -16,12 +16,12 @@ import { postLogin } from '../state/actions/LoginActions';
 const LoginPage =(props)=>{
 
   const {push} = useHistory()
-  const [login,errors,setLogin] = useValidation(FormSchema)
+  const [login,errors,setLogin] = useValidation(LoginFormSchema)
   const initialDisabled = true
   const [disabled,setDisabled] = useState(initialDisabled)
 
   const change=(event)=>{
-    setLogin(event,FormSchema)
+    setLogin(event,LoginFormSchema)
   }
   
   const handleDisabled=(e)=>{
