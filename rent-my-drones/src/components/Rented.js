@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { getRentedDrones,returnRentedDrone } from "../state/actions/RentedActions";
 import '../styles/Rented.css'
 
-const Rented =()=>{
+const Rented =(props)=>{
     const initialValue = false
     const [isReturned,setIsReturned] = useState(initialValue)
     useEffect(()=>{
