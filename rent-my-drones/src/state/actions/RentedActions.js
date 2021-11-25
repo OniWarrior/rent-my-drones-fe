@@ -8,7 +8,7 @@ export const getRentedDrones=()=>(dispatch)=>{
     dispatch({type:RENTED_START})
     axiosWithAuth().get(`/api/users/rented`)
     .then(success=>{
-        
+        dispatch({type:RENTED_SUCCESS,payload:success.data})
     })
 
 }
