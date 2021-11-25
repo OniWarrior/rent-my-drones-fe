@@ -54,5 +54,8 @@
     .available-card{
         border-radius: 10px;
     }
+    .drone-button Button{
+        border-radius: 30px;
+    }
     
 }
