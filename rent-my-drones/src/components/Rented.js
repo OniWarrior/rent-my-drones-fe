@@ -5,7 +5,7 @@ import '../styles/Rented.css'
 
 const Rented =()=>{
     const initialValue = false
-    const [isRented,setIsRented] = useState(initialValue)
+    const [isReturned,setIsReturned] = useState(initialValue)
     useEffect(()=>{
         props.getAvailableDrones()
     },[isRented])
