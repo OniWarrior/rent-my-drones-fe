@@ -16,11 +16,7 @@ const Available=(props)=>{
     
     const handleRentButton=(e,index)=>{
         e.preventDefault()
-        props.rentAvailableDrone(index,setIsRented(
-            ()=>({
-                isRented:!isRented
-            })
-        ))
+        props.rentAvailableDrone(index)
         setIsRented(()=>({isRented:!isRented}))
     }
 
