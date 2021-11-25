@@ -17,6 +17,8 @@ const rentedReducer=(state=initialState,action)=>{
             return {...state,loading:true}
         case RENTED_SUCCESS:
             return {...state,loading:false,rentedDrones:action.payload}
+        case RENTED_FAILURE:
+            return {...state,loading:false,error:action.payload}
 
     }
 
