@@ -21,7 +21,7 @@ const rentedReducer=(state=initialState,action)=>{
             return {...state,loading:false,error:action.payload}
         default:
             return state
-
     }
-
 }
+
+export default rentedReducer
