@@ -10,3 +10,5 @@ const LoginFormSchema = yup.object().shape({
      .trim()
      .required("Username/Password is required. Please fill out field")
 })
+
+export default LoginFormSchema
