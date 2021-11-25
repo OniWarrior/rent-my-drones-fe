@@ -1,7 +1,7 @@
 import * as yup from 'yup'
 
 
-const FormSchema= yup.object().shape({
+const SignupFormSchema= yup.object().shape({
     username:yup.string()
      .trim()
      .required("Username is required. Please fill out field")
@@ -13,4 +13,4 @@ const FormSchema= yup.object().shape({
 
 })
 
-export default FormSchema
+export default SignupFormSchema
