@@ -1,6 +1,8 @@
-import React from "react";
-import { Button } from "antd";
+import React, { useEffect,useState } from "react";
+import { Button,Card} from "antd";
 import LoggedInNavigation from "./LoggedInNavigation";
+import { connect } from "react-redux";
+import { getRentedDrones,returnRentedDrone } from "../state/actions/AvailableActions";
 import '../styles/Rented.css'
 
 const Rented =()=>{
