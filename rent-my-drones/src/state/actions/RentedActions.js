@@ -6,5 +6,6 @@ export const RENTED_FAILURE='RENTED_FAILURE'
 
 export const getRentedDrones=()=>(dispatch)=>{
     dispatch({type:RENTED_START})
+    axiosWithAuth().get(`/api/users/rented`)
 
 }
