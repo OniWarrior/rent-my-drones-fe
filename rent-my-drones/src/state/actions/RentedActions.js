@@ -5,5 +5,6 @@ export const RENTED_SUCCESS='RENTED_SUCCESS'
 export const RENTED_FAILURE='RENTED_FAILURE'
 
 export const getRentedDrones=()=>(dispatch)=>{
-    
+    dispatch({type:RENTED_START})
+
 }
