@@ -10,7 +10,7 @@ const Rented =()=>{
         props.getAvailableDrones()
     },[isReturned])
     
-    const handleRentButton=(e,id)=>{
+    const handleReturnButton=(e,id)=>{
         e.preventDefault()        
         props.returnRentedDrone(id)
         setIsReturned(()=>({isReturned:!isReturned}))        
