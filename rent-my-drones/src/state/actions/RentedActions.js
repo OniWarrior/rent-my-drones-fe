@@ -11,7 +11,7 @@ export const getRentedDrones=()=>(dispatch)=>{
         dispatch({type:RENTED_SUCCESS,payload:success.data})
     })
     .catch(err=>{
-        
+        dispatch({type:RENTED_FAILURE,payload:err.message})
     })
 
 }
