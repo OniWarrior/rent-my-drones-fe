@@ -6,8 +6,10 @@ import { connect } from "react-redux";
 import { getAvailableDrones,rentAvailableDrone } from "../state/actions/AvailableActions";
 
 
+
 const Available=(props)=>{
-    const [isRented,setIsRented] = useState()
+    const initialValue = false
+    const [isRented,setIsRented] = useState(initialValue)
     useEffect(()=>{
         props.getAvailableDrones()
     },[])
