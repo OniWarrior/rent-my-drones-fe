@@ -23,7 +23,7 @@ export const returnRentedDrone=(id)=>(dispatch)=>{
         dispatch({type:RENTED_SUCCESS,payload:success.data})
     })
     .catch(err=>{
-        
+        dispatch({type:RENTED_FAILURE,payload:err.message})
     })
 
 }
