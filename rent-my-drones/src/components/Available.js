@@ -15,7 +15,7 @@ const Available=(props)=>{
     },[isRented])
     
     const handleRentButton=(e)=>{
-
+        e.preventDefault()
     }
 
     if(props.loading){
