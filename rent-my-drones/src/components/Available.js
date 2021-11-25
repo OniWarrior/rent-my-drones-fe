@@ -18,7 +18,8 @@ const Available=(props)=>{
     const handleRentButton=(e,id)=>{
         e.preventDefault()        
         props.rentAvailableDrone(id)
-        setIsRented(()=>({isRented:!isRented}))        
+        setIsRented(()=>({isRented:!isRented})) 
+        push('/Dashboard/rented')       
     }
 
     if(props.loading){
