@@ -55,6 +55,6 @@ const mapStateToProps=(state)=>{
     }
 }
 
-const mapDispatchToProps={getAvailableDrones}
+const mapDispatchToProps={getAvailableDrones,rentAvailableDrone}
 
 export default connect(mapStateToProps,mapDispatchToProps)(Available)
