@@ -4,6 +4,7 @@ import LoggedInNavigation from "./LoggedInNavigation";
 import { connect } from "react-redux";
 import { getRentedDrones,returnRentedDrone } from "../state/actions/RentedActions";
 import '../styles/Rented.css'
+import { useHistory } from "react-router";
 
 const Rented =(props)=>{
     const initialValue = false
@@ -17,6 +18,8 @@ const Rented =(props)=>{
         props.returnRentedDrone(id)
         setIsReturned(()=>({isReturned:!isReturned}))        
     }
+
+    
 
     if(props.loading){
         return(<h1>...Loading</h1>)
