@@ -10,3 +10,7 @@ const initialState={
     loading:true,
     error:''
 }
+
+const rentedReducer=(state=initialState,action)=>{
+
+}
