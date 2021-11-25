@@ -18,7 +18,7 @@ function App() {
         <Route path='/Signup' component={Signup}/>
         <ProtectedRoute exact path='/Dashboard' component={RenterDashboard}/>
         <ProtectedRoute path='/Dashboard/available' component={Available}/>
-        <Route path='/Dashboard/rented' component={Rented}  />      
+        <ProtectedRoute path='/Dashboard/rented' component={Rented}  />      
       </Switch>
 
 
