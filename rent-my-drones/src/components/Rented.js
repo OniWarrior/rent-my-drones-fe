@@ -12,7 +12,7 @@ const Rented =()=>{
     
     const handleRentButton=(e,id)=>{
         e.preventDefault()        
-        props.rentAvailableDrone(id)
+        props.returnRentedDrone(id)
         setIsReturned(()=>({isReturned:!isReturned}))        
     }
 
