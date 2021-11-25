@@ -26,6 +26,19 @@ const Rented =(props)=>{
     if(props.loading){
         return(<h1>...Loading</h1>)
     }
+    else if(props.rentedDrones.length ===0){
+        return (
+            <div className='renter-container'>
+            <LoggedInNavigation/>
+            <div className='renter-header'>
+                <h1>Rented Drones</h1>
+            </div>
+            <div className='renter-card-container'>
+             <h2 style={{fontSize:"xx-large"}}>No Rented Drones</h2>
+            </div>
+        </div>
+        )
+    }
     else{
 
     return (

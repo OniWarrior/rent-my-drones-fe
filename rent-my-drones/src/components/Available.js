@@ -17,13 +17,26 @@ const Available=(props)=>{
     
     const handleRentButton=(e,id)=>{
         e.preventDefault()        
-        props.rentAvailableDrone(id)
-        setIsRented(()=>({isRented:!isRented})) 
-        push('/Dashboard/rented')       
+        props.rentAvailableDrone(id,push)
+        setIsRented(()=>({isRented:!isRented}))  
+        push('/Dashboard/rented')             
     }
 
     if(props.loading){
         return(<h1>...Loading</h1>)
+    }
+    else if( props.drones.length ===0){
+        return (
+            <div className='available-container'>
+            <LoggedInNavigation/>
+            <div className='available-header'>
+                <h1>Available Drones</h1>
+            </div>
+            <div className='available-card-container'>
+             <h2 style={{fontSize:"xx-large"}}>No Available Drones</h2>
+            </div>
+        </div>
+        )
     }
     else{
 
