@@ -16,12 +16,12 @@ import { postLogin } from '../state/actions/LoginActions';
 const LoginPage =(props)=>{
 
   const {push} = useHistory()
-  const [login,errors,setLogin] = useValidation(FormSchema)
+  const [login,errors,setLogin] = useValidation(LoginFormSchema)
   const initialDisabled = true
   const [disabled,setDisabled] = useState(initialDisabled)
 
   const change=(event)=>{
-    setLogin(event,FormSchema)
+    setLogin(event,LoginFormSchema)
   }
   
   const handleDisabled=(e)=>{
