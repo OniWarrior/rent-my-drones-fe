@@ -4,10 +4,11 @@ import LoggedInNavigation from "./LoggedInNavigation";
 import '../styles/Available.css'
 import { connect } from "react-redux";
 import { getAvailableDrones,rentAvailableDrone } from "../state/actions/AvailableActions";
-
+import { useHistory } from "react-router";
 
 
 const Available=(props)=>{    
+    const {push}=useHistory()
     const initialValue = false
     const [isRented,setIsRented] = useState(initialValue)
     useEffect(()=>{
@@ -17,7 +18,8 @@ const Available=(props)=>{
     const handleRentButton=(e,id)=>{
         e.preventDefault()        
         props.rentAvailableDrone(id)
-        setIsRented(()=>({isRented:!isRented}))        
+        setIsRented(()=>({isRented:!isRented})) 
+        push('/Dashboard/rented')       
     }
 
     if(props.loading){
