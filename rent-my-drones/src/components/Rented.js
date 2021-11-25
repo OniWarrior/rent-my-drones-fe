@@ -26,6 +26,9 @@ const Rented =(props)=>{
     if(props.loading){
         return(<h1>...Loading</h1>)
     }
+    else if(props.rentedDrones.length ===0){
+        
+    }
     else{
 
     return (
