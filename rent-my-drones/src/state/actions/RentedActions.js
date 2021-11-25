@@ -18,5 +18,6 @@ export const getRentedDrones=()=>(dispatch)=>{
 
 export const returnRentedDrone=(id)=>(dispatch)=>{
     dispatch({type:RENTED_START})
+    axiosWithAuth().put(`/api/users/rented/${id}`)
 
 }
