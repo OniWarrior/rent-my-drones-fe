@@ -42,7 +42,7 @@ const Available=(props)=>{
                               <p>{char.drone_description}</p>                                  
                             </div>   
                             <div className='drone-button'>
-                              <Button type='ghost'>Rent Drone</Button>     
+                              <Button type='ghost' onClick={(e)=>handleRentButton(e,index)}>Rent Drone</Button>     
                             </div>
                                                   
                         </Card>)
