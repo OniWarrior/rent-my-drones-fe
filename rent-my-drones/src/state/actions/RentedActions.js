@@ -16,6 +16,7 @@ export const getRentedDrones=()=>(dispatch)=>{
 
 }
 
-export const returnRentedDrone=()=>(dispatch)=>{
-    
+export const returnRentedDrone=(id)=>(dispatch)=>{
+    dispatch({type:RENTED_START})
+
 }
