@@ -56,6 +56,11 @@ const Rented =(props)=>{
 }
 
 const mapStateToProps=(state)=>{
-    
+    return{
+        rentedDrones:state.rentedReducer.rentedDrones,
+        loading:state.rentedReducer.loading,
+        error:state.rentedReducer.error
+    }
+
 }
 export default Rented
