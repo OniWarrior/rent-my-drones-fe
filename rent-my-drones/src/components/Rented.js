@@ -40,7 +40,7 @@ const Rented =()=>{
                               <p>{char.drone_description}</p>                                  
                             </div>   
                             <div className='drone-button'>
-                              <Button type='ghost' onClick={(e)=>handleReturnButton(e,char.drone_id)}>Rent Drone</Button>     
+                              <Button type='ghost' onClick={(e)=>handleReturnButton(e,char.drone_id)}>Return Drone</Button>     
                             </div>
                                                   
                         </Card>)
