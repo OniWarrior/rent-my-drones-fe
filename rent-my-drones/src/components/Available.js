@@ -12,7 +12,8 @@ const Available=(props)=>{
     const [isRented,setIsRented] = useState(initialValue)
     useEffect(()=>{
         props.getAvailableDrones()
-    },[])
+    },[isRented])
+    
     if(props.loading){
         return(<h1>...Loading</h1>)
     }
