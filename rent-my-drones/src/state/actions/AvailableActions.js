@@ -20,7 +20,7 @@ export const getAvailableDrones=()=>(dispatch)=>{
 
 export const rentAvailableDrone=(id)=>(dispatch)=>{
     dispatch({type:AVAILABLE_START})
-    axiosWithAuth().put(`/api/users/available/${id}`,isRented)
+    axiosWithAuth().put(`/api/users/available/${id}`)
     .then(success=>{
         dispatch({type:AVAILABLE_SUCCESS,payload:success.data})
     })
