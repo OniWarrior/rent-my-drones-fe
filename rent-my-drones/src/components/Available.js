@@ -14,6 +14,10 @@ const Available=(props)=>{
         props.getAvailableDrones()
     },[isRented])
     
+    const handleRentButton=(e)=>{
+
+    }
+
     if(props.loading){
         return(<h1>...Loading</h1>)
     }
