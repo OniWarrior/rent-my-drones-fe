@@ -2,7 +2,7 @@ import React from "react";
 import { Input,Form,Button } from "antd";
 import '../styles/Signup.css'
 import UnsignedNavigation from "./UnsignedNavigation";
-import FormSchema from '../formSchemas/SignupFormSchema'
+import SignupFormSchema from '../formSchemas/SignupFormSchema'
 import { useValidation } from "../hooks/useValidation";
 import { useHistory } from "react-router";
 import { useState } from "react";
@@ -11,12 +11,12 @@ import { connect } from "react-redux";
 
 const Signup =(props)=>{
   const {push} = useHistory()
-  const [signup,errors,setSignup] = useValidation(FormSchema)
+  const [signup,errors,setSignup] = useValidation(SignupFormSchema)
   const initialDisabled = 1
   const [disabled,setDisabled] = useState(initialDisabled)
 
   const change=(event)=>{
-    setSignup(event,FormSchema)
+    setSignup(event,SignupFormSchema)
   }
   
   const handleDisabled=(e)=>{
