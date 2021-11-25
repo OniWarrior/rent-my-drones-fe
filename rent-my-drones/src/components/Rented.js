@@ -63,4 +63,6 @@ const mapStateToProps=(state)=>{
     }
 
 }
+
+const mapDispatchToProps={getRentedDrones,returnRentedDrone}
 export default Rented
