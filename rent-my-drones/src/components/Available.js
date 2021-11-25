@@ -8,6 +8,7 @@ import { useHistory } from "react-router";
 
 
 const Available=(props)=>{    
+    const {push}=useHistory()
     const initialValue = false
     const [isRented,setIsRented] = useState(initialValue)
     useEffect(()=>{
