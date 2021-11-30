@@ -1,4 +1,4 @@
-import Password from 'antd/lib/input/Password'
+
 import * as yup from 'yup'
 
 
