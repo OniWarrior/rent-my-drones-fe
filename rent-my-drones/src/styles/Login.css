@@ -1,8 +1,14 @@
 .container{
     box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.301) ; 
     width:40%;
-    height:70vh;
+    height:20%;   
     
+}
+
+.login-container{
+    max-height:35em;
+    min-height: 35em;
+
 }
 
 .container h2{
@@ -77,4 +83,11 @@
 
 .errors{
     color:red;
+  }
+
+
+  @media  screen and (max-width:480px) {
+      .container{
+          border-radius: 30px;
+      }
   }
