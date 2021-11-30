@@ -13,6 +13,7 @@ const Available=(props)=>{
     const [isRented,setIsRented] = useState(initialValue)
     useEffect(()=>{
         props.getAvailableDrones()
+        // eslint-disable-next-line
     },[isRented])
     
     const handleRentButton=(e,id)=>{

@@ -12,6 +12,7 @@ const Rented =(props)=>{
     const [isReturned,setIsReturned] = useState(initialValue)
     useEffect(()=>{
         props.getRentedDrones()
+        // eslint-disable-next-line
     },[isReturned])
     
     const handleReturnButton=(e,id)=>{
