@@ -1,4 +1,4 @@
-.navbar{
+.nav-row{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -7,14 +7,18 @@
     background-color:black;
 }
 
-.navbar Button{
+.nav-container{   
+    box-shadow: 0px 0px 2px rgba(19, 0, 128, 0.8);   
+}
+
+.btn-nav{
     background-color:black;
     border:none;
     font-size: larger;
     color:white;
 }
 
-.navbar Button:hover{    
+.btn-nav:hover{    
     opacity: 0.5;
     animation:nav-button-animation linear 0.5s infinite;
 }
@@ -44,12 +48,6 @@
 }
 
 
-
-
-
-.nav-container{   
-    box-shadow: 0px 0px 2px rgba(19, 0, 128, 0.8);   
-}
 
 @media screen and (max-width:480px) {
     .nav-container{

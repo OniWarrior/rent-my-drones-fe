@@ -1,24 +1,26 @@
-import React from 'react'
+
 import { Routes, Route } from 'react-router-dom'
-import Home from './components/Home';
-import LoginPage from './components/LoginPage';
-import RenterDashboard from './components/RenterDashboard';
-import Signup from './components/Signup';
-import Available from './components/Available';
+import Home from './components/home.jsx';
+import LoginPage from './components/login';
+import RenterDashboard from './components/renter-dashboard.jsx';
+import Signup from './components/signup.jsx';
+import Available from './components/available.jsx';
 import './styles/App.css'
-import ProtectedRoute from './components/utils/ProtectedRoute'
-import Rented from './components/Rented';
+import ProtectedRoute from './components/utils/protected-route.jsx'
+import Rented from './components/rented.jsx';
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route exact path='/' component={Home} />
-        <Route path='/Login' component={LoginPage} />
-        <Route path='/Signup' component={Signup} />
-        <ProtectedRoute exact path='/Dashboard' component={RenterDashboard} />
-        <ProtectedRoute path='/Dashboard/available' component={Available} />
-        <ProtectedRoute path='/Dashboard/rented' component={Rented} />
+        <Route path='/' element={<Home />} />
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/signup' component={<Signup />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path='/dashboard' element={<RenterDashboard />} />
+          <Route path='/dashboard/available' element={<Available />} />
+          <Route path='/dashboard/rented' element={<Rented />} />
+        </Route>
       </Routes>
 
 
