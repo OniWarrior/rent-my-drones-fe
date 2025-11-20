@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button, Card } from "antd";
 import LoggedInNavigation from "./logged-in-navigation";
 import { connect } from "react-redux";
-import { getRentedDrones, returnRentedDrone } from "../state/actions/RentedActions";
+import { getRentedDrones, returnRentedDrone } from "../state/actions/rented-actions";
 import '../styles/Rented.css'
 import { useHistory } from "react-router";
 

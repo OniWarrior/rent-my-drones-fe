@@ -1,13 +1,13 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Home from './components/Home';
+import Home from './components/home.jsx';
 import LoginPage from './components/login';
-import RenterDashboard from './components/RenterDashboard';
+import RenterDashboard from './components/renter-dashboard.jsx';
 import Signup from './components/signup.jsx';
-import Available from './components/Available';
+import Available from './components/available.jsx';
 import './styles/App.css'
-import ProtectedRoute from './components/utils/ProtectedRoute'
-import Rented from './components/Rented';
+import ProtectedRoute from './components/utils/protected-route.jsx'
+import Rented from './components/rented.jsx';
 
 function App() {
   return (

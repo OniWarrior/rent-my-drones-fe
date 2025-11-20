@@ -1,31 +1,31 @@
-import axiosWithAuth from '../../components/utils/AxiosWithAuth'
+import axiosWithAuth from '../../components/utils/axios-with-auth.jsx';
 
 
-export const AVAILABLE_START = 'AVAILABLE_START'
-export const AVAILABLE_SUCCESS = 'AVAILABLE_SUCCESS'
-export const AVAILABLE_FAILURE = 'AVAILABLE_FAILURE'
+export const AVAILABLE_START = 'AVAILABLE_START';
+export const AVAILABLE_SUCCESS = 'AVAILABLE_SUCCESS';
+export const AVAILABLE_FAILURE = 'AVAILABLE_FAILURE';
 
 
-export const getAvailableDrones=()=>(dispatch)=>{
-    dispatch({type:AVAILABLE_START})
+export const getAvailableDrones = () => (dispatch) => {
+    dispatch({ type: AVAILABLE_START })
     axiosWithAuth().get(`/api/users/available`)
-    .then(success=>{
-        dispatch({type:AVAILABLE_SUCCESS,payload:success.data})        
-    })
-    .catch(err=>{
-        dispatch({type:AVAILABLE_FAILURE,payload:err.message})
-    })
+        .then(success => {
+            dispatch({ type: AVAILABLE_SUCCESS, payload: success.data })
+        })
+        .catch(err => {
+            dispatch({ type: AVAILABLE_FAILURE, payload: err.message })
+        })
 
 }
 
-export const rentAvailableDrone=(id)=>(dispatch)=>{
-    dispatch({type:AVAILABLE_START})
+export const rentAvailableDrone = (id) => (dispatch) => {
+    dispatch({ type: AVAILABLE_START })
     axiosWithAuth().put(`/api/users/available/${id}`)
-    .then(success=>{
-        dispatch({type:AVAILABLE_SUCCESS,payload:success.data})       
-    })
-    .catch(err=>{
-        dispatch({type:AVAILABLE_FAILURE,payload:err.message})
-    })
+        .then(success => {
+            dispatch({ type: AVAILABLE_SUCCESS, payload: success.data })
+        })
+        .catch(err => {
+            dispatch({ type: AVAILABLE_FAILURE, payload: err.message })
+        })
 
 }
