@@ -1,11 +1,11 @@
-import React from 'react'
-import '../styles/Login.css'
+
+import '../styles/login.css';
 import { Input, Form, Button } from "antd";
-import { Link } from 'react-router-dom'
-import UnsignedNavigation from './unsigned-navigation'
-import LoginFormSchema from '../formSchemas/login-form-schema'
+import { Link } from 'react-router-dom';
+import UnsignedNavigation from './unsigned-navigation';
+import LoginFormSchema from '../formSchemas/login-form-schema';
 import { useValidation } from "../hooks/useValidation";
-import { useHistory } from "react-router";
+import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import { connect } from "react-redux";
 import { postLogin } from '../state/actions/login-actions';
@@ -15,17 +15,17 @@ import { postLogin } from '../state/actions/login-actions';
 
 const LoginPage = (props) => {
 
-  const { push } = useHistory()
-  const [login, errors, setLogin] = useValidation(LoginFormSchema)
-  const initialDisabled = true
-  const [disabled, setDisabled] = useState(initialDisabled)
+  const navigate = useNavigate();
+  const [login, errors, setLogin] = useValidation(LoginFormSchema);
+  const initialDisabled = true;
+  const [disabled, setDisabled] = useState(initialDisabled);
 
   const change = (event) => {
-    setLogin(event, LoginFormSchema)
+    setLogin(event, LoginFormSchema);
   }
 
   const handleDisabled = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (login.username.length >= 12 && login.password.length >= 12) {
       setDisabled(() => ({
         disabled: !disabled
@@ -40,7 +40,7 @@ const LoginPage = (props) => {
 
   const onFormSubmit = () => {
 
-    props.postLogin(login, push)
+    props.postLogin(login, navigate);
   }
 
   return (

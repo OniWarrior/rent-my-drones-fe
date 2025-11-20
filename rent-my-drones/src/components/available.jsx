@@ -1,26 +1,26 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Card } from "antd";
 import LoggedInNavigation from "./logged-in-navigation";
 import '../styles/available.css'
 import { connect } from "react-redux";
 import { getAvailableDrones, rentAvailableDrone } from "../state/actions/available-actions";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 
 
 const Available = (props) => {
-    const { push } = useHistory()
-    const initialValue = false
-    const [isRented, setIsRented] = useState(initialValue)
+    const navigate = useNavigate();
+    const initialValue = false;
+    const [isRented, setIsRented] = useState(initialValue);
     useEffect(() => {
-        props.getAvailableDrones()
+        props.getAvailableDrones();
         // eslint-disable-next-line
     }, [isRented])
 
     const handleRentButton = (e, id) => {
-        e.preventDefault()
-        props.rentAvailableDrone(id, push)
-        setIsRented(() => ({ isRented: !isRented }))
-        push('/Dashboard/rented')
+        e.preventDefault();
+        props.rentAvailableDrone(id);
+        setIsRented(() => ({ isRented: !isRented }));
+        navigate('/dashboard/rented');
     }
 
     if (props.loading) {
