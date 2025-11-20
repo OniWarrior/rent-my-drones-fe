@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Card } from "antd";
 import LoggedInNavigation from "./logged-in-navigation";
 import { connect } from "react-redux";
 import { getRentedDrones, returnRentedDrone } from "../state/actions/rented-actions";
-import '../styles/Rented.css'
-import { useHistory } from "react-router";
+import '../styles/rented.css'
+import { useNavigate } from "react-router";
 
 const Rented = (props) => {
-    const { push } = useHistory()
-    const initialValue = false
-    const [isReturned, setIsReturned] = useState(initialValue)
+    const navigate = useNavigate();
+    const initialValue = false;
+    const [isReturned, setIsReturned] = useState(initialValue);
     useEffect(() => {
-        props.getRentedDrones()
+        props.getRentedDrones();
         // eslint-disable-next-line
     }, [isReturned])
 
     const handleReturnButton = (e, id) => {
-        e.preventDefault()
-        props.returnRentedDrone(id)
-        setIsReturned(() => ({ isReturned: !isReturned }))
-        push('/Dashboard/available')
+        e.preventDefault();
+        props.returnRentedDrone(id);
+        setIsReturned(() => ({ isReturned: !isReturned }));
+        navigate('/dashboard/available');
     }
 
 

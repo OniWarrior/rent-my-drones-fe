@@ -9,7 +9,7 @@ const RenterDashboard = () => {
 
     const handleAvailable = (e) => {
         e.preventDefault();
-        navigate('/dashboard/available')
+        navigate('/dashboard/available');
     }
 
     const handleRented = (e) => {
