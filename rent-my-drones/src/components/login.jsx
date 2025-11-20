@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/Login.css'
 import { Input, Form, Button } from "antd";
 import { Link } from 'react-router-dom'
-import UnsignedNavigation from './UnsignedNavigation'
+import UnsignedNavigation from './unsigned-navigation'
 import LoginFormSchema from '../formSchemas/login-form-schema'
 import { useValidation } from "../hooks/useValidation";
 import { useHistory } from "react-router";

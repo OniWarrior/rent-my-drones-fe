@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './components/Home';
 import LoginPage from './components/login';
 import RenterDashboard from './components/RenterDashboard';
-import Signup from './components/Signup';
+import Signup from './components/signup.jsx';
 import Available from './components/Available';
 import './styles/App.css'
 import ProtectedRoute from './components/utils/ProtectedRoute'
@@ -13,12 +13,12 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route exact path='/' component={Home} />
-        <Route path='/Login' component={LoginPage} />
-        <Route path='/Signup' component={Signup} />
-        <ProtectedRoute exact path='/Dashboard' component={RenterDashboard} />
-        <ProtectedRoute path='/Dashboard/available' component={Available} />
-        <ProtectedRoute path='/Dashboard/rented' component={Rented} />
+        <Route exact path='/' element={<Home />} />
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/signup' component={<Signup />} />
+        <ProtectedRoute exact path='/dashboard' element={<RenterDashboard />} />
+        <ProtectedRoute path='/dashboard/available' component={<Available />} />
+        <ProtectedRoute path='/dashboard/rented' component={<Rented />} />
       </Routes>
 
 

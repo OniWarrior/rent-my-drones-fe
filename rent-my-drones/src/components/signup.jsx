@@ -1,26 +1,26 @@
 import React from "react";
 import { Input, Form, Button } from "antd";
 import '../styles/Signup.css'
-import UnsignedNavigation from "./UnsignedNavigation";
+import UnsignedNavigation from "./unsigned-navigation";
 import SignupFormSchema from '../formSchemas/signup-form-schema'
 import { useValidation } from "../hooks/useValidation";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 import { useState } from "react";
 import { register } from "../state/actions/SignupActions";
 import { connect } from "react-redux";
 
 const Signup = (props) => {
-  const { push } = useHistory()
-  const [signup, errors, setSignup] = useValidation(SignupFormSchema)
-  const initialDisabled = 1
-  const [disabled, setDisabled] = useState(initialDisabled)
+  const navigate = useNavigate();
+  const [signup, errors, setSignup] = useValidation(SignupFormSchema);
+  const initialDisabled = 1;
+  const [disabled, setDisabled] = useState(initialDisabled);
 
   const change = (event) => {
-    setSignup(event, SignupFormSchema)
+    setSignup(event, SignupFormSchema);
   }
 
   const handleDisabled = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (signup.username.length >= 12 && signup.password.length >= 12) {
       setDisabled(() => ({
         disabled: !disabled
@@ -34,8 +34,8 @@ const Signup = (props) => {
   }
 
   const onFormSubmit = (e) => {
-    e.preventDefault()
-    props.register(signup, push)
+    e.preventDefault();
+    props.register(signup, navigate);
   }
 
   return (
