@@ -1,27 +1,32 @@
-import React from "react";
+import React from 'react'
+import '../styles/Login.css'
 import { Input, Form, Button } from "antd";
-import '../styles/Signup.css'
-import UnsignedNavigation from "./UnsignedNavigation";
-import SignupFormSchema from '../formSchemas/signup-form-schema'
+import { Link } from 'react-router-dom'
+import UnsignedNavigation from './UnsignedNavigation'
+import LoginFormSchema from '../formSchemas/login-form-schema'
 import { useValidation } from "../hooks/useValidation";
 import { useHistory } from "react-router";
 import { useState } from "react";
-import { register } from "../state/actions/SignupActions";
 import { connect } from "react-redux";
+import { postLogin } from '../state/actions/LoginActions';
 
-const Signup = (props) => {
+
+
+
+const LoginPage = (props) => {
+
   const { push } = useHistory()
-  const [signup, errors, setSignup] = useValidation(SignupFormSchema)
-  const initialDisabled = 1
+  const [login, errors, setLogin] = useValidation(LoginFormSchema)
+  const initialDisabled = true
   const [disabled, setDisabled] = useState(initialDisabled)
 
   const change = (event) => {
-    setSignup(event, SignupFormSchema)
+    setLogin(event, LoginFormSchema)
   }
 
   const handleDisabled = (e) => {
     e.preventDefault()
-    if (signup.username.length >= 12 && signup.password.length >= 12) {
+    if (login.username.length >= 12 && login.password.length >= 12) {
       setDisabled(() => ({
         disabled: !disabled
       }))
@@ -33,19 +38,18 @@ const Signup = (props) => {
     }
   }
 
-  const onFormSubmit = (e) => {
-    e.preventDefault()
-    props.register(signup, push)
+  const onFormSubmit = () => {
+
+    props.postLogin(login, push)
   }
 
   return (
     <div>
       <UnsignedNavigation />
-      <div className="signup-container">
+      <div className="login-container">
         <Form className="container" onSubmitCapture={onFormSubmit}>
-          <h2>Sign up</h2>
+          <h2>Login</h2>
           <div className='input-group'>
-
             <Form.Item name='username' label='username'>
 
               <Input
@@ -75,26 +79,27 @@ const Signup = (props) => {
               </div>
             </Form.Item>
 
-            <Button type='primary' htmlType='submit' disabled={handleDisabled} >Submit</Button>
+            <Button type='primary' htmlType='submit' disabled={handleDisabled}>Login</Button>
 
+            <p>If you don't have an account
+              click <Link to='/Signup'>here</Link>
+            </p>
           </div>
         </Form>
       </div>
     </div>
   )
 
-
-
 }
 
 const mapStateToProps = (state) => {
   return {
-    signup: state.signupReducer.signup,
-    loading: state.signupReducer.loading,
-    error: state.signupReducer.error
+    login: state.loginReducer.login,
+    loading: state.loginReducer.loading,
+    error: state.loginReducer.error
   }
 }
 
-const mapDispatchToProps = { register }
+const mapDispatchToProps = { postLogin }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Signup)
+export default connect(mapStateToProps, mapDispatchToProps)(LoginPage)
