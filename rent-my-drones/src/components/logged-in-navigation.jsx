@@ -1,32 +1,32 @@
 import React from "react";
-import {Row, Button } from 'antd';
-import { useHistory } from "react-router";
+import { Row, Button } from 'antd';
+import { useNavigate } from "react-router";
 import '../styles/Navigation.css'
 
-const LoggedInNavigation=()=>{
-    const {push} = useHistory()
+const LoggedInNavigation = () => {
+    const navigate = useNavigate();
 
-    const goToDashboard=(e)=>{
+    const goToDashboard = (e) => {
         e.preventDefault()
-        push('/Dashboard')
+        navigate('/dashboard')
     }
 
-    const goToAvailable=(e)=>{
+    const goToAvailable = (e) => {
         e.preventDefault()
-        push('/Dashboard/available')
+        navigate('/dashboard/available')
     }
 
-    const goToRented=(e)=>{
+    const goToRented = (e) => {
         e.preventDefault()
-        push('/Dashboard/rented')
+        navigate('/dashboard/rented')
     }
 
-    const logOut=(e)=>{
+    const logOut = (e) => {
         e.preventDefault()
         localStorage.removeItem('token')
-        push('/')
+        navigate('/')
     }
-    return(
+    return (
         <div className='nav-container'>
             <Row className='navbar'>
                 <Button onClick={goToDashboard}>Dashboard</Button>
