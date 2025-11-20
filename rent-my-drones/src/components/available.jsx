@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card } from "antd";
 import LoggedInNavigation from "./logged-in-navigation";
-import '../styles/Available.css'
+import '../styles/available.css'
 import { connect } from "react-redux";
 import { getAvailableDrones, rentAvailableDrone } from "../state/actions/available-actions";
 import { useHistory } from "react-router";

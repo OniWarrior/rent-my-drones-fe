@@ -1,6 +1,6 @@
-import React from "react";
+
 import { Input, Form, Button } from "antd";
-import '../styles/Signup.css'
+import '../styles/signup.css'
 import UnsignedNavigation from "./unsigned-navigation";
 import SignupFormSchema from '../formSchemas/signup-form-schema'
 import { useValidation } from "../hooks/useValidation";

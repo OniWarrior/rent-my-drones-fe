@@ -1,20 +1,20 @@
 import { Button } from 'antd'
-import React from 'react'
-import '../styles/RenterDashboard.css'
-import { useHistory } from 'react-router'
+
+import '../styles/renter-dashboard.css';
+import { useNavigate } from 'react-router';
 import LoggedInNavigation from './logged-in-navigation'
 
 const RenterDashboard = () => {
-    const { push } = useHistory()
+    const navigate = useNavigate();
 
     const handleAvailable = (e) => {
-        e.preventDefault()
-        push('/Dashboard/available')
+        e.preventDefault();
+        navigate('/dashboard/available')
     }
 
     const handleRented = (e) => {
-        e.preventDefault()
-        push('/Dashboard/rented')
+        e.preventDefault();
+        navigate('/dashboard/rented');
     }
 
 

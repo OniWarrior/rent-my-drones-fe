@@ -1,7 +1,7 @@
 
 
-import { Row, Button } from 'antd';
-import '../styles/Navigation.css'
+
+import '../styles/navigation.css'
 import { useNavigate } from "react-router";
 
 
@@ -23,11 +23,11 @@ const UnsignedNavigation = () => {
     }
     return (
         <div className='nav-container'>
-            <Row className='navbar'>
-                <Button onClick={goHome}>Home</Button>
-                <Button onClick={goSignUp}>Sign Up</Button>
-                <Button onClick={goLogin}>Login</Button>
-            </Row>
+            <nav className='nav-row'>
+                <div className="btn-nav btn-home" onClick={goHome}>Home</div>
+                <div className="btn-nav btn-login" onClick={goLogin}>Login</div>
+                <div className="btn-nav btn-signup" onClick={goSignUp}>Signup</div>
+            </nav>
         </div>
     )
 
