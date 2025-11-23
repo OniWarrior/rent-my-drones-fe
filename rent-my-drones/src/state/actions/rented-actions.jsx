@@ -1,4 +1,4 @@
-import axiosWithAuth from "../../components/utils/AxiosWithAuth";
+import axiosWithAuth from "../../components/utils/axios-with-auth";
 
 export const RENTED_START = 'RENTED_START'
 export const RENTED_SUCCESS = 'RENTED_SUCCESS'

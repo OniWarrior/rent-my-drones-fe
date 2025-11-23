@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button, Card } from "antd";
+
 import LoggedInNavigation from "./logged-in-navigation";
 import { connect } from "react-redux";
 import { getRentedDrones, returnRentedDrone } from "../state/actions/rented-actions";
@@ -48,6 +48,7 @@ const Rented = (props) => {
                 <div className='renter-header'>
                     <h1>Rented Drones</h1>
                 </div>
+                {/* 
                 <div className='renter-card-container'>
                     {
                         props.rentedDrones.map((char, index) => {
@@ -68,6 +69,7 @@ const Rented = (props) => {
                         })
                     }
                 </div>
+                */}
             </div>
         )
     }

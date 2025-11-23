@@ -1,5 +1,5 @@
 
-import { Input, Form, Button } from "antd";
+
 import '../styles/signup.css'
 import UnsignedNavigation from "./unsigned-navigation";
 import SignupFormSchema from '../formSchemas/signup-form-schema'
@@ -42,6 +42,7 @@ const Signup = (props) => {
     <div>
       <UnsignedNavigation />
       <div className="signup-container">
+        {/* 
         <Form className="container" onSubmitCapture={onFormSubmit}>
           <h2>Sign up</h2>
           <div className='input-group'>
@@ -79,6 +80,7 @@ const Signup = (props) => {
 
           </div>
         </Form>
+        */}
       </div>
     </div>
   )

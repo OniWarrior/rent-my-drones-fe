@@ -1,7 +1,7 @@
 
-import { Row, Button } from 'antd';
+
 import { useNavigate } from "react-router";
-import '../styles/Navigation.css'
+import '../styles/navigation.css'
 
 const LoggedInNavigation = () => {
     const navigate = useNavigate();
@@ -28,12 +28,12 @@ const LoggedInNavigation = () => {
     }
     return (
         <div className='nav-container'>
-            <Row className='navbar'>
-                <Button onClick={goToDashboard}>Dashboard</Button>
-                <Button onClick={goToAvailable}>Available </Button>
-                <Button onClick={goToRented}>Rented</Button>
-                <Button onClick={logOut}>Log out</Button>
-            </Row>
+            <nav className='navbar'>
+                <button onClick={goToDashboard}>Dashboard</button>
+                <button onClick={goToAvailable}>Available </button>
+                <button onClick={goToRented}>Rented</button>
+                <button onClick={logOut}>Log out</button>
+            </nav>
         </div>
     )
 

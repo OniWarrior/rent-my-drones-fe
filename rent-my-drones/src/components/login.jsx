@@ -1,7 +1,6 @@
 
 import '../styles/login.css';
-import { Input, Form, Button } from "antd";
-import { Link } from 'react-router-dom';
+
 import UnsignedNavigation from './unsigned-navigation';
 import LoginFormSchema from '../formSchemas/login-form-schema';
 import { useValidation } from "../hooks/useValidation";
@@ -47,6 +46,7 @@ const LoginPage = (props) => {
     <div>
       <UnsignedNavigation />
       <div className="login-container">
+        {/* 
         <Form className="container" onSubmitCapture={onFormSubmit}>
           <h2>Login</h2>
           <div className='input-group'>
@@ -86,6 +86,7 @@ const LoginPage = (props) => {
             </p>
           </div>
         </Form>
+        */}
       </div>
     </div>
   )

@@ -1,4 +1,4 @@
-import { Button } from 'antd'
+
 
 import '../styles/renter-dashboard.css';
 import { useNavigate } from 'react-router';
@@ -25,8 +25,8 @@ const RenterDashboard = () => {
                 <h1>Dashboard</h1>
             </div>
             <div className='dashboard-card-container'>
-                <Button id='available-card' className='dashboard-card' onClick={handleAvailable}>Available</Button>
-                <Button id='rented-card' className='dashboard-card' onClick={handleRented}>Rented</Button>
+                <button id='available-card' className='dashboard-card' onClick={handleAvailable}>Available</button>
+                <button id='rented-card' className='dashboard-card' onClick={handleRented}>Rented</button>
             </div>
         </div>
     )

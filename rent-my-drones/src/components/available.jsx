@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button, Card } from "antd";
+
 import LoggedInNavigation from "./logged-in-navigation";
 import '../styles/available.css'
 import { connect } from "react-redux";
@@ -47,6 +47,7 @@ const Available = (props) => {
                 <div className='available-header'>
                     <h1>Available Drones</h1>
                 </div>
+                {/* Temp comment
                 <div className='available-card-container'>
                     {
                         props.drones.map((char, index) => {
@@ -67,6 +68,7 @@ const Available = (props) => {
                         })
                     }
                 </div>
+                */}
             </div>
         )
     }
