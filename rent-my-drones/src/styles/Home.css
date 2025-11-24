@@ -13,29 +13,63 @@
     background-repeat: no-repeat;
     background-image:url('../assets/Drone_In_The_Hand.jpg');
     width:100%;
-    height: 60vh;
+    height: 100vh;
     background-attachment: scroll;
     background-size:cover;
     background-position: center;
     box-shadow: 0px 0px 2px rgba(0, 49, 128, 0.8); 
 }
 
-.main-doc{
-    color:black;
-    padding-top:2%;
-    font-size: xx-small;
-    width:100%;    
-    box-shadow: 0px 0px 2px  rgba(128, 128, 128, 0.301);
-    padding-bottom: 2%;
+.hero-text-header{
+    font-size: xx-large;
 }
 
-.main-doc p{
-    color: black;
-    font-weight: bolder;
+.hero-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: black;
+    width: 30%;
+    height: 40%;
+    margin-top:12%;
+    color:white;
+    opacity: 0.9;
+    border-radius:20px;
+    margin-left: 1%;
+    
 }
 
-.main-doc h1{
-    font-size:x-large;
-    padding-bottom: 1rem;
+.hero-text{
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
 }
+
+@media screen and (max-width:600px){
+    .hero-text-container{        
+        margin:auto;  
+        width:100%;  
+        background-color: black;
+        color:white;
+        height:25%;
+        border-radius: 0px;
+            
+    }
+
+    .hero-text-header{
+        font-size: x-large;
+    }
+
+    .hero-text{
+        
+        font-size:medium;
+        min-height: 100%;
+        min-width: 10em;
+        
+    }
+}
+
+
+
+
 
