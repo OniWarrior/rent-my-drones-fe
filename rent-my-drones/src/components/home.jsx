@@ -1,6 +1,6 @@
 
-import '../styles/home.css'
-import UnsignedNavigation from './unsigned-navigation'
+import '../styles/home.css';
+import UnsignedNavigation from './unsigned-navigation';
 
 const Home = () => {
 
