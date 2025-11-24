@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import LoggedInNavigation from "./logged-in-navigation";
-import '../styles/available.css'
+import '../styles/available-comp.css'
 import { connect } from "react-redux";
 import { getAvailableDrones, rentAvailableDrone } from "../state/actions/available-actions";
 import { useNavigate } from "react-router";

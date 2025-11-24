@@ -1,7 +1,7 @@
 
 
 
-import '../styles/navigation.css'
+import '../styles/nav-comp.css'
 import { useNavigate } from "react-router";
 
 

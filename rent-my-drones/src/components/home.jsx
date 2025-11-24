@@ -1,5 +1,5 @@
 
-import '../styles/home.css';
+import '../styles/home-comp.css';
 import UnsignedNavigation from './unsigned-navigation';
 
 const Home = () => {

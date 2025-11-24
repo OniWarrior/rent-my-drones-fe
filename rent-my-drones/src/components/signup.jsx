@@ -1,6 +1,6 @@
 
 
-import '../styles/signup.css'
+import '../styles/signup-comp.css'
 import UnsignedNavigation from "./unsigned-navigation";
 import SignupFormSchema from '../formSchemas/signup-form-schema'
 import { useValidation } from "../hooks/useValidation";

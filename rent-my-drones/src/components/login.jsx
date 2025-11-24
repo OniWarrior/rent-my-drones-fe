@@ -1,5 +1,5 @@
 
-import '../styles/login.css';
+import '../styles/login-comp.css';
 
 import UnsignedNavigation from './unsigned-navigation';
 import LoginFormSchema from '../formSchemas/login-form-schema';

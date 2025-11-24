@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import LoggedInNavigation from "./logged-in-navigation";
 import { connect } from "react-redux";
 import { getRentedDrones, returnRentedDrone } from "../state/actions/rented-actions";
-import '../styles/rented.css'
+import '../styles/rented-comp.css'
 import { useNavigate } from "react-router";
 
 const Rented = (props) => {

@@ -1,7 +1,7 @@
 
 
 import { useNavigate } from "react-router";
-import '../styles/navigation.css'
+import '../styles/nav-comp.css'
 
 const LoggedInNavigation = () => {
     const navigate = useNavigate();
