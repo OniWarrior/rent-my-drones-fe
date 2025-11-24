@@ -24,9 +24,9 @@ const UnsignedNavigation = () => {
     return (
         <div className='nav-container'>
             <nav className='nav-row'>
-                <div className="btn-nav btn-home" onClick={goHome}>Home</div>
-                <div className="btn-nav btn-login" onClick={goLogin}>Login</div>
-                <div className="btn-nav btn-signup" onClick={goSignUp}>Signup</div>
+                <button className="btn-nav btn-home" onClick={goHome}>Home</button>
+                <button className="btn-nav btn-login" onClick={goLogin}>Login</button>
+                <button className="btn-nav btn-signup" onClick={goSignUp}>Signup</button>
             </nav>
         </div>
     )
