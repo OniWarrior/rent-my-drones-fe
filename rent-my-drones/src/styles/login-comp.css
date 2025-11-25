@@ -1,92 +1,61 @@
-.container{
-    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.301) ; 
-    width:40%;
-    height:20%;   
-    
-}
 
-.login-container{
-    max-height:35em;
-    min-height: 35em;
+/*
+ * Attribution: 
+ * Photo by <a href="https://unsplash.com/@brennan_marttinez?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brennan Martinez</a> on <a href="https://unsplash.com/photos/person-holding-black-and-red-quadcopter-drone-TtJNbsmP_fU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+ * login_asset.jpg
+*/
 
-}
 
-.container h2{
-    padding-top:5%;
-    text-align: center;
-}
+/*
+ * Styling for the main body of login comp
+ */
+ .login-main{
+    background-image: url('../Assets/login_asset.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height:100%;
+ }
 
-.container Button{
-    width:50%;
-    margin-left:20%;
-    border-radius: 20px;
-    text-decoration: none;
-    background-color:black;
-    border:none;
-    color:white;
-    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.301);
-    
-}
-
-.container Button:hover{
-    animation:button-animation linear 0.3s infinite;
-}
-
-@keyframes button-animation {
-
-    0%{
-        transform: rotate(0deg);
-    }
-
-    25%{
-        transform: rotate(-5deg);
-    }
-
-    50%{
-        transform: rotate(0deg);
-    }
-
-    75%{
-        transform: rotate(5deg);
-    }
-
-    100%{
-        transform: rotate(0deg);
-    }
-    
-}
-
-.login-container{
-    padding-top:6%;
-    display:flex;
-    justify-content: center;
-}
-
-.input-group{
-    padding-top:1%;
+/*
+ * Styling for the container of the form
+ */
+ .login-container{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;       
-    margin-left:10%;
-    min-height: 15em;   
+    justify-content: space-evenly;
+    align-items: center;
+    margin:auto;
+ }
+
+ 
+/*
+ * Positioning for the container of login-labels and login-txt-boxes
+ */
+.input-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.input-group a{
-    text-decoration: none;
-    text-transform: none;
+/*
+ * Styling for the login labels for text boxes
+ */
+.login-labels{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.input-group input{
-    width:90%;
-}
 
-.errors{
-    color:red;
-  }
-
-
-  @media  screen and (max-width:480px) {
-      .container{
-          border-radius: 30px;
-      }
-  }
+/*
+ * Styling for the login text boxes
+ */
+ .login-txt-boxes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+ } 
