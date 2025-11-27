@@ -18,6 +18,7 @@ const Signup = (props) => {
   // local state var for navigation
   const navigate = useNavigate();
 
+  // local state vars for signup and error values
   const [signup, errors, setSignup] = useValidation(SignupFormSchema);
 
 
