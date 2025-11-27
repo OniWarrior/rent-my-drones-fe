@@ -7,6 +7,7 @@
  */
 import '../styles/signup-comp.css'
 import UnsignedNavigation from "./unsigned-navigation";
+import signupFormSubComp from './signup-form-sub-comp';
 
 
 
