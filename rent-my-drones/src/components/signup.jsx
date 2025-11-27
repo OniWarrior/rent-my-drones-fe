@@ -86,7 +86,8 @@ const Signup = (props) => {
                   placeholder='Password'
                   onChange={onChangeInput}
                 />
-
+              </div>
+              <div className='signup-btn-container'>
 
               </div>
 
