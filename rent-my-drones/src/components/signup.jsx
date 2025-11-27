@@ -54,6 +54,14 @@ const Signup = (props) => {
                 <h3>password:</h3>
               </div>
               <div className='signup-txt-boxes'>
+                <input
+                  id='first_name'
+                  type='text'
+                  name='first_name'
+                  required
+                  placeholder='First Name'
+                  onChange={onChangeInput}
+                />
 
               </div>
 
