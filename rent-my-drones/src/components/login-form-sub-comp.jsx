@@ -39,8 +39,8 @@ const LoginFormContainer = (props) => {
                 <form className='login-form' onSubmit={onFormSubmit}>
                     <div className='login-group'>
                         <div className='login-labels'>
-                            <h3>email:</h3>
-                            <h3>password:</h3>
+                            <h3>Email:</h3>
+                            <h3>Password:</h3>
                         </div>
                         <div className='login-txt-boxes'>
 

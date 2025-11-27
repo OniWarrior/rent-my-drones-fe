@@ -45,8 +45,8 @@ const SignupFormContainer = (props) => {
                         <div className='signup-labels'>
                             <h3>First Name:</h3>
                             <h3>Last Name:</h3>
-                            <h3>email:</h3>
-                            <h3>password:</h3>
+                            <h3>Email:</h3>
+                            <h3>Password:</h3>
                         </div>
                         <div className='signup-txt-boxes'>
                             <input
