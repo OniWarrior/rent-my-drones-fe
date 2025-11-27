@@ -31,6 +31,8 @@ const Signup = (props) => {
   //handler function for handling form submission
   const onFormSubmit = (e) => {
     e.preventDefault();
+
+    // make api call to register new account
     props.register(signup, navigate);
   }
 
