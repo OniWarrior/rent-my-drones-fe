@@ -70,6 +70,23 @@ const Signup = (props) => {
                   placeholder='Last Name'
                   onChange={onChangeInput}
                 />
+                <input
+                  id='email'
+                  type='text'
+                  name='email'
+                  required
+                  placeholder='Email'
+                  onChange={onChangeInput}
+                />
+                <input
+                  id='password'
+                  type='text'
+                  name='password'
+                  required
+                  placeholder='Password'
+                  onChange={onChangeInput}
+                />
+
 
               </div>
 
