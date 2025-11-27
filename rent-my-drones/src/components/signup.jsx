@@ -43,6 +43,9 @@ const Signup = (props) => {
         <div className='signup-container'>
           <div className='signup-img'></div>
           <div className='signup-form-container'>
+            <form className='signup-form' onSubmit={onFormSubmit}>
+
+            </form>
 
           </div>
 
