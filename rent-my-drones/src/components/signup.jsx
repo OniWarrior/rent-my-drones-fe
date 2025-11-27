@@ -40,10 +40,12 @@ const Signup = (props) => {
     <div className='signup'>
       <UnsignedNavigation />
       <div className="signup-body">
-        <div className='signup-img'>
-
+        <div className='signup-container'>
+          <div className='signup-img'>
+          </div>
 
         </div>
+
 
       </div>
     </div>
