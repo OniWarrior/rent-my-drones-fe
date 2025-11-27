@@ -94,7 +94,7 @@ const Signup = (props) => {
                 <p>{errors.first_name}</p>
                 <p>{errors.last_name}</p>
                 <p>{errors.email}</p>
-
+                <p>{errors.password}</p>
               </div>
 
 
