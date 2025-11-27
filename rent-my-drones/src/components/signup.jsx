@@ -28,7 +28,7 @@ const Signup = (props) => {
   }
 
 
-
+  //handler function for handling form submission
   const onFormSubmit = (e) => {
     e.preventDefault();
     props.register(signup, navigate);
