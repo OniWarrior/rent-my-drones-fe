@@ -17,8 +17,7 @@ import { connect } from "react-redux";
 const Signup = (props) => {
   const navigate = useNavigate();
   const [signup, errors, setSignup] = useValidation(SignupFormSchema);
-  const initialDisabled = 1;
-  const [disabled, setDisabled] = useState(initialDisabled);
+
 
   // handler function for input change in text boxes
   const onChangeInput = (event) => {
