@@ -10,7 +10,7 @@ import UnsignedNavigation from "./unsigned-navigation";
 import SignupFormSchema from '../formSchemas/signup-form-schema'
 import { useValidation } from "../hooks/useValidation";
 import { useNavigate } from "react-router";
-import { useState } from "react";
+
 import { register } from "../state/actions/signup-actions";
 import { connect } from "react-redux";
 
