@@ -39,7 +39,7 @@ const Signup = (props) => {
   return (
     <div className='signup'>
       <UnsignedNavigation />
-      <div className="signup-container">
+      <div className="signup-body">
 
       </div>
     </div>
