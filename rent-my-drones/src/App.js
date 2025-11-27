@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<LoginPage />} />
-        <Route path='/signup' component={<Signup />} />
+        <Route path='/signup' element={<Signup />} />
         <Route element={<ProtectedRoute />}>
           <Route path='/dashboard' element={<RenterDashboard />} />
           <Route path='/dashboard/available' element={<Available />} />
