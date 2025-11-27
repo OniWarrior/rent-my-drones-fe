@@ -27,19 +27,7 @@ const Signup = (props) => {
     setSignup(event, SignupFormSchema);
   }
 
-  const handleDisabled = (e) => {
-    e.preventDefault();
-    if (signup.username.length >= 12 && signup.password.length >= 12) {
-      setDisabled(() => ({
-        disabled: !disabled
-      }))
-    }
-    else {
-      setDisabled(() => ({
-        disabled: disabled
-      }))
-    }
-  }
+
 
   const onFormSubmit = (e) => {
     e.preventDefault();
