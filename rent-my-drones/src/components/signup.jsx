@@ -43,7 +43,14 @@ const Signup = (props) => {
         <div className='signup-container'>
           <div className='signup-img'></div>
           <div className='signup-form-container'>
+            <div className='signup-header'>
+              <h1>Register New Account</h1>
+            </div>
             <form className='signup-form' onSubmit={onFormSubmit}>
+              <div className='signup-labels'>
+
+              </div>
+
 
             </form>
 
