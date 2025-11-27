@@ -44,7 +44,7 @@ const Signup = (props) => {
   }
 
   return (
-    <div>
+    <div className='signup'>
       <UnsignedNavigation />
       <div className="signup-container">
 
