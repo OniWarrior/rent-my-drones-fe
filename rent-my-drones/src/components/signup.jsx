@@ -7,34 +7,12 @@
  */
 import '../styles/signup-comp.css'
 import UnsignedNavigation from "./unsigned-navigation";
-import SignupFormSchema from '../formSchemas/signup-form-schema'
-import { useValidation } from "../hooks/useValidation";
-import { useNavigate } from "react-router";
-
-import { register } from "../state/actions/signup-actions";
-import { connect } from "react-redux";
-
-const Signup = (props) => {
-  // local state var for navigation
-  const navigate = useNavigate();
-
-  // local state vars for signup and error values
-  const [signup, errors, setSignup] = useValidation(SignupFormSchema);
 
 
-  // handler function for input change in text boxes
-  const onChangeInput = (event) => {
-    setSignup(event, SignupFormSchema);
-  }
 
 
-  //handler function for handling form submission
-  const onFormSubmit = (e) => {
-    e.preventDefault();
+const Signup = () => {
 
-    // make api call to register new account
-    props.register(signup, navigate);
-  }
 
   return (
     <div className='signup'>

@@ -3,8 +3,14 @@
  * File   : signup-form-sub-comp.jsx 
  * Desc   : sub component fo signup.jsx. Represents the container for the form
  */
+import SignupFormSchema from '../formSchemas/signup-form-schema'
+import { useValidation } from "../hooks/useValidation";
+import { useNavigate } from "react-router";
+import { register } from "../state/actions/signup-actions";
+import { connect } from "react-redux";
 
-const SignupFormContainer = () => {
+
+const SignupFormContainer = (props) => {
     // local state var for navigation
     const navigate = useNavigate();
 
