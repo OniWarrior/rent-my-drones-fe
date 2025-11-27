@@ -92,6 +92,7 @@ const Signup = (props) => {
               </div>
               <div className='errors'>
                 <p>{errors.first_name}</p>
+                <p>{errors.last_name}</p>
 
               </div>
 
