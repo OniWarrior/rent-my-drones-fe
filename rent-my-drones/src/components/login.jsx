@@ -8,31 +8,9 @@ import '../styles/login-comp.css';
 
 import UnsignedNavigation from './unsigned-navigation';
 
-
-
-
-
 const LoginPage = (props) => {
 
-  // State vars for navigation, errors, and login
-  const navigate = useNavigate();
-  const [login, errors, setLogin] = useValidation(LoginFormSchema);
 
-
-  // handler for changing input in text boxes
-  const onchangeInput = (event) => {
-    setLogin(event, LoginFormSchema);
-  }
-
-
-
-
-  // handler for form submission after login button is pressed.
-  const onFormSubmit = () => {
-
-    // api call to post login
-    props.postLogin(login, navigate);
-  }
 
   return (
 

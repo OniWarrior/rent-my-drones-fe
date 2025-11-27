@@ -10,3 +10,28 @@ import { useNavigate } from 'react-router-dom';
 
 import { connect } from "react-redux";
 import { postLogin } from '../state/actions/login-actions';
+
+const LoginFormContainer = (props) => {
+    // State vars for navigation, errors, and login
+    const navigate = useNavigate();
+    const [login, errors, setLogin] = useValidation(LoginFormSchema);
+
+
+    // handler for changing input in text boxes
+    const onchangeInput = (event) => {
+        setLogin(event, LoginFormSchema);
+    }
+
+
+
+
+    // handler for form submission after login button is pressed.
+    const onFormSubmit = () => {
+
+        // api call to post login
+        props.postLogin(login, navigate);
+    }
+
+}
+
+export default LoginFormContainer;
