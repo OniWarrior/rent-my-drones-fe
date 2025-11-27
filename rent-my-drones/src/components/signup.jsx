@@ -20,7 +20,8 @@ const Signup = (props) => {
   const initialDisabled = 1;
   const [disabled, setDisabled] = useState(initialDisabled);
 
-  const change = (event) => {
+
+  const onChangeInput = (event) => {
     setSignup(event, SignupFormSchema);
   }
 
