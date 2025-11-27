@@ -62,6 +62,14 @@ const Signup = (props) => {
                   placeholder='First Name'
                   onChange={onChangeInput}
                 />
+                <input
+                  id='last_name'
+                  type='text'
+                  name='last_name'
+                  required
+                  placeholder='Last Name'
+                  onChange={onChangeInput}
+                />
 
               </div>
 
