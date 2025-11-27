@@ -15,7 +15,9 @@ import { register } from "../state/actions/signup-actions";
 import { connect } from "react-redux";
 
 const Signup = (props) => {
+  // local state var for navigation
   const navigate = useNavigate();
+
   const [signup, errors, setSignup] = useValidation(SignupFormSchema);
 
 
