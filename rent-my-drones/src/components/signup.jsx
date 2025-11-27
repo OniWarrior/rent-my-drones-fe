@@ -7,7 +7,7 @@
  */
 import '../styles/signup-comp.css'
 import UnsignedNavigation from "./unsigned-navigation";
-import signupFormSubComp from './signup-form-sub-comp';
+import SignupFormContainer from './signup-form-sub-comp';
 
 
 
@@ -19,9 +19,7 @@ const Signup = () => {
     <div className='signup'>
       <UnsignedNavigation />
       <div className="signup-body">
-
-
-
+        <SignupFormContainer />
       </div>
     </div>
   )
