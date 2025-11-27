@@ -2,3 +2,14 @@
  * attribution: Photo by <a href="https://unsplash.com/@alvannee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alvan Nee</a> on <a href="https://unsplash.com/photos/man-standing-near-drone-BRf5pG8h1nU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
  * Styling rule set for main background image  
 */
+.signup-img{
+    background-image: url('../Assets/signup_asset.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
