@@ -42,6 +42,7 @@ const Signup = (props) => {
       <div className="signup-body">
         <div className='signup-img'>
 
+
         </div>
 
       </div>
