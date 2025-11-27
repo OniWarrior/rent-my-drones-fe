@@ -42,45 +42,7 @@ const Signup = (props) => {
     <div>
       <UnsignedNavigation />
       <div className="signup-container">
-        {/* 
-        <Form className="container" onSubmitCapture={onFormSubmit}>
-          <h2>Sign up</h2>
-          <div className='input-group'>
 
-            <Form.Item name='username' label='username'>
-
-              <Input
-                id='username'
-                type='text'
-                name='username'
-                placeholder='username'
-                required
-                onChange={change}
-              />
-              <div className='errors'>
-                <p>{errors.username}</p>
-
-              </div>
-            </Form.Item>
-            <Form.Item name='password' label='password'>
-              <Input.Password
-                id='password'
-                type='password'
-                name='password'
-                placeholder='password'
-                required
-                onChange={change}
-              />
-              <div className='errors'>
-                <p>{errors.password}</p>
-              </div>
-            </Form.Item>
-
-            <Button type='primary' htmlType='submit' disabled={handleDisabled} >Submit</Button>
-
-          </div>
-        </Form>
-        */}
       </div>
     </div>
   )
