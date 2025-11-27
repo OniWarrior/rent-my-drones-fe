@@ -93,6 +93,7 @@ const Signup = (props) => {
               <div className='errors'>
                 <p>{errors.first_name}</p>
                 <p>{errors.last_name}</p>
+                <p>{errors.email}</p>
 
               </div>
 
