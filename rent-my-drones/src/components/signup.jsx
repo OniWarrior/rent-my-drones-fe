@@ -52,6 +52,8 @@ const Signup = (props) => {
                 <h3>Last Name:</h3>
                 <h3>email:</h3>
                 <h3>password:</h3>
+              </div>
+              <div className='signup-txt-boxes'>
 
               </div>
 
