@@ -91,6 +91,7 @@ const Signup = (props) => {
                 <button type='submit' className='btn-submit btn-signup'>Register</button>
               </div>
               <div className='errors'>
+                <p>{errors.first_name}</p>
 
               </div>
 
