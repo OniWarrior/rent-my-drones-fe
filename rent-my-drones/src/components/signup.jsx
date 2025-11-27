@@ -50,6 +50,7 @@ const Signup = (props) => {
               <div className='signup-labels'>
                 <h3>First Name:</h3>
                 <h3>Last Name:</h3>
+                <h3>email</h3>
 
               </div>
 
