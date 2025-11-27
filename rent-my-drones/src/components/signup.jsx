@@ -1,5 +1,10 @@
 
-
+/*
+ * Author: Stephen Aranda
+ * File  : signup.jsx
+ * Desc  : single component file for signup component that allows the
+ *       : creation of a new user account for user type: Renter or Owner.
+ */
 import '../styles/signup-comp.css'
 import UnsignedNavigation from "./unsigned-navigation";
 import SignupFormSchema from '../formSchemas/signup-form-schema'
