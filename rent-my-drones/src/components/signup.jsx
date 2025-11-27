@@ -20,7 +20,7 @@ const Signup = (props) => {
   const initialDisabled = 1;
   const [disabled, setDisabled] = useState(initialDisabled);
 
-
+  // handler function for input change in text boxes
   const onChangeInput = (event) => {
     setSignup(event, SignupFormSchema);
   }
