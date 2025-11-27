@@ -103,4 +103,16 @@ const SignupFormContainer = (props) => {
 
 }
 
-export default SignupFormContainer;
+
+const mapStateToProps = (state) => {
+    return {
+        signup: state.signupReducer.signup,
+        loading: state.signupReducer.loading,
+        error: state.signupReducer.error
+    }
+}
+
+const mapDispatchToProps = { register }
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignupFormContainer)
+
