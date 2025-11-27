@@ -14,3 +14,9 @@
     align-items: center;
 }
 
+/*
+ * Rule set for the signup component's overall container- first div
+*/
+.signup{
+    height:100vh;
+}

@@ -90,14 +90,9 @@ const SignupFormContainer = (props) => {
                         <p>{errors.email}</p>
                         <p>{errors.password}</p>
                     </div>
-
-
                 </form>
-
             </div>
-
         </div>
-
     )
 
 
