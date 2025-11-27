@@ -49,6 +49,7 @@ const Signup = (props) => {
             <form className='signup-form' onSubmit={onFormSubmit}>
               <div className='signup-labels'>
                 <h3>First Name:</h3>
+                <h3>Last Name:</h3>
 
               </div>
 
