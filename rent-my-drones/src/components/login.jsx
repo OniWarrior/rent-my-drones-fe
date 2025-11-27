@@ -8,7 +8,7 @@ import '../styles/login-comp.css';
 
 import UnsignedNavigation from './unsigned-navigation';
 
-const LoginPage = (props) => {
+const LoginPage = () => {
 
 
 
@@ -26,14 +26,6 @@ const LoginPage = (props) => {
 
 }
 
-const mapStateToProps = (state) => {
-  return {
-    login: state.loginReducer.login,
-    loading: state.loginReducer.loading,
-    error: state.loginReducer.error
-  }
-}
 
-const mapDispatchToProps = { postLogin }
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginPage)
+export default LoginPage;

@@ -22,9 +22,6 @@ const LoginFormContainer = (props) => {
         setLogin(event, LoginFormSchema);
     }
 
-
-
-
     // handler for form submission after login button is pressed.
     const onFormSubmit = () => {
 
@@ -32,6 +29,20 @@ const LoginFormContainer = (props) => {
         props.postLogin(login, navigate);
     }
 
+    return (
+
+    )
+
 }
 
-export default LoginFormContainer;
+const mapStateToProps = (state) => {
+    return {
+        login: state.loginReducer.login,
+        loading: state.loginReducer.loading,
+        error: state.loginReducer.error
+    }
+}
+
+const mapDispatchToProps = { postLogin }
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginFormContainer)
