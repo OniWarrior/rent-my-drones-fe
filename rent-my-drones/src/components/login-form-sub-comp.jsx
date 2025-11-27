@@ -18,7 +18,7 @@ const LoginFormContainer = (props) => {
 
 
     // handler for changing input in text boxes
-    const onchangeInput = (event) => {
+    const onChangeInput = (event) => {
         setLogin(event, LoginFormSchema);
     }
 
@@ -30,6 +30,50 @@ const LoginFormContainer = (props) => {
     }
 
     return (
+        <div className='login-container'>
+            <div className='login-img'></div>
+            <div className='login-form-container'>
+                <div className='login-header'>
+                    <h1>Login</h1>
+                </div>
+                <form className='login-form' onSubmit={onFormSubmit}>
+                    <div className='login-group'>
+                        <div className='login-labels'>
+                            <h3>email:</h3>
+                            <h3>password:</h3>
+                        </div>
+                        <div className='login-txt-boxes'>
+
+                            <input
+                                id='email'
+                                type='text'
+                                name='email'
+                                required
+                                placeholder='Email'
+                                onChange={onChangeInput}
+                            />
+                            <input
+                                id='password'
+                                type='text'
+                                name='password'
+                                required
+                                placeholder='Password'
+                                onChange={onChangeInput}
+                            />
+                        </div>
+
+                    </div>
+
+                    <div className='login-btn-container'>
+                        <button type='submit' className='btn-submit btn-login'>Login</button>
+                    </div>
+                    <div className='errors'>
+                        <p>{errors.email}</p>
+                        <p>{errors.password}</p>
+                    </div>
+                </form>
+            </div>
+        </div>
 
     )
 
