@@ -193,6 +193,18 @@
 @media screen and (max-width:600px){
    .login-container{
       width:90%;
+      flex-direction: column;
+
+   }
+   .login-img{
+    width:100%;
+   }
+   .login-form-container{
+    margin: auto;
+    width:100%;
+   }
+   .login-group{
+    width:100%;
    }
 }
 
