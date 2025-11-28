@@ -186,6 +186,18 @@
 @media screen and (max-width:600px){
    .signup-container{
       width:90%;
+      flex-direction: column;
+
+   }
+   .signup-img{
+    width:100%;
+   }
+   .signup-form-container{
+    margin: auto;
+    width:100%;
+   }
+   .signup-group{
+    width:100%;
    }
 }
 
