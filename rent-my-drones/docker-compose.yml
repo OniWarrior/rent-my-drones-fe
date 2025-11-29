@@ -12,3 +12,5 @@ services:
       - HOST=${HOST}
       - CHOKIDAR_USEPOLLING=${CHOKIDAR_USEPOLLING}
       - REACT_APP_API_URL=${REACT_APP_API_URL}
+    volumes:
+      - .:/app
