@@ -24,6 +24,9 @@ ENV CHOKIDAR_USEPOLLING=true
 # expose the dev server port   
 EXPOSE 3000
 
+# start the dev server
+CMD [ "npm","start" ]
+
 
 
 
