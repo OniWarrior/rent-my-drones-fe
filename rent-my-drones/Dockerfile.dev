@@ -18,5 +18,8 @@ COPY . .
 # allow the dev server to listen on all interfaces
 ENV HOST=0.0.0.0
 
+# Helps file watching work better inside Docker on some systems
+ENV CHOKIDAR_USEPOLLING=true
+
 
 
