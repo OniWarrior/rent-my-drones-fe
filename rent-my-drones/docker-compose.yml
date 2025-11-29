@@ -8,3 +8,5 @@ services:
     container_name: rent-my-drones-fe-dev
     ports:
       - "3000:3000"
+    environment:
+      - HOST=${HOST}
