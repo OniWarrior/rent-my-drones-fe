@@ -1,0 +1,18 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: rent-my-drones-fe-dev
+    ports:
+      - "3000:3000"
+
+    environment:
+      - HOST=${HOST}
+      - CHOKIDAR_USEPOLLING=${CHOKIDAR_USEPOLLING}
+      - REACT_APP_API_URL=${REACT_APP_API_URL}
+    volumes:
+      - .:/app
+      - /app/node_modules
+    stdin_open: true
+    tty: true
