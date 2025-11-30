@@ -95,6 +95,12 @@ const SignupFormContainer = (props) => {
                                 </div>
                             </div>
                             <div className='radio-btn-container'>
+                                <input
+                                    id='Owner'
+                                    type='radio'
+                                    name='Owner'
+                                    onChange={onChangeInput}
+                                />
 
                             </div>
 
