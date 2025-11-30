@@ -94,7 +94,7 @@
     display: flex;
     flex-direction: column;
     height:60%;
-    justify-content: space-evenly;
+    justify-content: space-evenly;    
   }
 
   /*
@@ -107,6 +107,7 @@
     width: 50%;
     justify-content: space-evenly;
     align-items: center;
+    border:1px solid orange;
    }
 
    /*
@@ -141,6 +142,17 @@
    
         background-color: black;
         color:white;
+    }
+
+    /*
+     * Rule set for the radio button container
+    */
+    .radio-btn-group{
+      border:1px solid red;
+      width:50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
     }
 
     /*
