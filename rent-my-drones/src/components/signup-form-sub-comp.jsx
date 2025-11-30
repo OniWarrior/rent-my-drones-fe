@@ -82,29 +82,30 @@ const SignupFormContainer = (props) => {
                                 onChange={onChangeInput}
                             />
                         </div>
-                        <div className='radio-btn-group'>
-                            <div className='radio-btn-container'>
-                                <input
-                                    id='Renter'
-                                    type='radio'
-                                    name='Renter'
-                                    onChange={onChangeInput}
-                                />
-                                <div className='btn-label'>
-                                    <p>Renter</p>
-                                </div>
-                            </div>
-                            <div className='radio-btn-container'>
-                                <input
-                                    id='Owner'
-                                    type='radio'
-                                    name='Owner'
-                                    onChange={onChangeInput}
-                                />
-                                <div className='btn-label'>
-                                    <p>Owner</p>
 
-                                </div>
+
+                    </div>
+                    <div className='radio-btn-group'>
+                        <div className='radio-btn-container'>
+                            <input
+                                id='Renter'
+                                type='radio'
+                                name='Renter'
+                                onChange={onChangeInput}
+                            />
+                            <div className='btn-label'>
+                                <p>Renter</p>
+                            </div>
+                        </div>
+                        <div className='radio-btn-container'>
+                            <input
+                                id='Owner'
+                                type='radio'
+                                name='Owner'
+                                onChange={onChangeInput}
+                            />
+                            <div className='btn-label'>
+                                <p>Owner</p>
 
                             </div>
 
