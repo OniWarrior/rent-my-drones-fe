@@ -94,6 +94,9 @@ const SignupFormContainer = (props) => {
                                     <p>Renter</p>
                                 </div>
                             </div>
+                            <div className='radio-btn-container'>
+
+                            </div>
 
                         </div>
 
