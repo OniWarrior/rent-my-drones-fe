@@ -160,6 +160,7 @@
       flex-direction: row;
       justify-content: space-evenly;      
       width:30%;
+      margin-bottom: 10%;
     }
 
     /*
@@ -206,6 +207,7 @@
    .signup-container{
       width:90%;
       flex-direction: column;
+      height:90%;
 
    }
    .signup-img{
@@ -222,6 +224,7 @@
    .btn-signup{
     height:80%;
    }
+   
 }
 
 /******************************************************/
