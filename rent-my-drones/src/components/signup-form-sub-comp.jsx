@@ -102,6 +102,7 @@ const SignupFormContainer = (props) => {
                                     onChange={onChangeInput}
                                 />
                                 <div className='btn-label'>
+                                    <p>Owner</p>
 
                                 </div>
 
