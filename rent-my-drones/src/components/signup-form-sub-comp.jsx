@@ -83,6 +83,36 @@ const SignupFormContainer = (props) => {
                             />
                         </div>
 
+
+                    </div>
+                    <div className='radio-btn-group'>
+                        <div className='radio-btn-container'>
+                            <input
+                                id='user_type'
+                                type='radio'
+                                name='user_type'
+                                value="Renter"
+                                onChange={onChangeInput}
+                            />
+                            <div className='btn-label'>
+                                <p>Renter</p>
+                            </div>
+                        </div>
+                        <div className='radio-btn-container'>
+                            <input
+                                id='user_type'
+                                type='radio'
+                                name='user_type'
+                                onChange={onChangeInput}
+                                value="Owner"
+                            />
+                            <div className='btn-label'>
+                                <p>Owner</p>
+
+                            </div>
+
+                        </div>
+
                     </div>
 
                     <div className='signup-btn-container'>

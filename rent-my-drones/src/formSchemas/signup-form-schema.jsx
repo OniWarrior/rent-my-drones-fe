@@ -16,7 +16,10 @@ const SignupFormSchema = yup.object().shape({
     password: yup.string()
         .trim()
         .required("Password is required. Please fill out field")
-        .min(12, 'A minimum of 12 characters is required for password')
+        .min(12, 'A minimum of 12 characters is required for password'),
+    user_type: yup.string()
+        .required("Please select a user type")
+        .oneOf(['Renter', 'Owner'], "User type must be either 'Renter' or 'Owner'")
 
 })
 

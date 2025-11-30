@@ -196,6 +196,10 @@
       flex-direction: column;
 
    }
+
+   .btn-login{
+    height:80%;
+   }
    .login-img{
     width:100%;
    }

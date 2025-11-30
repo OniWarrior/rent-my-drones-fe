@@ -94,7 +94,7 @@
     display: flex;
     flex-direction: column;
     height:60%;
-    justify-content: space-evenly;
+    justify-content: space-evenly;    
   }
 
   /*
@@ -106,7 +106,7 @@
     height:80%;
     width: 50%;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: center;       
    }
 
    /*
@@ -137,10 +137,30 @@
     .btn-signup{
         border-radius: 20px;
         width: 60%;
-        height:60%;
-   
+        height:60%;   
         background-color: black;
         color:white;
+    }
+
+    /*
+     * Rule set for the radio button group
+    */
+    .radio-btn-group{      
+      width:50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    /*
+     *  Rule set for radio button container for Renter and Owner
+     */
+    .radio-btn-container{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;      
+      width:30%;
+      margin-bottom: 10%;
     }
 
     /*
@@ -187,6 +207,7 @@
    .signup-container{
       width:90%;
       flex-direction: column;
+      height:90%;
 
    }
    .signup-img{
@@ -199,6 +220,11 @@
    .signup-group{
     width:100%;
    }
+
+   .btn-signup{
+    height:80%;
+   }
+   
 }
 
 /******************************************************/
