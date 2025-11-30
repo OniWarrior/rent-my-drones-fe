@@ -90,6 +90,9 @@ const SignupFormContainer = (props) => {
                                     name='Renter'
                                     onChange={onChangeInput}
                                 />
+                                <div className='btn-label'>
+                                    <p>Renter</p>
+                                </div>
                             </div>
 
                         </div>
