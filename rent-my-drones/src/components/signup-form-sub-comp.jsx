@@ -82,6 +82,9 @@ const SignupFormContainer = (props) => {
                                 onChange={onChangeInput}
                             />
                         </div>
+                        <div className='radio-btn-group'>
+
+                        </div>
 
                     </div>
 
