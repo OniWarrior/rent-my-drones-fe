@@ -88,9 +88,10 @@ const SignupFormContainer = (props) => {
                     <div className='radio-btn-group'>
                         <div className='radio-btn-container'>
                             <input
-                                id='Renter'
+                                id='user_type'
                                 type='radio'
-                                name='Renter'
+                                name='user_type'
+                                value="Renter"
                                 onChange={onChangeInput}
                             />
                             <div className='btn-label'>
@@ -99,10 +100,11 @@ const SignupFormContainer = (props) => {
                         </div>
                         <div className='radio-btn-container'>
                             <input
-                                id='Owner'
+                                id='user_type'
                                 type='radio'
-                                name='Owner'
+                                name='user_type'
                                 onChange={onChangeInput}
+                                value="Owner"
                             />
                             <div className='btn-label'>
                                 <p>Owner</p>
