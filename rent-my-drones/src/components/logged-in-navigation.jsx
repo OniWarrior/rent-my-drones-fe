@@ -6,6 +6,9 @@ import '../styles/nav-comp.css'
 
 const LoggedInNavigation = (props) => {
 
+    // get the role 
+    const role = localStorage.getItem('role');
+
 
 
 
