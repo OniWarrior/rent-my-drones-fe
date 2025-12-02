@@ -2,7 +2,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from './components/home.jsx';
 import LoginPage from './components/login';
-import RenterDashboard from './components/renter-dashboard.jsx';
+import RenterDashboard from './components/renter/renter-dashboard.jsx';
 import Signup from './components/signup.jsx';
 import Available from './components/available.jsx';
 import './styles/App.css'
