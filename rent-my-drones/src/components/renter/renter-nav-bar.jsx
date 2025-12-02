@@ -30,6 +30,11 @@ const RenterNav = () => {
         navigate('/renter-dashboard/rented');
     }
 
+    // handler function for navigation to renter dashboard
+    const goToDash = (e) => {
+        e.preventDefault();
+    }
+
 }
 
 export default RenterNav;
