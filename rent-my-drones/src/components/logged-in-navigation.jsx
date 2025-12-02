@@ -1,10 +1,12 @@
 
 
-import { useNavigate } from "react-router";
+import RenterNav from "./renter/renter-nav-bar";
 import { connect } from "react-redux";
 import '../styles/nav-comp.css'
 
 const LoggedInNavigation = (props) => {
+
+
 
 
 }
