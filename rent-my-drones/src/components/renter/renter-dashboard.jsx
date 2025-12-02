@@ -21,9 +21,12 @@ const RenterDashboard = () => {
 
 
     return (
-        <div className='dashboard-container'>
+        <div className='dashboard'>
             <LoggedInNavigation />
             <div className='dashboard-body'>
+                <div className='dashboard-container'>
+
+                </div>
 
             </div>
 
