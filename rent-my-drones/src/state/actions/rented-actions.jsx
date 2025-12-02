@@ -9,6 +9,11 @@ export const RENTED_FAILURE = 'RENTED_FAILURE'
  *                     : drones of the renter
  */
 export const getRentedDronesCount = () => async (dispatch) => {
+    try {
+
+    } catch (err) {
+
+    }
 
 }
 
