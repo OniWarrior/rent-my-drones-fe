@@ -23,13 +23,7 @@ const RenterDashboard = () => {
     return (
         <div className='dashboard-container'>
             <LoggedInNavigation />
-            <div className='dashboard-header'>
-                <h1>Dashboard</h1>
-            </div>
-            <div className='dashboard-card-container'>
-                <button className='dashboard-card available-card' onClick={handleAvailable}>Available</button>
-                <button className='dashboard-card rented-card' onClick={handleRented}>Rented</button>
-            </div>
+
         </div>
     )
 
