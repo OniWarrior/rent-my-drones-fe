@@ -10,6 +10,8 @@ export const RENTED_FAILURE = 'RENTED_FAILURE'
  */
 export const getRentedDronesCount = () => async (dispatch) => {
     try {
+        // start action
+        dispatch({ type: RENTED_START });
 
     } catch (err) {
         // dispatch failure to reducer
