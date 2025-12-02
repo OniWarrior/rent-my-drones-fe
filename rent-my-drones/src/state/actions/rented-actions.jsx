@@ -14,7 +14,7 @@ export const getRentedDronesCount = () => async (dispatch) => {
         dispatch({ type: RENTED_START });
 
         // make api call and store response
-        const response = await axiosWithAuth().post('/api/users/renter-total-rented');
+        const response = await axiosWithAuth().get('/api/users/renter-total-rented');
 
         // dispatch success to reducer
         dispatch({ type: RENTED_SUCCESS, payload: response.data.rented });
