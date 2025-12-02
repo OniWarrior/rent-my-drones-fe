@@ -31,17 +31,26 @@ const RenterDashboard = (props) => {
                             <div className='big-card-header'>
                                 <h2>Profile</h2>
                                 <div className='profile-img'></div>
-
+                                <h2>{props.login.message}</h2>
                             </div>
 
                         </div>
                         <div className='big-card'>
                             <div className='big-card-header'>
-                                <h2>Number of Drones</h2>
+                                <h2>Number of Rented Drones</h2>
+                                <h2>{props.rentedDrones}</h2>
                             </div>
 
                         </div>
 
+                    </div>
+                    <div className='big-card-group'>
+                        <div className='big-card'>
+
+                        </div>
+                        <div className='big-card'>
+
+                        </div>
                     </div>
 
 
