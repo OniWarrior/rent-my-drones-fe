@@ -25,6 +25,12 @@ const RenterDashboard = () => {
             <LoggedInNavigation />
             <div className='dashboard-body'>
                 <div className='dashboard-container'>
+                    <div className='big-card'>
+
+                    </div>
+                    <div className='big-card'>
+
+                    </div>
 
                 </div>
 
