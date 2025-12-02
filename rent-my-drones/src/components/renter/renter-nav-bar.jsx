@@ -18,6 +18,11 @@ const RenterNav = () => {
         navigate('/')
     }
 
+    // handler function for navigation to the available market for drones
+    const goToAvailable = (e) => {
+
+    }
+
 }
 
 export default RenterNav;
