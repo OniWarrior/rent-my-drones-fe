@@ -9,7 +9,14 @@ import { useNavigate } from "react-router";
 const RenterNav = () => {
 
     // state var for navigation.
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
+    // handler functin for logout
+    const logOut = (e) => {
+        e.preventDefault()
+        localStorage.removeItem('token')
+        navigate('/')
+    }
 
 }
 
