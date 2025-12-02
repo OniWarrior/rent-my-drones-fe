@@ -26,11 +26,23 @@
 }
 
 .big-card-header{
-    height:50%;
-    border-bottom: 2px solid yellow;
+    height:80%;
+    border-bottom: 1px solid orange;
     margin:auto;
     text-align: center;
     font-size: x-large;
+}
+
+.profile-img{
+    background-image: url("../Assets/dashboardimg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    background-size:2em;
+    height:50%;
+    width:50%;
+    border-radius: 50%;
+    margin:auto;
 }
 .big-card{
 

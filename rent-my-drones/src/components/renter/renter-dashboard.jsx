@@ -4,7 +4,7 @@ import '../../styles/renter-dashboard.css';
 import { useNavigate } from 'react-router';
 import LoggedInNavigation from '../logged-in-navigation'
 
-const RenterDashboard = () => {
+const RenterDashboard = (props) => {
     const navigate = useNavigate();
 
     // handler for available button
