@@ -29,6 +29,7 @@ const RenterDashboard = () => {
                         <div className='big-card'>
                             <div className='big-card-header'>
                                 <h2>Profile</h2>
+                                <div className='profile-img'></div>
 
                             </div>
 
