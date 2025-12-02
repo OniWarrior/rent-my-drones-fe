@@ -27,9 +27,16 @@ const RenterDashboard = () => {
                 <div className='dashboard-container'>
                     <div className='big-card-group'>
                         <div className='big-card'>
+                            <div className='big-card-header'>
+                                <h2>Profile</h2>
+
+                            </div>
 
                         </div>
                         <div className='big-card'>
+                            <div className='big-card-header'>
+                                <h2>Number of Drones</h2>
+                            </div>
 
                         </div>
 
