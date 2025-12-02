@@ -2,6 +2,7 @@
 
 import '../../styles/renter-dashboard.css';
 import { useNavigate } from 'react-router';
+import { connect } from 'react-redux';
 import LoggedInNavigation from '../logged-in-navigation'
 
 const RenterDashboard = (props) => {
