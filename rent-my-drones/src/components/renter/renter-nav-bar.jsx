@@ -36,6 +36,12 @@ const RenterNav = () => {
         navigate('/renter-dashboard');
     }
 
+    return (
+        <div className="renter-navigation">
+
+        </div>
+    )
+
 }
 
 export default RenterNav;
