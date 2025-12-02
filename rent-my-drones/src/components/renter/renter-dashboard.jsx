@@ -7,9 +7,10 @@ import LoggedInNavigation from '../logged-in-navigation'
 const RenterDashboard = () => {
     const navigate = useNavigate();
 
+    // handler for available button
     const handleAvailable = (e) => {
         e.preventDefault();
-        navigate('/dashboard/available');
+        navigate('/renter-dashboard/available');
     }
 
     const handleRented = (e) => {
