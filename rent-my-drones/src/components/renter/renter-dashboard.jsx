@@ -39,7 +39,7 @@ const RenterDashboard = (props) => {
                         <div className='big-card'>
                             <div className='big-card-header'>
                                 <h2>Number of Rented Drones</h2>
-                                <h2>{props.rentedDrones}</h2>
+                                <h2>{props.rented}</h2>
                             </div>
 
                         </div>
@@ -67,8 +67,11 @@ const RenterDashboard = (props) => {
 const mapStateToProps = (state) => {
     return {
         login: state.loginReducer.login,
-        loading: state.loginReducer.loading,
-        error: state.loginReducer.error
+        login_loading: state.loginReducer.loading,
+        login_error: state.loginReducer.error,
+        rented: state.rentedReducer.rentedDrones,
+        rented_loading: state.rentedReducer.loading,
+        rented_error: state.rentedReducer.error
     }
 }
 
