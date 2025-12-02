@@ -2,7 +2,7 @@ import axios from "axios";
 
 const axiosWithAuth = () => {
     return axios.create({
-        baseURL: "https://rent-my-drones-be.herokuapp.com",
+        baseURL: "http://localhost:8000",
         headers: {
             authorization: localStorage.getItem("token")
         }
