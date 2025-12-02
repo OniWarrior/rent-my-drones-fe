@@ -6,6 +6,7 @@
 
 import { useNavigate } from "react-router";
 
+
 const RenterNav = () => {
 
     // state var for navigation.
@@ -38,7 +39,12 @@ const RenterNav = () => {
 
     return (
         <div className="renter-navigation">
-
+            <nav className='nav-bar'>
+                <button onClick={goToDash}>Dashboard</button>
+                <button onClick={goToAvailable}>Available </button>
+                <button onClick={goToRented}>Rented</button>
+                <button onClick={logOut}>Log out</button>
+            </nav>
         </div>
     )
 

@@ -4,22 +4,7 @@ import { useNavigate } from "react-router";
 import '../styles/nav-comp.css'
 
 const LoggedInNavigation = () => {
-    const navigate = useNavigate();
 
-    const goToDashboard = (e) => {
-        e.preventDefault()
-        navigate('/dashboard')
-    }
-
-    const goToAvailable = (e) => {
-        e.preventDefault()
-        navigate('/dashboard/available')
-    }
-
-    const goToRented = (e) => {
-        e.preventDefault()
-        navigate('/dashboard/rented')
-    }
 
 
     return (
