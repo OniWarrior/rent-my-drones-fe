@@ -23,6 +23,9 @@ const RenterDashboard = () => {
     return (
         <div className='dashboard-container'>
             <LoggedInNavigation />
+            <div className='dashboard-body'>
+
+            </div>
 
         </div>
     )
