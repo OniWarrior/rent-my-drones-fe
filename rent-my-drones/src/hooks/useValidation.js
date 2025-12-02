@@ -2,31 +2,23 @@ import { useState } from "react";
 import * as yup from 'yup'
 
 
-const initialValues ={
-    username:'',
-    password:''
-}
 
-const initialErrors={
-    username:'',
-    password:''
-}
 
-export const useValidation=(schema)=>{
+export const useValidation = (schema, initialValues, initialErrors) => {
     const [data, setData] = useState(initialValues)
-    const [errors,setErrors] = useState(initialErrors)
-    
+    const [errors, setErrors] = useState(initialErrors)
+
 
     const onInputChange = (event) => {
-        const {name,value} = event.target
-        yup.reach(schema,name)
-        .validate(value)
-        .then(()=>{
-            setErrors({...errors,[name]:""})
-        })
-        .catch(err =>{
-            setErrors({...errors,[name]:err.errors[0]})
-        })
+        const { name, value } = event.target
+        yup.reach(schema, name)
+            .validate(value)
+            .then(() => {
+                setErrors({ ...errors, [name]: "" })
+            })
+            .catch(err => {
+                setErrors({ ...errors, [name]: err.errors[0] })
+            })
 
         setData({
             ...data,
@@ -34,6 +26,6 @@ export const useValidation=(schema)=>{
         })
     };
 
-    return [data,errors, onInputChange]
-    
+    return [data, errors, onInputChange]
+
 }
