@@ -72,5 +72,7 @@ const mapStateToProps = (state) => {
     }
 }
 
+const mapDispatchToProps = { getRentedDronesCount }
 
-export default connect(mapStateToProps)(RenterDashboard)
+
+export default connect(mapStateToProps, mapDispatchToProps)(RenterDashboard)
