@@ -13,14 +13,15 @@ const RenterNav = () => {
 
     // handler functin for logout
     const logOut = (e) => {
-        e.preventDefault()
-        localStorage.removeItem('token')
-        navigate('/')
+        e.preventDefault();
+        localStorage.removeItem('token');
+        navigate('/');
     }
 
     // handler function for navigation to the available market for drones
     const goToAvailable = (e) => {
-
+        e.preventDefault();
+        navigate('/renter-dashboard/available');
     }
 
 }
