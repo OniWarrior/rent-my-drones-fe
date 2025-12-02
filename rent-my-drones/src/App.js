@@ -2,7 +2,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from './components/home.jsx';
 import LoginPage from './components/login';
-import RenterDashboard from './components/renter-dashboard.jsx';
+import RenterDashboard from './components/renter/renter-dashboard.jsx';
 import Signup from './components/signup.jsx';
 import Available from './components/available.jsx';
 import './styles/App.css'
@@ -17,9 +17,9 @@ function App() {
         <Route path='/login' element={<LoginPage />} />
         <Route path='/signup' element={<Signup />} />
         <Route element={<ProtectedRoute />}>
-          <Route path='/dashboard' element={<RenterDashboard />} />
-          <Route path='/dashboard/available' element={<Available />} />
-          <Route path='/dashboard/rented' element={<Rented />} />
+          <Route path='/renter-dashboard' element={<RenterDashboard />} />
+          <Route path='/renter-dashboard/available' element={<Available />} />
+          <Route path='/renter-dashboard/rented' element={<Rented />} />
         </Route>
       </Routes>
 

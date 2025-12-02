@@ -12,11 +12,12 @@
     flex-flow: wrap;
     justify-content: space-evenly;
     padding-top:10%;
+    
 }
 
 .dashboard-card{
-    min-height: 15rem;
-    width: 15rem;        
+    border-radius: 50%;
+         
     box-sizing: border-box;
     box-shadow: 0px 6px 10px rgba(128,128,128,0.8);
     margin-bottom:5%;
@@ -56,19 +57,23 @@
 }
 
 
-#available-card{
+.available-card{
     background-image:url('https://images.unsplash.com/photo-1477160739634-171ff0343882?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1212&q=80');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 15rem;
+    width: 15rem;
     
 }
 
-#rented-card{
+.rented-card{
     background-image:url('https://images.unsplash.com/photo-1524512099866-c65c6bfb2617?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1073&q=80');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 15rem;
+    width: 15rem;   
 }
 
 

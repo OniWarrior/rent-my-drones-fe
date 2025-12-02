@@ -1,42 +1,37 @@
 
 
+import RenterNav from "./renter/renter-nav-bar";
 import { useNavigate } from "react-router";
+import { connect } from "react-redux";
 import '../styles/nav-comp.css'
 
-const LoggedInNavigation = () => {
+const LoggedInNavigation = (props) => {
     const navigate = useNavigate();
 
-    const goToDashboard = (e) => {
-        e.preventDefault()
-        navigate('/dashboard')
-    }
+    // get the role 
+    const role = localStorage.getItem('role');
 
-    const goToAvailable = (e) => {
-        e.preventDefault()
-        navigate('/dashboard/available')
-    }
+    // check what role
+    switch (role) {
+        case "Renter": return (
+            <div className="nav-container">
+                <RenterNav />
+            </div>);
+        default:
+            navigate('/');
 
-    const goToRented = (e) => {
-        e.preventDefault()
-        navigate('/dashboard/rented')
     }
-
-    const logOut = (e) => {
-        e.preventDefault()
-        localStorage.removeItem('token')
-        navigate('/')
-    }
-    return (
-        <div className='nav-container'>
-            <nav className='navbar'>
-                <button onClick={goToDashboard}>Dashboard</button>
-                <button onClick={goToAvailable}>Available </button>
-                <button onClick={goToRented}>Rented</button>
-                <button onClick={logOut}>Log out</button>
-            </nav>
-        </div>
-    )
 
 }
 
-export default LoggedInNavigation
+const mapStateToProps = (state) => {
+    return {
+        login: state.loginReducer.login,
+        loading: state.loginReducer.loading,
+        error: state.loginReducer.error
+    }
+}
+
+
+
+export default connect(mapStateToProps)(LoggedInNavigation);
