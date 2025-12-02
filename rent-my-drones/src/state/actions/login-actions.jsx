@@ -13,13 +13,16 @@ export const postLogin = (login, push) => async (dispatch) => {
 
         // make api call and save response 
         // TODO - update this endpoint after backend is redeployed
-        const response = await axios.post(`https://localhost:8000/api/auth/Login`, login);
+        const response = await axios.post(`https://localhost:8000/api/auth/login`, login);
 
         // dispatch success to reducer
         dispatch({ type: LOGIN_SUCCESS, payload: response.data });
 
         // store token
         localStorage.setItem('token', response.data.token);
+
+        // store role
+        localStorage.setItem('role', response.data.role);
 
         // nav to dashboard
         push('/dashboard');
