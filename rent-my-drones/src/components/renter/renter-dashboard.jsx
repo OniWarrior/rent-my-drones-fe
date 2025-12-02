@@ -49,7 +49,8 @@ const RenterDashboard = (props) => {
                         <div className='big-card'>
                             <div className='big-card-header'>
                                 <h2>Number of Rented Drones</h2>
-                                <h2>{props.rented}</h2>
+                                <br></br>
+                                <h2>{props.rented[0].count}</h2>
                             </div>
 
                         </div>
