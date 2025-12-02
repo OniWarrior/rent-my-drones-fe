@@ -24,6 +24,11 @@ const RenterNav = () => {
         navigate('/renter-dashboard/available');
     }
 
+    // handler function for navigation to the rented drones section
+    const goToRented = (e) => {
+        e.preventDefault()
+    }
+
 }
 
 export default RenterNav;
