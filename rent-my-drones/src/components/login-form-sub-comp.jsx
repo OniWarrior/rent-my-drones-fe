@@ -12,9 +12,21 @@ import { connect } from "react-redux";
 import { postLogin } from '../state/actions/login-actions';
 
 const LoginFormContainer = (props) => {
+
+    // Initial values and errors for login component text boxes
+    const initialValues = {
+        email: '',
+        password: ''
+    }
+
+    const initialErrors = {
+        email: '',
+        password: ''
+    }
+
     // State vars for navigation, errors, and login
     const navigate = useNavigate();
-    const [login, errors, setLogin] = useValidation(LoginFormSchema);
+    const [login, errors, setLogin] = useValidation(LoginFormSchema, initialValues, initialErrors);
 
 
     // handler for changing input in text boxes
@@ -23,8 +35,8 @@ const LoginFormContainer = (props) => {
     }
 
     // handler for form submission after login button is pressed.
-    const onFormSubmit = () => {
-
+    const onFormSubmit = (e) => {
+        e.preventDefault()
         // api call to post login
         props.postLogin(login, navigate);
     }
