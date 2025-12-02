@@ -13,9 +13,10 @@ const RenterDashboard = () => {
         navigate('/renter-dashboard/available');
     }
 
+    // handler for rented button
     const handleRented = (e) => {
         e.preventDefault();
-        navigate('/dashboard/rented');
+        navigate('/renter-dashboard/rented');
     }
 
 
