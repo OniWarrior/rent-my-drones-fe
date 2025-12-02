@@ -4,6 +4,14 @@ export const RENTED_START = 'RENTED_START'
 export const RENTED_SUCCESS = 'RENTED_SUCCESS'
 export const RENTED_FAILURE = 'RENTED_FAILURE'
 
+/*
+ * getRentedDronesCount: api call to get the total count of rented
+ *                     : drones of the renter
+ */
+export const getRentedDronesCount = () => async (dispatch) => {
+
+}
+
 export const getRentedDrones = () => async (dispatch) => {
     try {
 
