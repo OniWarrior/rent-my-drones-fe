@@ -54,4 +54,13 @@ const RenterDashboard = (props) => {
 
 }
 
-export default RenterDashboard
+const mapStateToProps = (state) => {
+    return {
+        login: state.loginReducer.login,
+        loading: state.loginReducer.loading,
+        error: state.loginReducer.error
+    }
+}
+
+
+export default connect(mapStateToProps)(RenterDashboard)
