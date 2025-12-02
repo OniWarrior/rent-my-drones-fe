@@ -11,11 +11,26 @@ import { connect } from "react-redux";
 
 
 const SignupFormContainer = (props) => {
+
+    // Initial values and errors for login component text boxes
+    const initialValues = {
+        email: '',
+        password: '',
+        first_name: '',
+        last_name: ''
+    }
+
+    const initialErrors = {
+        email: '',
+        password: '',
+        first_name: '',
+        last_name: ''
+    }
     // local state var for navigation
     const navigate = useNavigate();
 
     // local state vars for signup and error values
-    const [signup, errors, setSignup] = useValidation(SignupFormSchema);
+    const [signup, errors, setSignup] = useValidation(SignupFormSchema, initialValues, initialErrors);
 
 
     // handler function for input change in text boxes
