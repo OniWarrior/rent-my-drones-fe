@@ -21,11 +21,7 @@ const LoggedInNavigation = () => {
         navigate('/dashboard/rented')
     }
 
-    const logOut = (e) => {
-        e.preventDefault()
-        localStorage.removeItem('token')
-        navigate('/')
-    }
+
     return (
         <div className='nav-container'>
             <nav className='navbar'>
