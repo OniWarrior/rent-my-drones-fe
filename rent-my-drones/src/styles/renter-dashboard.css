@@ -4,8 +4,17 @@
  */
 
 
-
-
+.dashboard-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+.dashboard-container{
+    border:1px solid orange;    
+    width:90%;
+    height:70%;
+}
 
 .available-card{
     background-image:url('https://images.unsplash.com/photo-1477160739634-171ff0343882?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1212&q=80');
