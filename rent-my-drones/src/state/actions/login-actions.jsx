@@ -13,7 +13,7 @@ export const postLogin = (login, push) => async (dispatch) => {
 
         // make api call and save response 
         // TODO - update this endpoint after backend is redeployed
-        const response = await axios.post(`https://rent-my-drones-be.herokuapp.com/api/auth/Login`, login);
+        const response = await axios.post(`https://localhost:8000/api/auth/Login`, login);
 
         // dispatch success to reducer
         dispatch({ type: LOGIN_SUCCESS, payload: response.data });
