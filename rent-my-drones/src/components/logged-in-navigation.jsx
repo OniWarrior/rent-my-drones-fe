@@ -17,4 +17,6 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default LoggedInNavigation
+
+
+export default connect(mapStateToProps)(LoggedInNavigation);
