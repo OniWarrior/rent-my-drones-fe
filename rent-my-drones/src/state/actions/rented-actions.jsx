@@ -12,6 +12,8 @@ export const getRentedDronesCount = () => async (dispatch) => {
     try {
 
     } catch (err) {
+        // dispatch failure to reducer
+        dispatch({ type: RENTED_FAILURE, payload: err.message });
 
     }
 
