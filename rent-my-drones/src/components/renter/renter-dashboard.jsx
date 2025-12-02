@@ -5,8 +5,18 @@ import { useNavigate } from 'react-router';
 import { connect } from 'react-redux';
 import { getRentedDronesCount } from '../../state/actions/rented-actions';
 import LoggedInNavigation from '../logged-in-navigation'
+import { useEffect } from 'react';
 
 const RenterDashboard = (props) => {
+
+
+    useEffect(() => {
+        // make api call to get drone count
+        props.getRentedDronesCount();
+
+    }, [])
+
+
     const navigate = useNavigate();
 
     // handler for available button
