@@ -9,6 +9,13 @@ const LoggedInNavigation = (props) => {
     // get the role 
     const role = localStorage.getItem('role');
 
+    // check what role
+    switch (role) {
+        case "Renter": return (<div className="nav-container">
+
+        </div>)
+    }
+
 
 
 
