@@ -38,14 +38,14 @@ const RenterNav = () => {
     }
 
     return (
-        <div className="renter-navigation">
-            <nav className='nav-bar'>
-                <button onClick={goToDash}>Dashboard</button>
-                <button onClick={goToAvailable}>Available </button>
-                <button onClick={goToRented}>Rented</button>
-                <button onClick={logOut}>Log out</button>
-            </nav>
-        </div>
+        <nav className="nav-row">
+
+            <button className="btn-nav" onClick={goToDash}>Dashboard</button>
+            <button className="btn-nav" onClick={goToAvailable}>Available </button>
+            <button className="btn-nav" onClick={goToRented}>Rented</button>
+            <button className="btn-nav" onClick={logOut}>Log out</button>
+
+        </nav>
     )
 
 }
