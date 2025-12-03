@@ -45,6 +45,18 @@ const OwnerNav = () => {
         navigate('/');
     }
 
+    return (
+        <nav className="nav-row">
+
+            <button className="btn-nav" onClick={goToDash}>Dashboard</button>
+            <button className="btn-nav" onClick={goToOwnerMarket}>Available </button>
+            <button className="btn-nav" onClick={goToRentedDrones}>Rented</button>
+            <button className="btn-nav" onClick={goToAddDrone}>Add Drone</button>
+            <button className="btn-nav" onClick={logOut}>Log out</button>
+
+        </nav>
+    )
+
 
 }
 
