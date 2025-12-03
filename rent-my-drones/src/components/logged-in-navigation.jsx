@@ -22,7 +22,13 @@ const LoggedInNavigation = (props) => {
         case "Renter": return (
             <div className="nav-container">
                 <RenterNav />
-            </div>);
+            </div>
+        );
+        case "Owner": return (
+            <div className="nav-container">
+                <OwnerNav />
+            </div>
+        );
         default:
             navigate('/');
 
