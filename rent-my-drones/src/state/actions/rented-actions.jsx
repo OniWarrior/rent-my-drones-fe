@@ -17,7 +17,7 @@ export const getRentedDronesCount = () => async (dispatch) => {
         const response = await axiosWithAuth().get('/api/users/renter-total-rented');
 
         // dispatch success to reducer
-        dispatch({ type: RENTED_SUCCESS, payload: response.data.rented });
+        dispatch({ type: RENTED_SUCCESS, payload: response.data });
 
     } catch (err) {
         // dispatch failure to reducer
