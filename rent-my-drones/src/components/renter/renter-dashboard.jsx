@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 
 const RenterDashboard = (props) => {
 
+    const navigate = useNavigate();
 
     useEffect(() => {
         // make api call to get drone count
@@ -17,7 +18,7 @@ const RenterDashboard = (props) => {
     }, [])
 
 
-    const navigate = useNavigate();
+
 
     // handler for available button
     const handleAvailable = (e) => {
@@ -50,17 +51,17 @@ const RenterDashboard = (props) => {
                             <div className='big-card-header'>
                                 <h2>Number of Rented Drones</h2>
                                 <br></br>
-                                <h2>{props.rented[0].count}</h2>
+                                <h2>{props.rented_loading ? <p>loading...</p> : props.rented}</h2>
                             </div>
 
                         </div>
 
                     </div>
                     <div className='big-card-group'>
-                        <div className='big-card'>
+                        <div className='big-card' onClick={handleAvailable}>
 
                         </div>
-                        <div className='big-card'>
+                        <div className='big-card' onClick={handleRented}>
 
                         </div>
                     </div>
