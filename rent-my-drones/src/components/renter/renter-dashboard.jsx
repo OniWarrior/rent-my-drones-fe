@@ -26,7 +26,9 @@ const RenterDashboard = (props) => {
 
     return (
         <div className='dashboard'>
+            <div className='mobile-dashboard'></div>
             <LoggedInNavigation />
+
             <div className='dashboard-body'>
                 <div className='dashboard-container'>
                     <div className='big-card-group'>
