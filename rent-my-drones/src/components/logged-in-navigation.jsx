@@ -1,5 +1,11 @@
+/*
+ * Author: Stephen Aranda
+ * File  : logged-in-navigation.jsx 
+ * Desc  : Single file component that acts as a super component that makes the decision
+ *       : on which sub component nav bar to render. Based on user role.
+ */
 
-
+import OwnerNav from "./owner/owner-nav-bar";
 import RenterNav from "./renter/renter-nav-bar";
 import { useNavigate } from "react-router";
 import { connect } from "react-redux";
