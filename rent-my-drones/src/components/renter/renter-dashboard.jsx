@@ -57,24 +57,7 @@ const RenterDashboard = (props) => {
                         </div>
 
                     </div>
-                    <div className='big-card-group'>
-                        <div className='big-card ' onClick={handleAvailable}>
-                            <div className='big-card-header'>
-                                <br></br>
-                                <br></br>
-                                <h2>Available Drones</h2>
-                            </div>
 
-                        </div>
-                        <div className='big-card' onClick={handleRented}>
-                            <div className='big-card-header'>
-                                <br></br>
-                                <br></br>
-                                <h2>Rented Drones</h2>
-                            </div>
-
-                        </div>
-                    </div>
 
 
                 </div>
