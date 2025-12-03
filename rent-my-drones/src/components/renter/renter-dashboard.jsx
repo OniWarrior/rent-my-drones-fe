@@ -3,22 +3,18 @@
 import '../../styles/renter-dashboard.css';
 import { useNavigate } from 'react-router';
 import { connect } from 'react-redux';
-import { getRentedDronesCount } from '../../state/actions/rented-actions';
-import LoggedInNavigation from '../logged-in-navigation'
+import LoggedInNavigation from '../logged-in-navigation';
+import { getRentedDrones } from '../../state/actions/rented-actions';
 import { useEffect } from 'react';
+
 
 const RenterDashboard = (props) => {
 
     const navigate = useNavigate();
 
     useEffect(() => {
-        // make api call to get drone count
-        props.getRentedDronesCount();
-
+        props.getRentedDrones();
     }, [])
-
-
-
 
     // handler for available button
     const handleAvailable = (e) => {
@@ -43,7 +39,7 @@ const RenterDashboard = (props) => {
                             <div className='big-card-header'>
                                 <h2>Profile</h2>
                                 <div className='profile-img'></div>
-                                <h2>{props.login.message}</h2>
+                                <p>{props.login.message}</p>
                             </div>
 
                         </div>
@@ -51,7 +47,10 @@ const RenterDashboard = (props) => {
                             <div className='big-card-header'>
                                 <h2>Number of Rented Drones</h2>
                                 <br></br>
-                                <h2>{props.rented_loading ? <p>loading...</p> : props.rented}</h2>
+                                <h2>
+                                    {
+                                        props.rented_loading ? <p>loading...</p> : props.rented.rented.length}
+                                </h2>
                             </div>
 
                         </div>
@@ -77,10 +76,11 @@ const mapStateToProps = (state) => {
         rented: state.rentedReducer.rentedDrones,
         rented_loading: state.rentedReducer.loading,
         rented_error: state.rentedReducer.error
+
     }
 }
 
-const mapDispatchToProps = { getRentedDronesCount }
+const mapDispatchToProps = { getRentedDrones }
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(RenterDashboard)

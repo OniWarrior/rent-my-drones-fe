@@ -7,7 +7,8 @@
 import { useNavigate } from "react-router";
 
 
-const RenterNav = () => {
+
+const RenterNav = (props) => {
 
     // state var for navigation.
     const navigate = useNavigate();
