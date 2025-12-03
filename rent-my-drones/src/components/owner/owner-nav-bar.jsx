@@ -12,6 +12,13 @@ const OwnerNav = () => {
     const navigate = useNavigate();
 
 
+    // handler to navigate back to dashboard
+    const goToDash = (e) => {
+        e.preventDefault();
+        navigate('/owner-dashboard');
+    }
+
+
 }
 
 export default OwnerNav;
