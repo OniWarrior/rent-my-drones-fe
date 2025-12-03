@@ -10,23 +10,13 @@ import { useEffect } from 'react';
 
 const RenterDashboard = (props) => {
 
+    // local state var for navigation
     const navigate = useNavigate();
 
+    // fetch the number of rented drones of the user
     useEffect(() => {
         props.getRentedDrones();
     }, [])
-
-    // handler for available button
-    const handleAvailable = (e) => {
-        e.preventDefault();
-        navigate('/renter-dashboard/available');
-    }
-
-    // handler for rented button
-    const handleRented = (e) => {
-        e.preventDefault();
-        navigate('/renter-dashboard/rented');
-    }
 
 
     return (
@@ -49,20 +39,14 @@ const RenterDashboard = (props) => {
                                 <br></br>
                                 <h2>
                                     {
-                                        props.rented_loading ? <p>loading...</p> : props.rented.rented.length}
+                                        props.rented_loading ? <p>loading...</p> : props.rented.rented.length
+                                    }
                                 </h2>
                             </div>
-
                         </div>
-
                     </div>
-
-
-
                 </div>
-
             </div>
-
         </div>
     )
 
