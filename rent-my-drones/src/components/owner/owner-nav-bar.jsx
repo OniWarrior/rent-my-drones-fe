@@ -25,6 +25,13 @@ const OwnerNav = () => {
         navigate('/owner-dashboard/owner-drone-market');
     }
 
+    // handler to navigate to all drones that owner owns that 
+    // are currently being rented by a renter
+    const goToRentedDrones = (e) => {
+        e.preventDefault();
+        navigate('/owner-dashboard/owner-rented-drones');
+    }
+
 
 }
 
