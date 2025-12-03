@@ -1,4 +1,9 @@
-
+/*
+ * Author: Stephen Aranda
+ * File  : renter-dashboard.jsx 
+ * Desc  : Single File Component of the renter dashboard. Renders the email and
+ *       : number of rented drones of the renter along with the renter nav bar.
+ */
 
 import '../../styles/renter-dashboard.css';
 import { useNavigate } from 'react-router';
