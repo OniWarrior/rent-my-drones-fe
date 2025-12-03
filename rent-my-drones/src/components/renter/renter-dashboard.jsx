@@ -58,7 +58,12 @@ const RenterDashboard = (props) => {
 
                     </div>
                     <div className='big-card-group'>
-                        <div className='big-card' onClick={handleAvailable}>
+                        <div className='big-card ' onClick={handleAvailable}>
+                            <div className='big-card-header'>
+                                <br></br>
+                                <br></br>
+                                <h2>Available</h2>
+                            </div>
 
                         </div>
                         <div className='big-card' onClick={handleRented}>
