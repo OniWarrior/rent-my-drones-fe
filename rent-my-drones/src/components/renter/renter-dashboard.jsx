@@ -1,36 +1,77 @@
-
+/*
+ * Author: Stephen Aranda
+ * File  : renter-dashboard.jsx 
+ * Desc  : Single File Component of the renter dashboard. Renders the email and
+ *       : number of rented drones of the renter along with the renter nav bar.
+ */
 
 import '../../styles/renter-dashboard.css';
 import { useNavigate } from 'react-router';
-import LoggedInNavigation from '../logged-in-navigation'
+import { connect } from 'react-redux';
+import LoggedInNavigation from '../logged-in-navigation';
+import { getRentedDrones } from '../../state/actions/rented-actions';
+import { useEffect } from 'react';
 
-const RenterDashboard = () => {
+
+const RenterDashboard = (props) => {
+
+    // local state var for navigation
     const navigate = useNavigate();
 
-    const handleAvailable = (e) => {
-        e.preventDefault();
-        navigate('/dashboard/available');
-    }
-
-    const handleRented = (e) => {
-        e.preventDefault();
-        navigate('/dashboard/rented');
-    }
+    // fetch the number of rented drones of the user
+    useEffect(() => {
+        props.getRentedDrones();
+    }, [])
 
 
     return (
-        <div className='dashboard-container'>
+        <div className='dashboard'>
+            <div className='mobile-dashboard'></div>
             <LoggedInNavigation />
-            <div className='dashboard-header'>
-                <h1>Dashboard</h1>
-            </div>
-            <div className='dashboard-card-container'>
-                <button className='dashboard-card available-card' onClick={handleAvailable}>Available</button>
-                <button className='dashboard-card rented-card' onClick={handleRented}>Rented</button>
+
+            <div className='dashboard-body'>
+                <div className='dashboard-container'>
+                    <div className='big-card-group'>
+                        <div className='big-card'>
+                            <div className='big-card-header'>
+                                <h2>Profile</h2>
+                                <div className='profile-img'></div>
+                                <p>{props.login.message}</p>
+                            </div>
+
+                        </div>
+                        <div className='big-card'>
+                            <div className='big-card-header'>
+                                <h2>Number of Rented Drones</h2>
+                                <br></br>
+                                <h2>
+                                    {
+                                        props.rented_loading ? <p>loading...</p> : props.rented.rented.length
+                                    }
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
 
 }
 
-export default RenterDashboard
+const mapStateToProps = (state) => {
+    return {
+        login: state.loginReducer.login,
+        login_loading: state.loginReducer.loading,
+        login_error: state.loginReducer.error,
+        rented: state.rentedReducer.rentedDrones,
+        rented_loading: state.rentedReducer.loading,
+        rented_error: state.rentedReducer.error
+
+    }
+}
+
+const mapDispatchToProps = { getRentedDrones }
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(RenterDashboard)
