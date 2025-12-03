@@ -5,3 +5,4 @@
  */
 
 import loggedInNavigation from "../logged-in-navigation";
+import { connect } from "react-redux";
