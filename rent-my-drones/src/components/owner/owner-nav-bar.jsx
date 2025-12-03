@@ -38,6 +38,13 @@ const OwnerNav = () => {
         navigate('/owner-dashboard/add-drone');
     }
 
+    // handler functin for logout
+    const logOut = (e) => {
+        e.preventDefault();
+        localStorage.removeItem('token');
+        navigate('/');
+    }
+
 
 }
 
