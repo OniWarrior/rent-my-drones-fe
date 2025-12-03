@@ -32,6 +32,12 @@ const OwnerNav = () => {
         navigate('/owner-dashboard/owner-rented-drones');
     }
 
+    // handler to navigate to adding a drone page
+    const goToAddDrone = (e) => {
+        e.preventDefault();
+        navigate('/owner-dashboard/add-drone');
+    }
+
 
 }
 
