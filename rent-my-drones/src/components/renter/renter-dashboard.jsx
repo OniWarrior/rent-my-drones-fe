@@ -5,7 +5,7 @@
  *       : number of rented drones of the renter along with the renter nav bar.
  */
 
-import '../../styles/renter-dashboard.css';
+
 
 import { connect } from 'react-redux';
 import LoggedInNavigation from '../logged-in-navigation';
