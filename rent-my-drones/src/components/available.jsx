@@ -24,25 +24,32 @@ const Available = (props) => {
     }
 
     if (props.loading) {
-        return (<h1>...Loading</h1>)
-    }
-    else if (props.drones.length === 0) {
         return (
-            <div className='available-container'>
+            <div className='available'>
                 <LoggedInNavigation />
                 <div className='available-header'>
                     <h1>Available Drones</h1>
+                    <h2>...Loading</h2>
                 </div>
-                <div className='available-card-container'>
-                    <h2 style={{ fontSize: "xx-large" }}>No Available Drones</h2>
+
+            </div>)
+    }
+    else if (props.drones.length === 0) {
+        return (
+            <div className='available'>
+                <LoggedInNavigation />
+                <div className='available-header'>
+                    <h1>Available Drones</h1>
+                    <h2>No Available Drones</h2>
                 </div>
+
             </div>
         )
     }
     else {
 
         return (
-            <div className='available-container'>
+            <div className='available'>
                 <LoggedInNavigation />
                 <div className='available-header'>
                     <h1>Available Drones</h1>
