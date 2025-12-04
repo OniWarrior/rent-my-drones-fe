@@ -65,10 +65,14 @@ const Available = (props) => {
             <div className='available'>
                 <LoggedInNavigation />
                 <div className="available-body">
-                    <div className='available-header'>
-                        <h1>Available Drones</h1>
-                    </div>
+
                     <div className="available-container">
+                        <div className='available-header'>
+                            <h1>Available Drones</h1>
+                        </div>
+                        <div className="card-container">
+
+                        </div>
 
                     </div>
 
