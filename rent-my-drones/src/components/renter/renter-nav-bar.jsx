@@ -23,25 +23,25 @@ const RenterNav = () => {
     // handler function for navigation to the available market for drones
     const goToAvailable = (e) => {
         e.preventDefault();
-        navigate('/renter-dashboard/available');
+        navigate('/dashboard/available');
     }
 
     // handler function for navigation to the rented drones section
     const goToRented = (e) => {
         e.preventDefault();
-        navigate('/renter-dashboard/rented');
+        navigate('/dashboard/rented');
     }
 
     // handler function for navigation to renter dashboard
     const goToDash = (e) => {
         e.preventDefault();
-        navigate('/renter-dashboard');
+        navigate('/dashboard');
     }
 
     return (
         <nav className="nav-row">
 
-            <button className="btn-nav" onClick={goToDash}>Dashboard</button>
+            <button className="btn-nav" onClick={goToDash}>Dash</button>
             <button className="btn-nav" onClick={goToAvailable}>Available </button>
             <button className="btn-nav" onClick={goToRented}>Rented</button>
             <button className="btn-nav" onClick={logOut}>Log out</button>

@@ -3,13 +3,40 @@
  */
 
  /*
+  * attribution: Photo by <a href="https://unsplash.com/@micahandsammiechaffin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Micah & Sammie Chaffin</a> on <a href="https://unsplash.com/photos/photographers-gear-ready-to-be-used-w4avgGL6Icg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      
+  */
+
+  /*
   * attribution: Photo by <a href="https://unsplash.com/@aaronburden?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aaron Burden</a> on <a href="https://unsplash.com/photos/black-and-white-dji-quadcopters-cKdqPpL1EuY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
       
+ */
+
+
+ /*
+  * styling for mobile dashboard of renter
  */
 
 .mobile-dashboard{
     display: none;
 }
+
+/*
+ * styling for the container of all elements underneath the nav bar of renter user type.
+*/
+.dashboard-body{
+    display: flex;
+    justify-content: center;  
+
+    height:100vh;
+    background-image:url('../Assets/renter_dash_asset.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+/*
+ * Styling for the container of all elements underneath the nav bar of owner user type
+*/
 
 .owner-body{
     display: flex;
@@ -22,6 +49,10 @@
     background-attachment: fixed;
     background-size: cover;    
 }
+
+/*
+ * styling for the container of big cards broup
+*/
 .dashboard-container{    
     width:90%;
     height:70%;    
@@ -29,6 +60,11 @@
     color:black;
 }
 
+/*
+ * styling for the container of the two big cards in the middle of the screen.
+ * Profile card and the number of rented drones card for renter and
+ * Profile card and the number of drones rented out card for owner.
+*/
 .big-card-group{    
     height:60%;
     display: flex;
@@ -37,6 +73,10 @@
     align-items: center;
 }
 
+/*
+ * styling for the header of all big cards.
+*/
+
 .big-card-header{
     height:80%;
     font-family: Arial, Helvetica, sans-serif;
@@ -44,6 +84,10 @@
     text-align: center;
     font-size: x-large;
 }
+
+/*
+ * styling for the div containing the profile avatar image for both user types.
+ */
 
 .profile-img{
     background-image: url("../Assets/dashboardimg.png");
@@ -56,6 +100,10 @@
     border-radius: 50%;
     margin:auto;
 }
+
+/*
+ * styling for the big cards used in the dashboard of both user types
+ */
  .big-card{
     background-color: white;
     height:40%;
@@ -68,18 +116,10 @@
     
 }
 
-.dashboard-container > .big-card-group > .btn-card:hover{
-    animation: scale-up 0.4s forwards;
-}
-
-.dashboard-container > .big-card-group > .btn-card:not(:hover){
-    transform: scale(1.0);
-
-}
 
 
 /*
- * Stylings for mobile phone devices
+ * Stylings for mobile phone devices for both user types
  */
 @media screen and (max-width:600px){
 
@@ -89,7 +129,7 @@
         height:90%;
     }
 
-    .mobile-dashboard{
+     .mobile-owner-dashboard{
         background-image:url('../Assets/owner_dash_asset.jpg');
         background-position: center;
         background-repeat: no-repeat;
@@ -103,6 +143,29 @@
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         
+
+    }
+
+    .mobile-dashboard{
+        background-image:url('../Assets/renter_dash_asset.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;    
+        display: block;
+        height: 35vh;        
+        margin:auto;
+        top:0;
+        left: 0;
+        right:0;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        
+
+    }
+
+    .owner-body{
+        background-image: none;
+        height:65vh;  
 
     }
     .dashboard-body{       
