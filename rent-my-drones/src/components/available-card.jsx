@@ -31,4 +31,6 @@ const AvailableCard = (props) => {
 
 }
 
-export default AvailableCard;
+const mapDispatchToProps = { rentAvailableDrone }
+
+export default connect(null, mapDispatchToProps)(AvailableCard);
