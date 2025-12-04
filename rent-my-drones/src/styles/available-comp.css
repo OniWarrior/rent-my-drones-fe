@@ -22,3 +22,19 @@
     justify-content: space-evenly;
     align-items: center;
   }
+
+  /*
+   * styling for the card container
+   */
+   .card-container{
+    height: 90%;
+    border:1px solid orange;
+    width:90%;
+   }
+
+   /*
+    * styling for available header
+    */
+    .available-header{
+        font-size: x-large;
+    }
