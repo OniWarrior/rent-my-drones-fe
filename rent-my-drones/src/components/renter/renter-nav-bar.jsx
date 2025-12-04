@@ -41,7 +41,7 @@ const RenterNav = () => {
     return (
         <nav className="nav-row">
 
-            <button className="btn-nav" onClick={goToDash}>Dashboard</button>
+            <button className="btn-nav" onClick={goToDash}>Dash</button>
             <button className="btn-nav" onClick={goToAvailable}>Available </button>
             <button className="btn-nav" onClick={goToRented}>Rented</button>
             <button className="btn-nav" onClick={logOut}>Log out</button>
