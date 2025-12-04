@@ -4,10 +4,10 @@
  * Desc  : card component for the avaialble component. Used to display the information
  *       : of a drone and allow a user to rent by pressing the rent button.
  */
+import '../styles/available-card.css';
 
 
-
-const Card = (props) => {
+const AvailableCard = (props) => {
 
     return (
         <div className="item-card">
@@ -21,4 +21,4 @@ const Card = (props) => {
 
 }
 
-export default Card
+export default AvailableCard;
