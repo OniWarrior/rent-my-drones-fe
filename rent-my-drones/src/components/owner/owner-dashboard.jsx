@@ -3,7 +3,7 @@
  * File  : owner-dashboard.jsx 
  * Desc  : Single file component for the dasbhoard of the Owner user type.
  */
-import '../../styles/owner-dashboard.css';
+
 import LoggedInNavigation from "../logged-in-navigation";
 import { connect } from "react-redux";
 
@@ -16,10 +16,10 @@ const OwnerDashDashboard = (props) => {
 
     return (
         <div className='dashboard'>
-            <div className='mobile-dashboard'></div>
+            <div className='mobile-owner-dashboard'></div>
             <LoggedInNavigation />
 
-            <div className='owner-body '>
+            <div className='owner-body'>
                 <div className='dashboard-container'>
                     <div className='big-card-group'>
                         <div className='big-card'>
