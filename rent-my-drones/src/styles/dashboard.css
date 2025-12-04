@@ -162,6 +162,12 @@
         
 
     }
+
+    .owner-body{
+        background-image: none;
+        height:65vh;  
+
+    }
     .dashboard-body{       
         background-image: none;
         height:65vh;        
