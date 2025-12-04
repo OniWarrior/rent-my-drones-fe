@@ -2,20 +2,24 @@
  * attribution: <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Freepik - Flaticon</a>
  */
 
- 
+ /*
+  * attribution: Photo by <a href="https://unsplash.com/@aaronburden?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aaron Burden</a> on <a href="https://unsplash.com/photos/black-and-white-dji-quadcopters-cKdqPpL1EuY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      
+ */
 
 .mobile-dashboard{
     display: none;
 }
 
-.dashboard-body{
+.owner-body{
     display: flex;
     justify-content: center;  
 
-    height:100vh;
-    background-image:url('../Assets/renter_dash_asset.jpg');
+    height:95vh;
+    background-image:url('../Assets/owner_dash_asset.jpg');
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;    
 }
 .dashboard-container{    
@@ -86,7 +90,7 @@
     }
 
     .mobile-dashboard{
-        background-image:url('../Assets/renter_dash_asset.jpg');
+        background-image:url('../Assets/owner_dash_asset.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;    
