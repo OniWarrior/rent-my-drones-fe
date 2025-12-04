@@ -4,6 +4,8 @@
  * Desc   : Single file component for the nav bar of Owner user type
  * */
 
+import '../../styles/owner-dashboard.css';
+
 import { useNavigate } from "react-router";
 
 const OwnerNav = () => {
