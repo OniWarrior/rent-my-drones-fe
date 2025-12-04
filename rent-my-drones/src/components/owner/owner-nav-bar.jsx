@@ -17,27 +17,27 @@ const OwnerNav = () => {
     // handler to navigate back to dashboard
     const goToDash = (e) => {
         e.preventDefault();
-        navigate('/owner-dashboard');
+        navigate('/dashboard');
     }
 
     // handler to navigate to all drones that owner owns that are
     // available to rent
     const goToOwnerMarket = (e) => {
         e.preventDefault();
-        navigate('/owner-dashboard/owner-drone-market');
+        navigate('/dashboard/owner-drone-market');
     }
 
     // handler to navigate to all drones that owner owns that 
     // are currently being rented by a renter
     const goToRentedDrones = (e) => {
         e.preventDefault();
-        navigate('/owner-dashboard/owner-rented-drones');
+        navigate('/dashboard/owner-rented-drones');
     }
 
     // handler to navigate to adding a drone page
     const goToAddDrone = (e) => {
         e.preventDefault();
-        navigate('/owner-dashboard/add-drone');
+        navigate('/dashboard/add-drone');
     }
 
     // handler functin for logout
