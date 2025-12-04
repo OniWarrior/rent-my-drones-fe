@@ -26,7 +26,7 @@ const AvailableCard = (props) => {
 
     return (
         <div className="available-card">
-            <form className='available-card-form'>
+            <form className='available-card-form' onSubmit={onFormSubmit}>
                 <img src={props.drone_image} alt='Card of item' />
                 <h2>{props.drone_name}</h2>
                 <p>{props.drone_description}</p>
