@@ -5,9 +5,15 @@
  *       : of a drone and allow a user to rent by pressing the rent button.
  */
 import '../styles/available-card.css';
+import { rentAvailableDrone } from '../state/actions/available-actions';
+import { connect } from "react-redux";
 
 
 const AvailableCard = (props) => {
+
+
+
+
 
     return (
         <div className="available-card">
