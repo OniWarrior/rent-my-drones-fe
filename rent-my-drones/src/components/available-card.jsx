@@ -11,6 +11,15 @@ import { connect } from "react-redux";
 
 const AvailableCard = (props) => {
 
+    // created handler function for form submission
+    const onFormSubmit = (e) => {
+        e.preventDefault();
+
+        // make api call to rent drone after rent button is pressed
+        props.rentAvailableDrone(props.drone_id);
+
+    }
+
 
 
 
