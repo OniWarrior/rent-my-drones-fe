@@ -1,38 +1,21 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import LoggedInNavigation from "./logged-in-navigation";
 import '../styles/available-comp.css'
 import { connect } from "react-redux";
-import { getAvailableDrones, rentAvailableDrone } from "../state/actions/available-actions";
+import { getAvailableDrones } from "../state/actions/available-actions";
 
 
 const Available = (props) => {
 
 
-
-    // var for rent button
-    const initialValue = false;
-    const [isRented, setIsRented] = useState(initialValue);
-
     // call in all available drones
     useEffect(() => {
         props.getAvailableDrones();
         // eslint-disable-next-line
-    }, [isRented])
-
-    // handler for the rent button
-    const handleRentButton = (e, id) => {
-        e.preventDefault();
-
-        // make api call to rent drone
-        props.rentAvailableDrone(id);
-
-        // change state of rent button to trigger useEffect
-        setIsRented(() => ({ isRented: !isRented }));
+    }, [])
 
 
-
-    }
 
     // if loading
     if (props.loading) {
