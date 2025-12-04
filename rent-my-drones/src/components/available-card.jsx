@@ -31,7 +31,7 @@ const AvailableCard = (props) => {
                 <h2>{props.drone_name}</h2>
                 <p>{props.drone_description}</p>
                 <p>{props.drone_cost}</p>
-                <button>Rent Drone</button>
+                <button className='btn-submit btn-rent'>Rent Drone</button>
 
             </form>
 
