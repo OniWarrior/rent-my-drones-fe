@@ -31,6 +31,7 @@ export const postLogin = (login, navigate) => async (dispatch) => {
         // nav to dashboard
         switch (role) {
             case "Renter": navigate('/renter-dashboard'); break;
+            case "Owner": navigate('/owner-dashboard'); break;
             default:
                 return;
         }
