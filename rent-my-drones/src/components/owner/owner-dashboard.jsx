@@ -4,10 +4,48 @@
  * Desc  : Single file component for the dasbhoard of the Owner user type.
  */
 
-import loggedInNavigation from "../logged-in-navigation";
+import LoggedInNavigation from "../logged-in-navigation";
 import { connect } from "react-redux";
 
 const OwnerDashDashboard = (props) => {
+
+    // fetch the number of rented drones of the user
+    useEffect(() => {
+        props.getRentedDrones();
+    }, [])
+
+    return (
+        <div className='dashboard'>
+            <div className='mobile-dashboard'></div>
+            <LoggedInNavigation />
+
+            <div className='dashboard-body'>
+                <div className='dashboard-container'>
+                    <div className='big-card-group'>
+                        <div className='big-card'>
+                            <div className='big-card-header'>
+                                <h2>Profile</h2>
+                                <div className='profile-img'></div>
+                                <p>{props.login.message}</p>
+                            </div>
+
+                        </div>
+                        <div className='big-card'>
+                            <div className='big-card-header'>
+                                <h2>Number of Rented Drones</h2>
+                                <br></br>
+                                <h2>
+                                    {
+                                        props.rented_loading ? <p>loading...</p> : props.rented.rented.length
+                                    }
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
 
 }
 
