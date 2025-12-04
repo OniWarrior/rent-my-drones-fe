@@ -2,6 +2,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from './components/home.jsx';
 import LoginPage from './components/login';
+import OwnerDashboard from './components/owner/owner-dashboard.jsx';
 import RenterDashboard from './components/renter/renter-dashboard.jsx';
 import Signup from './components/signup.jsx';
 import Available from './components/available.jsx';
@@ -20,6 +21,7 @@ function App() {
           <Route path='/renter-dashboard' element={<RenterDashboard />} />
           <Route path='/renter-dashboard/available' element={<Available />} />
           <Route path='/renter-dashboard/rented' element={<Rented />} />
+          <Route path='/owner-dashboard' element={<OwnerDashboard />} />
         </Route>
       </Routes>
 

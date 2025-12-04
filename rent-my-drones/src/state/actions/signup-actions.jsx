@@ -13,7 +13,7 @@ export const register = (signup, push) => async (dispatch) => {
 
         // make api call and save response
         // TODO update this endpoint after backend redeployment
-        const response = await axios.post(`https://localhost:8000/api/auth/signup`, signup);
+        const response = await axios.post(`http://localhost:8000/api/auth/signup`, signup);
 
         // dispatch success to reducer
         dispatch({ type: SIGNUP_SUCCESS, payload: response.data });

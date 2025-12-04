@@ -1,33 +1,25 @@
 /*
  * Author: Stephen Aranda
- * File  : renter-dashboard.jsx 
- * Desc  : Single File Component of the renter dashboard. Renders the email and
- *       : number of rented drones of the renter along with the renter nav bar.
+ * File  : owner-dashboard.jsx 
+ * Desc  : Single file component for the dasbhoard of the Owner user type.
  */
+import '../../styles/owner-dashboard.css';
+import LoggedInNavigation from "../logged-in-navigation";
+import { connect } from "react-redux";
 
-import '../../styles/renter-dashboard.css';
+const OwnerDashDashboard = (props) => {
 
-import { connect } from 'react-redux';
-import LoggedInNavigation from '../logged-in-navigation';
-import { getRentedDrones } from '../../state/actions/rented-actions';
-import { useEffect } from 'react';
-
-
-const RenterDashboard = (props) => {
-
-
-    // fetch the number of rented drones of the user
-    useEffect(() => {
-        props.getRentedDrones();
-    }, [])
-
+    // // fetch the number of rented drones of the user
+    // useEffect(() => {
+    //     props.getRentedDrones();
+    // }, [])
 
     return (
         <div className='dashboard'>
             <div className='mobile-dashboard'></div>
             <LoggedInNavigation />
 
-            <div className='dashboard-body'>
+            <div className='owner-body '>
                 <div className='dashboard-container'>
                     <div className='big-card-group'>
                         <div className='big-card'>
@@ -40,7 +32,7 @@ const RenterDashboard = (props) => {
                         </div>
                         <div className='big-card'>
                             <div className='big-card-header'>
-                                <h2>Number of Rented Drones</h2>
+                                <h2>Number of Drones Rented Out</h2>
                                 <br></br>
                                 <h2>
                                     {
@@ -69,7 +61,7 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = { getRentedDrones }
+const mapDispatchToProps = {}
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(RenterDashboard)
+export default connect(mapStateToProps, mapDispatchToProps)(OwnerDashDashboard)
