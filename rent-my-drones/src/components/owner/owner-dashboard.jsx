@@ -3,23 +3,23 @@
  * File  : owner-dashboard.jsx 
  * Desc  : Single file component for the dasbhoard of the Owner user type.
  */
-
+import '../../styles/owner-dashboard.css';
 import LoggedInNavigation from "../logged-in-navigation";
 import { connect } from "react-redux";
 
 const OwnerDashDashboard = (props) => {
 
-    // fetch the number of rented drones of the user
-    useEffect(() => {
-        props.getRentedDrones();
-    }, [])
+    // // fetch the number of rented drones of the user
+    // useEffect(() => {
+    //     props.getRentedDrones();
+    // }, [])
 
     return (
         <div className='dashboard'>
             <div className='mobile-dashboard'></div>
             <LoggedInNavigation />
 
-            <div className='dashboard-body'>
+            <div className='owner-body '>
                 <div className='dashboard-container'>
                     <div className='big-card-group'>
                         <div className='big-card'>
@@ -32,7 +32,7 @@ const OwnerDashDashboard = (props) => {
                         </div>
                         <div className='big-card'>
                             <div className='big-card-header'>
-                                <h2>Number of Rented Drones</h2>
+                                <h2>Number of Drones Rented Out</h2>
                                 <br></br>
                                 <h2>
                                     {
