@@ -24,17 +24,8 @@ export const postLogin = (login, navigate) => async (dispatch) => {
         // store role
         localStorage.setItem('role', response.data.role);
 
-        const role = localStorage.getItem('role');
-
-
-
-        // nav to dashboard
-        switch (role) {
-            case "Renter": navigate('/renter-dashboard'); break;
-            case "Owner": navigate('/owner-dashboard'); break;
-            default:
-                return;
-        }
+        // navigate to dash
+        navigate('/dashboard');
 
 
     } catch (err) {
