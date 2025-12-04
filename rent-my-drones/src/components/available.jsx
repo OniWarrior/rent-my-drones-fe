@@ -4,25 +4,37 @@ import LoggedInNavigation from "./logged-in-navigation";
 import '../styles/available-comp.css'
 import { connect } from "react-redux";
 import { getAvailableDrones, rentAvailableDrone } from "../state/actions/available-actions";
-import { useNavigate } from "react-router";
 
 
 const Available = (props) => {
-    const navigate = useNavigate();
+
+
+
+    // var for rent button
     const initialValue = false;
     const [isRented, setIsRented] = useState(initialValue);
+
+    // call in all available drones
     useEffect(() => {
         props.getAvailableDrones();
         // eslint-disable-next-line
     }, [isRented])
 
+    // handler for the rent button
     const handleRentButton = (e, id) => {
         e.preventDefault();
+
+        // make api call to rent drone
         props.rentAvailableDrone(id);
+
+        // change state of rent button to trigger useEffect
         setIsRented(() => ({ isRented: !isRented }));
-        navigate('/dashboard/rented');
+
+
+
     }
 
+    // if loading
     if (props.loading) {
         return (
             <div className='available'>
@@ -34,6 +46,7 @@ const Available = (props) => {
 
             </div>)
     }
+    // if all drones are rented and none are available
     else if (props.drones.length === 0) {
         return (
             <div className='available'>
@@ -42,18 +55,22 @@ const Available = (props) => {
                     <h1>Available Drones</h1>
                     <h2>No Available Drones</h2>
                 </div>
-
             </div>
         )
     }
+    // otherwise, render the entire component along with all the drones available for rent.
     else {
 
         return (
             <div className='available'>
                 <LoggedInNavigation />
-                <div className='available-header'>
-                    <h1>Available Drones</h1>
+                <div className="available-body">
+                    <div className='available-header'>
+                        <h1>Available Drones</h1>
+                    </div>
+
                 </div>
+
 
             </div>
         )
