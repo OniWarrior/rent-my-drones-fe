@@ -7,18 +7,26 @@
 
 import RenterDashboard from './renter/renter-dashboard';
 import OwnerDashboard from './owner/owner-dashboard';
-import { connect } from 'react-redux';
+import '../styles/dashboard.css';
 
-const Dashboard = (props) => {
 
-}
+const Dashboard = () => {
 
-const mapStateToProps = (state) => {
-    return {
-        login: state.loginReducer.login,
-        loading: state.loginReducer.loading,
-        error: state.loginReducer.error
+    // get the role
+    const role = localStorage.getItem('role');
+
+    switch (role) {
+        case "Renter": return (
+            <RenterDashboard />
+        );
+        case "Owner": return (
+            <OwnerDashboard />
+        );
     }
+
+
+
+
 }
 
-export default connect(mapStateToProps)(Dashboard);
+export default Dashboard;
