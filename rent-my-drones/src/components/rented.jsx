@@ -7,10 +7,7 @@
 import LoggedInNavigation from "./logged-in-navigation";
 import '../styles/rented-comp.css'
 import { connect } from "react-redux";
-import {
-    getRentedDrones
 
-} from '../state/actions/rented-actions';
 import RentedCard from './rented-card';
 
 const Rented = (props) => {
@@ -81,5 +78,5 @@ const mapStateToProps = (state) => {
 
 }
 
-const mapDispatchToProps = { getRentedDrones }
-export default connect(mapStateToProps, mapDispatchToProps)(Rented)
+
+export default connect(mapStateToProps)(Rented)
