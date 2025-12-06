@@ -45,7 +45,7 @@ const RenterDashboard = (props) => {
                                 <br></br>
                                 <h2>
                                     {
-                                        props.rented_loading ? <p>loading...</p> : props.rented.rented.length
+                                        props.rented_loading ? <p>loading...</p> : props.rented.length
                                     }
                                 </h2>
                             </div>
