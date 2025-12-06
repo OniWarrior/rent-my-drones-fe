@@ -1,75 +1,71 @@
-import { useEffect, useState } from "react";
+/*
+ * Author: Stephen Aranda
+ * File  : rented.jsx 
+ * Desc  : single file component that displays all the cards to return rented drones
+ */
 
 import LoggedInNavigation from "./logged-in-navigation";
-import { connect } from "react-redux";
-import { getRentedDrones, returnRentedDrone } from "../state/actions/rented-actions";
 import '../styles/rented-comp.css'
-import { useNavigate } from "react-router";
+import { connect } from "react-redux";
+import {
+    getRentedDrones,
+    returnRentedDrone
+} from '../state/actions/rented-actions';
+import RentedCard from './rented-card';
 
 const Rented = (props) => {
-    const navigate = useNavigate();
-    const initialValue = false;
-    const [isReturned, setIsReturned] = useState(initialValue);
-    useEffect(() => {
-        props.getRentedDrones();
-        // eslint-disable-next-line
-    }, [isReturned])
 
-    const handleReturnButton = (e, id) => {
-        e.preventDefault();
-        props.returnRentedDrone(id);
-        setIsReturned(() => ({ isReturned: !isReturned }));
-        navigate('/dashboard/available');
-    }
-
-
-
+    // if loading
     if (props.loading) {
-        return (<h1>...Loading</h1>)
-    }
-    else if (props.rentedDrones.length === 0) {
         return (
-            <div className='renter-container'>
+            <div className='rented'>
                 <LoggedInNavigation />
-                <div className='renter-header'>
+                <div className='rented-header'>
                     <h1>Rented Drones</h1>
+                    <h2>...Loading</h2>
                 </div>
-                <div className='renter-card-container'>
-                    <h2 style={{ fontSize: "xx-large" }}>No Rented Drones</h2>
+
+            </div>)
+    }
+    // if all drones are available and none are rented
+    else if (props.drones.length === 0) {
+        return (
+            <div className='rented'>
+                <LoggedInNavigation />
+                <div className='rented-header'>
+                    <h1>Rented Drones</h1>
+                    <h2>No Rented Drones</h2>
                 </div>
             </div>
         )
     }
+    // otherwise, render the entire component along with all the drones that were rented.
     else {
 
         return (
-            <div className='renter-container'>
+            <div className='rented'>
                 <LoggedInNavigation />
-                <div className='renter-header'>
-                    <h1>Rented Drones</h1>
-                </div>
-                {/* 
-                <div className='renter-card-container'>
-                    {
-                        props.rentedDrones.map((char, index) => {
-                            return (
-                                <Card className='renter-card' title={char.drone_name} key={index} data={char} >
-                                    <div className='drone-image-container' >
-                                        <img className='drone-images' src={char.drone_image} alt='The drone your returning' />
-                                    </div>
-                                    <div className='drone-info'>
-                                        <p>$ {char.drone_cost}</p>
-                                        <p>{char.drone_description}</p>
-                                    </div>
-                                    <div className='drone-button'>
-                                        <Button type='ghost' onClick={(e) => handleReturnButton(e, char.drone_id)}>Return Drone</Button>
-                                    </div>
+                <div className="rented-body">
 
-                                </Card>)
-                        })
-                    }
+                    <div className="rented-container">
+                        <div className='rented-header'>
+                            <h1>Rented Drones</h1>
+                        </div>
+                        <div className="card-container">
+                            {
+                                props.drones.map((drone) => {
+                                    return <AvailableCard key={drone.drone_id} drone={drone} />
+
+                                })
+                            }
+
+                        </div>
+
+                    </div>
+
                 </div>
-                */}
+
+
             </div>
         )
     }
