@@ -19,6 +19,7 @@ const RenterDashboard = (props) => {
     // fetch the number of rented drones of the user
     useEffect(() => {
         props.getRentedDrones();
+        // eslint-disable-next-line
     }, [])
 
 
