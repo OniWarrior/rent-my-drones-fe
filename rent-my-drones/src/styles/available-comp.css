@@ -3,9 +3,9 @@
  * styling for positioning of all elements
  */
  .available-body{
-        height:100vh;
+        height:150vh;
         display: flex;
-    
+        
         justify-content: center;
         align-items: center;
  }
@@ -14,7 +14,7 @@
   * styling for the available card container
   */
   .available-container{
-        
+       
         height:90%;
         width:90%;
         display:flex;
@@ -44,4 +44,14 @@
     */
     .available-header{
         font-size: x-large;
+    }
+
+    @media  screen and (max-width:600px) {
+        .card-container{
+            width:100%;
+            
+            
+        }
+        
+        
     }
