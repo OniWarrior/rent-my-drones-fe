@@ -3,18 +3,11 @@ import { useEffect } from "react";
 import LoggedInNavigation from "./logged-in-navigation";
 import '../styles/available-comp.css'
 import { connect } from "react-redux";
-import { getAvailableDrones } from "../state/actions/available-actions";
+
+import AvailableCard from './available-card';
 
 
 const Available = (props) => {
-
-
-    // call in all available drones
-    useEffect(() => {
-        props.getAvailableDrones();
-        // eslint-disable-next-line
-    }, [])
-
 
 
     // if loading
@@ -54,6 +47,12 @@ const Available = (props) => {
                             <h1>Available Drones</h1>
                         </div>
                         <div className="card-container">
+                            {
+                                props.drones.map((drone) => {
+                                    return <AvailableCard key={drone.drone_id} drone={drone} />
+
+                                })
+                            }
 
                         </div>
 
@@ -75,6 +74,6 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = { getAvailableDrones, rentAvailableDrone }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Available)
+
+export default connect(mapStateToProps)(Available)
