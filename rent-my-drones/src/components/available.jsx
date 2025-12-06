@@ -1,52 +1,65 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import LoggedInNavigation from "./logged-in-navigation";
 import '../styles/available-comp.css'
 import { connect } from "react-redux";
-import { getAvailableDrones, rentAvailableDrone } from "../state/actions/available-actions";
-import { useNavigate } from "react-router";
+
+import AvailableCard from './available-card';
 
 
 const Available = (props) => {
-    const navigate = useNavigate();
-    const initialValue = false;
-    const [isRented, setIsRented] = useState(initialValue);
-    useEffect(() => {
-        props.getAvailableDrones();
-        // eslint-disable-next-line
-    }, [isRented])
 
-    const handleRentButton = (e, id) => {
-        e.preventDefault();
-        props.rentAvailableDrone(id);
-        setIsRented(() => ({ isRented: !isRented }));
-        navigate('/dashboard/rented');
-    }
 
+    // if loading
     if (props.loading) {
-        return (<h1>...Loading</h1>)
-    }
-    else if (props.drones.length === 0) {
         return (
-            <div className='available-container'>
+            <div className='available'>
                 <LoggedInNavigation />
                 <div className='available-header'>
                     <h1>Available Drones</h1>
+                    <h2>...Loading</h2>
                 </div>
-                <div className='available-card-container'>
-                    <h2 style={{ fontSize: "xx-large" }}>No Available Drones</h2>
+
+            </div>)
+    }
+    // if all drones are rented and none are available
+    else if (props.drones.length === 0) {
+        return (
+            <div className='available'>
+                <LoggedInNavigation />
+                <div className='available-header'>
+                    <h1>Available Drones</h1>
+                    <h2>No Available Drones</h2>
                 </div>
             </div>
         )
     }
+    // otherwise, render the entire component along with all the drones available for rent.
     else {
 
         return (
-            <div className='available-container'>
+            <div className='available'>
                 <LoggedInNavigation />
-                <div className='available-header'>
-                    <h1>Available Drones</h1>
+                <div className="available-body">
+
+                    <div className="available-container">
+                        <div className='available-header'>
+                            <h1>Available Drones</h1>
+                        </div>
+                        <div className="card-container">
+                            {
+                                props.drones.map((drone) => {
+                                    return <AvailableCard key={drone.drone_id} drone={drone} />
+
+                                })
+                            }
+
+                        </div>
+
+                    </div>
+
                 </div>
+
 
             </div>
         )
@@ -61,6 +74,6 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = { getAvailableDrones, rentAvailableDrone }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Available)
+
+export default connect(mapStateToProps)(Available)

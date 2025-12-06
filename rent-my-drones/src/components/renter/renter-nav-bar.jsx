@@ -5,10 +5,11 @@
  * */
 
 import { useNavigate } from "react-router";
+import { connect } from "react-redux";
+import { getAvailableDrones } from "../../state/actions/available-actions";
 
 
-
-const RenterNav = () => {
+const RenterNav = (props) => {
 
     // state var for navigation.
     const navigate = useNavigate();
@@ -23,6 +24,11 @@ const RenterNav = () => {
     // handler function for navigation to the available market for drones
     const goToAvailable = (e) => {
         e.preventDefault();
+
+        // get available drones
+        props.getAvailableDrones();
+
+        // navigate to available page after drones have been fetched.
         navigate('/dashboard/available');
     }
 
@@ -51,4 +57,6 @@ const RenterNav = () => {
 
 }
 
-export default RenterNav;
+const mapDispatchToProps = { getAvailableDrones }
+
+export default connect(null, mapDispatchToProps)(RenterNav);
