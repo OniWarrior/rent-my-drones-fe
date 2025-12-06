@@ -37,7 +37,7 @@ export const getRentedDrones = () => async (dispatch) => {
         const response = await axiosWithAuth().get(`/api/users/rented`);
 
         // dispatch success to reducer
-        dispatch({ type: RENTED_SUCCESS, payload: response.data });
+        dispatch({ type: RENTED_SUCCESS, payload: response.data.rented });
 
     } catch (err) {
         //dispatch failure to reducer
