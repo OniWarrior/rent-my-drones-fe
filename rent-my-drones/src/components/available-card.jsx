@@ -7,16 +7,24 @@
 import '../styles/available-card.css';
 import { rentAvailableDrone } from '../state/actions/available-actions';
 import { connect } from "react-redux";
+import { useNavigate } from 'react-router';
 
 
 const AvailableCard = (props) => {
+
+    // nav var to navigate back to dashboard
+    const navigate = useNavigate();
+
 
     // created handler function for form submission
     const onFormSubmit = (e) => {
         e.preventDefault();
 
         // make api call to rent drone after rent button is pressed
-        props.rentAvailableDrone(props.drone_id);
+        props.rentAvailableDrone(props.drone.drone_id);
+
+        // after successful rent, then navigate to dashboard.
+        navigate('/dashboard');
 
     }
 
@@ -26,12 +34,18 @@ const AvailableCard = (props) => {
 
     return (
         <div className="available-card">
-            <form className='available-card-form' onSubmit={onFormSubmit}>
-                <img src={props.drone_image} alt='Card of item' />
-                <h2>{props.drone_name}</h2>
-                <p>{props.drone_description}</p>
-                <p>{props.drone_cost}</p>
-                <button className='btn-submit btn-rent'>Rent Drone</button>
+            <form className='available-card-form' onSubmitCapture={onFormSubmit}>
+                <div className='available-card-img-container'>
+                    <img className="available-card-img" src={props.drone.drone_image} alt='Card of item' />
+                </div>
+                <div className='available-card-info-container'>
+                    <h2>{props.drone.drone_name}</h2>
+                    <p>{props.drone.drone_description}</p>
+                    <p>$ {props.drone.drone_cost}</p>
+                    <button className='btn-submit btn-rent'>Rent Drone</button>
+
+                </div>
+
 
             </form>
 
