@@ -42,7 +42,7 @@ const RentedCard = (props) => {
                     <h2>{props.drone.drone_name}</h2>
                     <p>{props.drone.drone_description}</p>
                     <p>$ {props.drone.drone_cost}</p>
-                    <button className='btn-submit btn-rent'>Return Drone</button>
+                    <button className='btn-submit btn-return'>Return Drone</button>
 
                 </div>
 
