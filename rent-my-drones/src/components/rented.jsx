@@ -8,8 +8,8 @@ import LoggedInNavigation from "./logged-in-navigation";
 import '../styles/rented-comp.css'
 import { connect } from "react-redux";
 import {
-    getRentedDrones,
-    returnRentedDrone
+    getRentedDrones
+
 } from '../state/actions/rented-actions';
 import RentedCard from './rented-card';
 
@@ -54,7 +54,7 @@ const Rented = (props) => {
                         <div className="card-container">
                             {
                                 props.drones.map((drone) => {
-                                    return <AvailableCard key={drone.drone_id} drone={drone} />
+                                    return <RentedCard key={drone.drone_id} drone={drone} />
 
                                 })
                             }
@@ -81,5 +81,5 @@ const mapStateToProps = (state) => {
 
 }
 
-const mapDispatchToProps = { getRentedDrones, returnRentedDrone }
+const mapDispatchToProps = { getRentedDrones }
 export default connect(mapStateToProps, mapDispatchToProps)(Rented)
