@@ -16,7 +16,7 @@ export const getAvailableDrones = () => async (dispatch) => {
         const response = await axiosWithAuth().get(`/api/users/available`);
 
         // dispatch success to reducer function
-        dispatch({ type: AVAILABLE_SUCCESS, payload: response.data });
+        dispatch({ type: AVAILABLE_SUCCESS, payload: response.data.drones });
 
     } catch (err) {
 
@@ -38,6 +38,11 @@ export const rentAvailableDrone = (id) => async (dispatch) => {
 
         // dispatch success to reducer
         dispatch({ type: AVAILABLE_SUCCESS, payload: response.data });
+
+        //alert  success message
+        alert("successfully rented drone!");
+
+
 
     } catch (err) {
         // dispatch failure to reducer
