@@ -1,0 +1,59 @@
+/*
+ * styling for the rented card.
+ */
+.rented-card{
+    border:1px solid black;
+    width:30%;
+    height:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.9);
+}
+
+.rented-card-img{
+    width:100%;
+    height:100%;
+    border-top-left-radius:20px ;
+    border-top-right-radius: 20px;
+}
+
+.rented-card-form{
+    
+   
+    height:100%;
+    width: 100%;
+}
+
+.rented-card-img-container{
+    height: 50%;
+    
+}
+
+
+.rented-card-info-container{
+    height:50%;
+    width:90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin:auto;
+}
+
+.rented-card-info-container h2{
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+
+.btn-return{
+    color:white;
+    height:2em;
+    width: 7em;
+    border-radius: 20px;
+    background-color: black;
+}
