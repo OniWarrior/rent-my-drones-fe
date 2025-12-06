@@ -46,6 +46,7 @@ export const getRentedDrones = () => async (dispatch) => {
 
 }
 
+
 export const returnRentedDrone = (id) => async (dispatch) => {
 
     try {
