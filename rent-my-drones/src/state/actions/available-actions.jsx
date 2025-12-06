@@ -40,7 +40,7 @@ export const rentAvailableDrone = (id) => async (dispatch) => {
         dispatch({ type: AVAILABLE_SUCCESS, payload: response.data });
 
         //alert  success message
-        alert("successfully rented drone!");
+        alert(`${response.data.message}`);
 
 
 
