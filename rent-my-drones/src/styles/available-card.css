@@ -58,3 +58,11 @@
     border-radius: 20px;
     background-color: black;
 }
+
+
+@media screen and (max-width:600px){
+    .available-card{
+        height: 100%;
+        width:100%;
+    }
+}
