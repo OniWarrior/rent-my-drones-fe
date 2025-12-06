@@ -7,6 +7,7 @@
 import { useNavigate } from "react-router";
 import { connect } from "react-redux";
 import { getAvailableDrones } from "../../state/actions/available-actions";
+import { getRentedDrones } from "../../state/actions/rented-actions";
 
 
 const RenterNav = (props) => {
@@ -35,6 +36,11 @@ const RenterNav = (props) => {
     // handler function for navigation to the rented drones section
     const goToRented = (e) => {
         e.preventDefault();
+
+        // get rented drones
+        props.getRentedDrones();
+
+        // navigate to the rented page
         navigate('/dashboard/rented');
     }
 
@@ -57,6 +63,6 @@ const RenterNav = (props) => {
 
 }
 
-const mapDispatchToProps = { getAvailableDrones }
+const mapDispatchToProps = { getAvailableDrones, getRentedDrones }
 
 export default connect(null, mapDispatchToProps)(RenterNav);
