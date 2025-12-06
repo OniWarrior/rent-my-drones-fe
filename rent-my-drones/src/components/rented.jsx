@@ -25,7 +25,7 @@ const Rented = (props) => {
             </div>)
     }
     // if all drones are available and none are rented
-    else if (props.drones.length === 0) {
+    else if (props.rentedDrones.length === 0) {
         return (
             <div className='rented'>
                 <LoggedInNavigation />
@@ -50,7 +50,7 @@ const Rented = (props) => {
                         </div>
                         <div className="card-container">
                             {
-                                props.drones.map((drone) => {
+                                props.rentedDrones.map((drone) => {
                                     return <RentedCard key={drone.drone_id} drone={drone} />
 
                                 })
