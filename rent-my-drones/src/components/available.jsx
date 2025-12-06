@@ -1,4 +1,8 @@
-import { useEffect } from "react";
+/*
+ * Author: Stephen Aranda
+ * File  : available.jsx 
+ * Desc  : single file component that displays all the cards to rent available drones
+ */
 
 import LoggedInNavigation from "./logged-in-navigation";
 import '../styles/available-comp.css'
