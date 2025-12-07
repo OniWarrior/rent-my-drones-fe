@@ -10,6 +10,7 @@ import ProtectedRoute from './components/utils/protected-route.jsx'
 import Rented from './components/rented.jsx';
 import Market from './components/owner/owner-market.jsx';
 import OwnerRented from './components/owner/owner-rented.jsx';
+import Owned from './components/owner/owner-drones-owned.jsx'
 
 function App() {
   return (
