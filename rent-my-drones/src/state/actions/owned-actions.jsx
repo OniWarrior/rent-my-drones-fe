@@ -27,3 +27,17 @@ export const getOwnersDrones = () => async (dispatch) => {
 
 }
 
+/*
+ * postAddDrone: api call for owner to add a drone
+ */
+
+export const postAddDrone = () => (dispatch) => {
+    try {
+
+    } catch (err) {
+        // dispatch failure to reducer
+        dispatch({ type: OWNED_FAILURE, payload: err.message });
+
+    }
+}
+
