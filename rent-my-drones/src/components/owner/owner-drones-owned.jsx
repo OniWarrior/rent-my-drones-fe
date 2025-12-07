@@ -70,7 +70,7 @@ const Owned = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        drones: state.ownedReducer.ownedDrones,
+        drones: state.ownedReducer.drones,
         loading: state.ownedReducer.loading,
         error: state.ownedReducer.error
     }
