@@ -5,14 +5,16 @@
  */
 
 import LoggedInNavigation from "../logged-in-navigation";
+import { getMarketRentedDrones } from "../../state/actions/rented-actions";
 import { connect } from "react-redux";
+import { useEffect } from "react";
 
 const OwnerDashDashboard = (props) => {
 
-    // // fetch the number of rented drones of the user
-    // useEffect(() => {
-    //     props.getRentedDrones();
-    // }, [])
+    // fetch the number of rented drones of the user
+    useEffect(() => {
+        props.getMarketRentedDrones();
+    }, [])
 
     return (
         <div className='dashboard'>
@@ -36,7 +38,7 @@ const OwnerDashDashboard = (props) => {
                                 <br></br>
                                 <h2>
                                     {
-                                        props.rented_loading ? <p>loading...</p> : props.rented.rented.length
+                                        props.rented_loading ? <p>loading...</p> : props.rented.length
                                     }
                                 </h2>
                             </div>
@@ -61,7 +63,7 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = {}
+const mapDispatchToProps = { getMarketRentedDrones }
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(OwnerDashDashboard)
