@@ -8,6 +8,8 @@
 import { connect } from "react-redux";
 import { useNavigate } from "react-router";
 import { getMarketDrones } from "../../state/actions/available-actions";
+import { getMarketRentedDrones } from "../../state/actions/rented-actions";
+import { getOwnersDrones } from "../../state/actions/owned-actions";
 
 const OwnerNav = (props) => {
 
@@ -37,6 +39,11 @@ const OwnerNav = (props) => {
     // are currently being rented by a renter
     const goToRentedDrones = (e) => {
         e.preventDefault();
+
+        //make api call to get rented drones
+        props.getMarketRentedDrones()
+
+        // navigate to rented drones page
         navigate('/dashboard/owner-rented-drones');
     }
 
@@ -53,12 +60,24 @@ const OwnerNav = (props) => {
         navigate('/');
     }
 
+    // handler function to navigate to owned drones page
+    const goToOwned = (e) => {
+        e.preventDefault()
+
+        // make api call to get all of owner's drones
+        props.getOwnersDrones()
+
+        // navigate to owners drones page
+        navigate('/dashboard/owners-drones');
+    }
+
     return (
         <nav className="nav-row">
 
             <button className="btn-nav" onClick={goToDash}>Dash</button>
             <button className="btn-nav" onClick={goToOwnerMarket}>Market </button>
             <button className="btn-nav" onClick={goToRentedDrones}>Rented</button>
+            <button className="btn-nav" onClick={goToOwned}>Owned</button>
             <button className="btn-nav" onClick={goToAddDrone}>Add</button>
             <button className="btn-nav" onClick={logOut}>Log out</button>
 
@@ -68,6 +87,6 @@ const OwnerNav = (props) => {
 
 }
 
-const mapDispatchToProps = { getMarketDrones }
+const mapDispatchToProps = { getMarketDrones, getMarketRentedDrones, getOwnersDrones }
 
 export default connect(null, mapDispatchToProps)(OwnerNav);

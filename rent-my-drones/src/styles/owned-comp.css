@@ -1,7 +1,7 @@
 /*
  * styling for positioning of all elements
  */
- .rented-body{
+ .owned-body{
         height:100vh;
         display: flex;
     
@@ -10,9 +10,9 @@
  }
 
  /*
-  * styling for the rented card container
+  * styling for the owned card container
   */
-  .rented-container{
+  .owned-container{
         
         height:90%;
         width:90%;
@@ -41,7 +41,7 @@
    /*
     * styling for available header
     */
-    .rented-header{
+    .owned-header{
         font-size: x-large;
         text-align: center;
     }
