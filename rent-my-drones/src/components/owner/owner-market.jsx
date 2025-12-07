@@ -7,7 +7,6 @@
 
 import LoggedInNavigation from '../logged-in-navigation';
 import { connect } from 'react-redux';
-// TODO - ADD IMPORT FOR MARKET CARD
 import '../../styles/market-comp.css';
 import MarketCard from './owner-market-card';
 
