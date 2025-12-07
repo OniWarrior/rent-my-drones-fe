@@ -4,7 +4,7 @@
  * Desc   : single file component for card that displays the drone information in owner market place.
  * */
 
-import '../styles/market-card.css';
+import '../../styles/market-card.css';
 
 
 
