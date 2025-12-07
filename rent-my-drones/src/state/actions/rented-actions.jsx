@@ -27,6 +27,9 @@ export const getRentedDronesCount = () => async (dispatch) => {
 
 }
 
+/*
+ * getRentedDrones: api call that will get the rented drones of the Renter user type
+ * */
 export const getRentedDrones = () => async (dispatch) => {
     try {
 
@@ -46,7 +49,9 @@ export const getRentedDrones = () => async (dispatch) => {
 
 }
 
-
+/*
+ * returnRentedDrone: api call that will return a rented drone using id. for Renter user type.
+ */
 export const returnRentedDrone = (id) => async (dispatch) => {
 
     try {
