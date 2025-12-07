@@ -11,7 +11,7 @@ const AddDroneFormSchema = yup.object().shape({
         .required("please enter cost of drone"),
     drone_url: yup.string()
         .url('Invalid url format')
-        .required("Please enter a url of your drone image that is online")
+        .required("Please enter a url of your drone image that is online: 'https://example.com'")
 
 })
 export default AddDroneFormSchema
