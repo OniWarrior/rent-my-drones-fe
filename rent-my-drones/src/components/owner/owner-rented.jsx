@@ -71,7 +71,7 @@ const OwnerRented = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        drones: state.rentedReducer.drones,
+        drones: state.rentedReducer.rentedDrones,
         loading: state.rentedReducer.loading,
         error: state.rentedReducer.error
     }
