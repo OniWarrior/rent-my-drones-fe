@@ -75,3 +75,12 @@ export const returnRentedDrone = (id) => async (dispatch) => {
     }
 
 }
+
+export const getMarketRentedDrones = () => async (dispatch) => {
+    try {
+
+    } catch (err) {
+        // dispatch failure to reducer
+        dispatch({ type: RENTED_FAILURE, payload: err.message });
+    }
+}
