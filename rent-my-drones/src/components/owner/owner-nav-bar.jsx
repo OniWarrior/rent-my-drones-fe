@@ -7,8 +7,9 @@
 
 import { connect } from "react-redux";
 import { useNavigate } from "react-router";
+import { getMarketDrones } from "../../state/actions/available-actions";
 
-const OwnerNav = () => {
+const OwnerNav = (props) => {
 
     // local var for navigation
     const navigate = useNavigate();
@@ -62,4 +63,6 @@ const OwnerNav = () => {
 
 }
 
-export default OwnerNav;
+const mapDispatchToProps = { getMarketDrones }
+
+export default connect(null, mapDispatchToProps)(OwnerNav);
