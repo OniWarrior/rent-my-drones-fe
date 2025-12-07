@@ -25,6 +25,11 @@ const OwnerNav = (props) => {
     // available to rent
     const goToOwnerMarket = (e) => {
         e.preventDefault();
+
+        // make api call to get the available drones
+        props.getMarketDrones();
+
+        // Then navigate to drone market
         navigate('/dashboard/owner-drone-market');
     }
 
