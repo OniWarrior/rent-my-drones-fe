@@ -8,6 +8,7 @@
 import { connect } from "react-redux";
 import { useNavigate } from "react-router";
 import { getMarketDrones } from "../../state/actions/available-actions";
+import { getMarketRentedDrones } from "../../state/actions/rented-actions";
 
 const OwnerNav = (props) => {
 
@@ -37,6 +38,11 @@ const OwnerNav = (props) => {
     // are currently being rented by a renter
     const goToRentedDrones = (e) => {
         e.preventDefault();
+
+        //make api call to get rented drones
+        props.getMarketRentedDrones()
+
+        // navigate to rented drones page
         navigate('/dashboard/owner-rented-drones');
     }
 
@@ -68,6 +74,6 @@ const OwnerNav = (props) => {
 
 }
 
-const mapDispatchToProps = { getMarketDrones }
+const mapDispatchToProps = { getMarketDrones, getMarketRentedDrones }
 
 export default connect(null, mapDispatchToProps)(OwnerNav);
