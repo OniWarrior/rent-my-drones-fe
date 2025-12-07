@@ -34,6 +34,9 @@ export const getOwnersDrones = () => async (dispatch) => {
 export const postAddDrone = () => (dispatch) => {
     try {
 
+        // dispatch start of action
+        dispatch({ type: OWNED_START });
+
     } catch (err) {
         // dispatch failure to reducer
         dispatch({ type: OWNED_FAILURE, payload: err.message });
