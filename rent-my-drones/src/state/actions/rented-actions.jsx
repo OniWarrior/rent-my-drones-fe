@@ -27,6 +27,9 @@ export const getRentedDronesCount = () => async (dispatch) => {
 
 }
 
+/*
+ * getRentedDrones: api call that will get the rented drones of the Renter user type
+ * */
 export const getRentedDrones = () => async (dispatch) => {
     try {
 
@@ -46,7 +49,9 @@ export const getRentedDrones = () => async (dispatch) => {
 
 }
 
-
+/*
+ * returnRentedDrone: api call that will return a rented drone using id. for Renter user type.
+ */
 export const returnRentedDrone = (id) => async (dispatch) => {
 
     try {
@@ -69,4 +74,25 @@ export const returnRentedDrone = (id) => async (dispatch) => {
         dispatch({ type: RENTED_FAILURE, payload: err.message });
     }
 
+}
+
+/*
+ * getMarketRentedDrones: api call that retrieves the drones
+ *                      : of the owner that have been rented out to Renter user types.
+ */
+export const getMarketRentedDrones = () => async (dispatch) => {
+    try {
+        // dispatch start of action
+        dispatch({ type: RENTED_START });
+
+        // make api call to get rented drones 
+        const response = await axiosWithAuth().get('/api/users/rented-drones');
+
+        // dispatch success to reducer
+        dispatch({ type: RENTED_SUCCESS, payload: response.data })
+
+    } catch (err) {
+        // dispatch failure to reducer
+        dispatch({ type: RENTED_FAILURE, payload: err.message });
+    }
 }

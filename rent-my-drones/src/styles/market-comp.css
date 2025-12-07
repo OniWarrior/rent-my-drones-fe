@@ -1,0 +1,58 @@
+/*
+ * styling for positioning of all elements
+ */
+ .market-body{
+        height:150vh;
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+ }
+
+ /*
+  * styling for the market card container
+  */
+  .market-container{
+       
+        height:90%;
+        width:90%;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+  }
+
+  /*
+   * styling for the card container
+   */
+   .card-container{
+        height: 90%;
+        
+        width:90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 3em;
+        
+   }
+
+   /*
+    * styling for market header
+    */
+    .market-header{
+        font-size: x-large;
+        width:100%;
+        text-align: center;
+    }
+
+    @media  screen and (max-width:600px) {
+        .card-container{
+            width:100%;
+            
+            
+        }
+        
+        
+    }

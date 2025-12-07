@@ -5,10 +5,11 @@
  * */
 
 
-
+import { connect } from "react-redux";
 import { useNavigate } from "react-router";
+import { getMarketDrones } from "../../state/actions/available-actions";
 
-const OwnerNav = () => {
+const OwnerNav = (props) => {
 
     // local var for navigation
     const navigate = useNavigate();
@@ -24,6 +25,11 @@ const OwnerNav = () => {
     // available to rent
     const goToOwnerMarket = (e) => {
         e.preventDefault();
+
+        // make api call to get the available drones
+        props.getMarketDrones();
+
+        // Then navigate to drone market
         navigate('/dashboard/owner-drone-market');
     }
 
@@ -51,9 +57,9 @@ const OwnerNav = () => {
         <nav className="nav-row">
 
             <button className="btn-nav" onClick={goToDash}>Dash</button>
-            <button className="btn-nav" onClick={goToOwnerMarket}>Available </button>
+            <button className="btn-nav" onClick={goToOwnerMarket}>Market </button>
             <button className="btn-nav" onClick={goToRentedDrones}>Rented</button>
-            <button className="btn-nav" onClick={goToAddDrone}>Add Drone</button>
+            <button className="btn-nav" onClick={goToAddDrone}>Add</button>
             <button className="btn-nav" onClick={logOut}>Log out</button>
 
         </nav>
@@ -62,4 +68,6 @@ const OwnerNav = () => {
 
 }
 
-export default OwnerNav;
+const mapDispatchToProps = { getMarketDrones }
+
+export default connect(null, mapDispatchToProps)(OwnerNav);
