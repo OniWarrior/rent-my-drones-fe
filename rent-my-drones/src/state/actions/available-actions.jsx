@@ -66,6 +66,9 @@ export const rentAvailableDrone = (id) => async (dispatch) => {
 export const getMarketDrones = () => async (dispatch) => {
     try {
 
+        // dispatch start of action
+        dispatch({ type: AVAILABLE_START });
+
     } catch (err) {
         // dispatch failure to reducer
         dispatch({ type: AVAILABLE_FAILURE, payload: err.message });
