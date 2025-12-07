@@ -5,7 +5,10 @@ export const AVAILABLE_START = 'AVAILABLE_START';
 export const AVAILABLE_SUCCESS = 'AVAILABLE_SUCCESS';
 export const AVAILABLE_FAILURE = 'AVAILABLE_FAILURE';
 
-
+/*
+ * getAvailableDrones: api call that retrieves all available drones
+ *                   : for the Renter user type.
+ */
 export const getAvailableDrones = () => async (dispatch) => {
 
     try {
@@ -28,6 +31,9 @@ export const getAvailableDrones = () => async (dispatch) => {
 
 }
 
+/*
+ * rentAvailableDrone: Endpoint that allows a Renter to rent an available drone
+ */
 export const rentAvailableDrone = (id) => async (dispatch) => {
     try {
         // dispatch start of action to reducer
@@ -51,4 +57,16 @@ export const rentAvailableDrone = (id) => async (dispatch) => {
     }
 
 
+}
+
+/*
+ * getMarketDrones: api call that retrieves all of the drones that belong to a owner
+ *                : that are in the available market place to be rented by Renter user type
+ */
+export const getMarketDrones = () => async (dispatch) => {
+    try {
+
+    } catch (err) {
+
+    }
 }
