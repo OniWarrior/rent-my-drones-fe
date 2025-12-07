@@ -21,7 +21,7 @@ const OwnerCard = (props) => {
                     <h2>{props.drone.drone_name}</h2>
                     <p>{props.drone.drone_description}</p>
                     <p>$ {props.drone.drone_cost}</p>
-                    <p>{props.drone.renter_id ? props.drone.renter_id : <p>Not Rented</p>}</p>
+                    <p>{props.drone.renter_id ? <p>Renter ID {props.drone.renter_id}</p> : <p>Not Rented</p>}</p>
                 </div>
             </div>
         </div>
