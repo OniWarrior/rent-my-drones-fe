@@ -25,6 +25,7 @@ function App() {
           <Route path='/dashboard/rented' element={<Rented />} />
           <Route path='/dashboard/owner-drone-market' element={<Market />} />
           <Route path='/dashboard/owner-rented-drones' element={<OwnerRented />} />
+          <Route path='/dashboard/owners-drones' element={<Owned />} />
         </Route>
       </Routes>
 
