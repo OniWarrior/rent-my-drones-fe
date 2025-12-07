@@ -85,7 +85,10 @@ export const getMarketRentedDrones = () => async (dispatch) => {
         // dispatch start of action
         dispatch({ type: RENTED_START });
 
-        // make api call
+        // make api call to get rented drones 
+        const response = await axiosWithAuth().get('/api/users/rented-drones');
+
+        // dispatch success to reducer
 
     } catch (err) {
         // dispatch failure to reducer
