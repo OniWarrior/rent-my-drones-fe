@@ -43,6 +43,8 @@
     */
     .market-header{
         font-size: x-large;
+        width:100%;
+        text-align: center;
     }
 
     @media  screen and (max-width:600px) {
