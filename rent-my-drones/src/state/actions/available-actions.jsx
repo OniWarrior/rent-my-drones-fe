@@ -69,6 +69,11 @@ export const getMarketDrones = () => async (dispatch) => {
         // dispatch start of action
         dispatch({ type: AVAILABLE_START });
 
+        // make api call to get drones for the market
+        const response = await axiosWithAuth().get('/available-drones');
+
+
+
     } catch (err) {
         // dispatch failure to reducer
         dispatch({ type: AVAILABLE_FAILURE, payload: err.message });
