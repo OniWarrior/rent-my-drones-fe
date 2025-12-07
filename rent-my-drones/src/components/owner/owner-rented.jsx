@@ -10,7 +10,7 @@ import { connect } from 'react-redux';
 import '../../styles/rented-comp.css';
 import OwnerCard from './owner-rented-owned-card';
 
-const Rented = (props) => {
+const OwnerRented = (props) => {
     // if loading
     if (props.loading) {
         return (
@@ -79,4 +79,4 @@ const mapStateToProps = (state) => {
 
 
 
-export default connect(mapStateToProps)(Rented)
+export default connect(mapStateToProps)(OwnerRented)
