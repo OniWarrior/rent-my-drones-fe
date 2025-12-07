@@ -31,11 +31,14 @@ export const getOwnersDrones = () => async (dispatch) => {
  * postAddDrone: api call for owner to add a drone
  */
 
-export const postAddDrone = () => (dispatch) => {
+export const postAddDrone = (drone) => async (dispatch) => {
     try {
 
         // dispatch start of action
         dispatch({ type: OWNED_START });
+
+        // make api call to add drone
+        const response = await axiosWithAuth().post('/api/users/add-drone', drone);
 
     } catch (err) {
         // dispatch failure to reducer
