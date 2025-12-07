@@ -5,7 +5,7 @@
  * */
 
 
-
+import { connect } from "react-redux";
 import { useNavigate } from "react-router";
 
 const OwnerNav = () => {
@@ -51,7 +51,7 @@ const OwnerNav = () => {
         <nav className="nav-row">
 
             <button className="btn-nav" onClick={goToDash}>Dash</button>
-            <button className="btn-nav" onClick={goToOwnerMarket}>Available </button>
+            <button className="btn-nav" onClick={goToOwnerMarket}>Market </button>
             <button className="btn-nav" onClick={goToRentedDrones}>Rented</button>
             <button className="btn-nav" onClick={goToAddDrone}>Add Drone</button>
             <button className="btn-nav" onClick={logOut}>Log out</button>
