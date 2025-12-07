@@ -8,6 +8,7 @@ import Available from './components/available.jsx';
 import './styles/App.css'
 import ProtectedRoute from './components/utils/protected-route.jsx'
 import Rented from './components/rented.jsx';
+import Market from './components/owner/owner-market.jsx';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/dashboard/available' element={<Available />} />
           <Route path='/dashboard/rented' element={<Rented />} />
+          <Route path='/dashboard/owner-drone-market' element={<Market />} />
         </Route>
       </Routes>
 
