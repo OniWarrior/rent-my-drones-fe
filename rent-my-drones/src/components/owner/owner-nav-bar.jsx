@@ -59,7 +59,7 @@ const OwnerNav = (props) => {
             <button className="btn-nav" onClick={goToDash}>Dash</button>
             <button className="btn-nav" onClick={goToOwnerMarket}>Market </button>
             <button className="btn-nav" onClick={goToRentedDrones}>Rented</button>
-            <button className="btn-nav" onClick={goToAddDrone}>Add Drone</button>
+            <button className="btn-nav" onClick={goToAddDrone}>Add</button>
             <button className="btn-nav" onClick={logOut}>Log out</button>
 
         </nav>
