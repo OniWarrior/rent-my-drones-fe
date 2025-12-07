@@ -67,6 +67,8 @@ export const getMarketDrones = () => async (dispatch) => {
     try {
 
     } catch (err) {
+        // dispatch failure to reducer
+        dispatch({ type: AVAILABLE_FAILURE, payload: err.message });
 
     }
 }
