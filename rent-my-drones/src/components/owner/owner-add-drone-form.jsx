@@ -10,7 +10,7 @@ const AddDroneForm = (props) => {
     const initialValues = {
         drone_name: '',
         drone_description: '',
-        drone_cost: 0.00,
+        drone_cost: '',
         drone_url: ''
     }
 
@@ -80,6 +80,7 @@ const AddDroneForm = (props) => {
                                 name='drone_cost'
                                 required
                                 placeholder='cost example 300.00'
+                                defaultValue='0.00'
                                 onChange={onChangeInput}
                             />
                             <input
