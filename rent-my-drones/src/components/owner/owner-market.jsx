@@ -71,9 +71,9 @@ const Market = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        drones: state.marketReducer.drones,
-        loading: state.marketReducer.loading,
-        error: state.marketReducer.error
+        drones: state.availableReducer.drones,
+        loading: state.availableReducer.loading,
+        error: state.availableReducer.error
     }
 }
 
