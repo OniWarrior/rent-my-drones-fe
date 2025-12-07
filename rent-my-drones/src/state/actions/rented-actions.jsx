@@ -76,8 +76,16 @@ export const returnRentedDrone = (id) => async (dispatch) => {
 
 }
 
+/*
+ * getMarketRentedDrones: api call that retrieves the drones
+ *                      : of the owner that have been rented out to Renter user types.
+ */
 export const getMarketRentedDrones = () => async (dispatch) => {
     try {
+        // dispatch start of action
+        dispatch({ type: RENTED_START });
+
+        // make api call
 
     } catch (err) {
         // dispatch failure to reducer
