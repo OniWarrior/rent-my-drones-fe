@@ -40,6 +40,12 @@ export const postAddDrone = (drone) => async (dispatch) => {
         // make api call to add drone
         const response = await axiosWithAuth().post('/api/users/add-drone', drone);
 
+        // dispatch success to reducer
+        dispatch({ type: OWNED_SUCCESS, payload: response.data })
+
+        // alert pop of success message
+        alert(`${response.data}`);
+
     } catch (err) {
         // dispatch failure to reducer
         dispatch({ type: OWNED_FAILURE, payload: err.message });
