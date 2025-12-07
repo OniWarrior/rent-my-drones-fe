@@ -72,6 +72,9 @@ export const getMarketDrones = () => async (dispatch) => {
         // make api call to get drones for the market
         const response = await axiosWithAuth().get('/available-drones');
 
+        // success dispatch to reducer
+        dispatch({ type: AVAILABLE_SUCCESS, payload: response.data });
+
 
 
     } catch (err) {
