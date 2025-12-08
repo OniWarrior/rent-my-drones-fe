@@ -1,4 +1,4 @@
-import axios from "axios"
+import axiosWithAuth from "../../components/utils/axios-with-auth"
 
 
 export const LOGIN_START = "LOGIN_START"
@@ -12,8 +12,8 @@ export const postLogin = (login, navigate) => async (dispatch) => {
         dispatch({ type: LOGIN_START });
 
         // make api call and save response 
-        // TODO - update this endpoint after backend is redeployed
-        const response = await axios.post(`http://localhost:8000/api/auth/login`, login);
+
+        const response = await axiosWithAuth().post(`/api/auth/login`, login);
 
         // dispatch success to reducer
         dispatch({ type: LOGIN_SUCCESS, payload: response.data });

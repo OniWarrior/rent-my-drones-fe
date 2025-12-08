@@ -1,8 +1,9 @@
 import axios from "axios";
 
+
 const axiosWithAuth = () => {
     return axios.create({
-        baseURL: "http://localhost:8000",
+        baseURL: "https://rent-my-drones-be-ffc04f1c4ced.herokuapp.com",
         headers: {
             authorization: localStorage.getItem("token")
         }

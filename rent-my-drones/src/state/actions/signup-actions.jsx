@@ -1,4 +1,4 @@
-import axios from "axios"
+import axiosWithAuth from "../../components/utils/axios-with-auth"
 
 export const SIGNUP_START = 'SIGNUP_START'
 export const SIGNUP_SUCCESS = 'SIGNUP_SUCCESS'
@@ -13,7 +13,7 @@ export const register = (signup, push) => async (dispatch) => {
 
         // make api call and save response
         // TODO update this endpoint after backend redeployment
-        const response = await axios.post(`http://localhost:8000/api/auth/signup`, signup);
+        const response = await axiosWithAuth().post(`/api/auth/signup`, signup);
 
         // dispatch success to reducer
         dispatch({ type: SIGNUP_SUCCESS, payload: response.data });
