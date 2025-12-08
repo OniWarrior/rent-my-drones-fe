@@ -8,9 +8,11 @@
 import RenterDashboard from './renter/renter-dashboard';
 import OwnerDashboard from './owner/owner-dashboard';
 import '../styles/dashboard.css';
+import { useNavigate } from 'react-router';
 
 
 const Dashboard = () => {
+    const navigate = useNavigate();
 
     // get the role
     const role = localStorage.getItem('role');
@@ -22,6 +24,9 @@ const Dashboard = () => {
         case "Owner": return (
             <OwnerDashboard />
         );
+        default:
+            navigate('/')
+
     }
 
 
