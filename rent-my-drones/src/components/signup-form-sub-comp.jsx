@@ -90,7 +90,7 @@ const SignupFormContainer = (props) => {
                             />
                             <input
                                 id='password'
-                                type='text'
+                                type='password'
                                 name='password'
                                 required
                                 placeholder='Password'

@@ -11,6 +11,7 @@ import Rented from './components/rented.jsx';
 import Market from './components/owner/owner-market.jsx';
 import OwnerRented from './components/owner/owner-rented.jsx';
 import Owned from './components/owner/owner-drones-owned.jsx'
+import AddDrone from './components/owner/owner-add-drone.jsx';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path='/dashboard/owner-drone-market' element={<Market />} />
           <Route path='/dashboard/owner-rented-drones' element={<OwnerRented />} />
           <Route path='/dashboard/owners-drones' element={<Owned />} />
+          <Route path='/dashboard/add-drone' element={<AddDrone />} />
         </Route>
       </Routes>
 

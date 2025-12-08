@@ -27,3 +27,29 @@ export const getOwnersDrones = () => async (dispatch) => {
 
 }
 
+/*
+ * postAddDrone: api call for owner to add a drone
+ */
+
+export const postAddDrone = (drone) => async (dispatch) => {
+    try {
+
+        // dispatch start of action
+        dispatch({ type: OWNED_START });
+
+        // make api call to add drone
+        const response = await axiosWithAuth().post('/api/users/add-drone', drone);
+
+        // dispatch success to reducer
+        dispatch({ type: OWNED_SUCCESS, payload: response.data })
+
+        // alert pop of success message
+        alert(`${response.data}`);
+
+    } catch (err) {
+        // dispatch failure to reducer
+        dispatch({ type: OWNED_FAILURE, payload: err.message });
+
+    }
+}
+
