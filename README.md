@@ -221,11 +221,11 @@ This frontend demonstrates:
 
 - Custom hooks and reusable validation logic
 
-= Real-world navigation and routing patterns
+- Real-world navigation and routing patterns
 
 - Clear separation of concerns in component design
 
-# The project reflects how I build maintainable frontend applications that integrate cleanly with backend services in a full-stack environment.
+ The project reflects how I build maintainable frontend applications that integrate cleanly with backend services in a full-stack environment.
 
 ---
 
