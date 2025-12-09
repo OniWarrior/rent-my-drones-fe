@@ -4,7 +4,7 @@ Frontend application for **Rent My Drones**, a simulated drone rental platform.
 The application provides role-based user interfaces for **Renters** and **Owners**, enabling users to browse drones, manage rentals, and manage owned inventory through a clean, state-driven React UI.
 
 🌐 **Live Demo (Frontend):**  
-https://www.rent-my-drones-fe.vercel.app
+https://rent-my-drones-fe.vercel.app/
 
 ---
 
